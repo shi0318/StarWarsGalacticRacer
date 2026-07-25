@@ -1,0 +1,78 @@
+---
+// Tips 分类聚合页（CollectionPage）—— 方案 5.1
+// 卡片式列表：从 guides 集合中筛出 category === 'tips' 的文章
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import MediaFigure from '../../components/MediaFigure.astro';
+import { SITE_IMAGES } from '../../data/images';
+import { getCollection } from 'astro:content';
+
+const title = 'Star Wars Galactic Racer Tips — Builds, Boosting & Credits';
+const description =
+  'Advanced Star Wars Galactic Racer tips: best builds, boost and drift technique, credits farming, and the fastest vehicles. Every claim carries a confirmation status.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Tips', url: '/tips/' },
+];
+
+const tips = (await getCollection('guides', ({ data }) => !data.draft && data.category === 'tips')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+
+  <PreReleaseNotice />
+  <div class="mt-6 mb-8">
+    <MediaFigure
+      src={SITE_IMAGES.tipsArt.src}
+      alt={SITE_IMAGES.tipsArt.alt}
+      width={SITE_IMAGES.tipsArt.width}
+      height={SITE_IMAGES.tipsArt.height}
+      credit={SITE_IMAGES.tipsArt.credit}
+    />
+  </div>
+
+  <header class="max-w-3xl">
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">
+      Star Wars Galactic Racer Tips
+    </h1>
+    <p class="mt-3 text-lg text-void-400">
+      Get faster with focused, source-tracked advice. Before launch these tips draw on the
+      reveal trailer and Star Wars racing tradition; each page is clearly labelled and will be
+      replaced with hands-on data once the game is out.
+    </p>
+  </header>
+
+  {
+    tips.length === 0 ? (
+      <p class="mt-8 text-void-400">Tips are being written. Check back soon.</p>
+    ) : (
+      <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {tips.map((g) => (
+          <li>
+            <a
+              href={`/${g.id}/`}
+              class="group flex h-full flex-col rounded-xl border border-void-800 bg-void-900/40 p-5 transition-colors hover:border-plasma/40 hover:bg-void-900"
+            >
+              <div class="mb-2 flex items-start justify-between gap-2">
+                <h2 class="text-base font-semibold leading-snug text-void-100 group-hover:text-plasma">
+                  {g.data.heading ?? g.data.title}
+                </h2>
+                <StatusBadge status={g.data.status} size="sm" />
+              </div>
+              <p class="line-clamp-3 flex-1 text-sm leading-relaxed text-void-400">
+                {g.data.description}
+              </p>
+              <span class="mt-4 text-sm font-medium text-plasma/90">Read tip →</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</Layout>

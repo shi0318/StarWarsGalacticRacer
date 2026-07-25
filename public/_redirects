@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects
+# 已删除的编造页面（电影正史角色/载具/赛道，与官方设定冲突）→ 301 到对应聚合页，
+# 保留任何已被索引/收藏的入链，避免 404。
+/characters/anakin-skywalker/  /characters/  301
+/vehicles/anakin-podracer/     /vehicles/    301
+/tracks/tatooine-canyon/       /tracks/      301

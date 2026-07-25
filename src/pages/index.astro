@@ -1,0 +1,294 @@
+---
+// 首页 —— WebSite + Organization Schema（方案 3.1）
+// 结构：Hero → 差异化说明 → 图片 → 分类 → 入门 → 发售信息。
+import Layout from '../layouts/Layout.astro';
+import Countdown from '../components/Countdown.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import { SITE, isReleased } from '../data/site';
+import { RACERS } from '../data/characters';
+import { VEHICLES } from '../data/vehicles';
+import { TRACKS } from '../data/tracks';
+import MediaFigure from '../components/MediaFigure.astro';
+import { SITE_IMAGES } from '../data/images';
+
+const released = isReleased();
+
+// 首页 TDK（方案 5.3 核心页面 TDK）
+const title = 'Star Wars Galactic Racer Wiki — Racers, Vehicles & Tracks';
+const description =
+  'Complete Star Wars Galactic Racer wiki with every racer, vehicle, track, and unlock guide. Every fact carries a source and confirmation status.';
+
+// 内容分类入口
+const categories = [
+  {
+    href: '/characters/',
+    title: 'Characters',
+    desc: 'Every racer, their faction, signature traits, and how to unlock them.',
+    count: RACERS.length,
+    countLabel: 'racers tracked',
+  },
+  {
+    href: '/vehicles/',
+    title: 'Vehicles',
+    desc: 'Landspeeders, speeder bikes, skim speeders, and podracers — classes, stats, and handling notes.',
+    count: VEHICLES.length,
+    countLabel: 'vehicles tracked',
+  },
+  {
+    href: '/tracks/',
+    title: 'Tracks',
+    desc: 'Circuit layouts, planet hazards, and difficulty for every course.',
+    count: TRACKS.length,
+    countLabel: 'tracks tracked',
+  },
+  {
+    href: '/unlocks/',
+    title: 'Unlocks',
+    desc: 'How to unlock racers, vehicles, and cosmetics — plus progression tips.',
+    count: null,
+    countLabel: '',
+  },
+];
+
+// 入门指南卡片
+const startHere = [
+  {
+    href: '/guide/',
+    title: 'Beginner Guide',
+    desc: 'Core racing systems, boosting, and drifting explained for new players.',
+  },
+  {
+    href: '/tips/best-build/',
+    title: 'Best Build',
+    desc: 'Early recommendations for the strongest racer and vehicle pairings.',
+  },
+  {
+    href: '/tracks/',
+    title: 'Tracks',
+    desc: 'The Galactic League circuits across the Outer Rim, with confirmation status on every entry.',
+  },
+  {
+    href: '/unlocks/',
+    title: 'Unlock Guide',
+    desc: 'What is unlockable, and the most efficient order to chase rewards.',
+  },
+];
+---
+
+<Layout title={title} description={description} schemaType="home">
+  <!-- Hero -->
+  <section class="relative overflow-hidden rounded-2xl border border-void-800">
+    <div class="absolute inset-0">
+      <img
+        src={SITE_IMAGES.heroBanner.src}
+        alt={SITE_IMAGES.heroBanner.alt}
+        width={SITE_IMAGES.heroBanner.width}
+        height={SITE_IMAGES.heroBanner.height}
+        loading="eager"
+        decoding="sync"
+        fetchpriority="high"
+        class="h-full w-full object-cover"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-void-950/95 via-void-950/80 to-void-950/55"></div>
+    </div>
+    <div class="relative px-6 py-14 md:px-10 md:py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        {
+          !released && (
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-plasma/30 bg-plasma/10 px-3 py-1 text-xs font-medium text-plasma">
+              Pre-release Wiki · Launch 2026-10-06
+            </p>
+          )
+        }
+        <h1 class="text-4xl font-bold tracking-tight text-void-100 md:text-5xl">
+          Star Wars Galactic Racer <span class="text-plasma">Wiki</span>
+        </h1>
+        <p class="mx-auto mt-4 max-w-2xl text-lg text-void-300">
+          The field guide to the galaxy's fastest race. Every racer, vehicle, and track —
+          with a clear source and confirmation status on every fact.
+        </p>
+
+        {!released && <div class="mt-8"><Countdown /></div>}
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href="/guide/"
+            class="rounded-lg bg-plasma px-5 py-2.5 font-medium text-void-950 transition-colors hover:bg-plasma-deep"
+          >
+            Read the guide
+          </a>
+          <a
+            href="/characters/"
+            class="rounded-lg border border-void-600 px-5 py-2.5 font-medium text-void-200 transition-colors hover:border-void-500 hover:bg-void-800"
+          >
+            Browse racers
+          </a>
+          <a
+            href="/tracks/"
+            class="rounded-lg border border-void-600 px-5 py-2.5 font-medium text-void-200 transition-colors hover:border-void-500 hover:bg-void-800"
+          >
+            Track list
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 官方设定：What is Star Wars Galactic Racer?（首段直接给答案，利于精选摘要） -->
+  <section class="mt-12">
+    <div class="rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
+      <h2 class="text-xl font-semibold text-void-100">What is Star Wars Galactic Racer?</h2>
+      <p class="mt-3 max-w-3xl text-void-300">
+        <strong class="text-void-100">Star Wars Galactic Racer</strong> is a runs-based combat
+        racing game from {SITE.developer}, published by {SITE.publisher} and launching
+        October 6, 2026. You play as <strong class="text-void-100">Shade</strong>, a lone racer
+        chasing revenge and glory through the underground <strong class="text-void-100">Galactic
+        League</strong> of the Outer Rim, in the years after the fall of the Empire.
+      </p>
+      <p class="mt-3 max-w-3xl text-void-400">
+        This is a combat racer — you don't just outdrive rivals, you slam, shunt, and take them
+        down. You pilot different classes of repulsorcraft — landspeeders, speeder bikes, skim
+        speeders, and podracers — each with distinct physics and playstyles, and build your ride
+        between story-driven campaign runs and strategic PvP grudge matches. As the official
+        pitch puts it: <em class="text-void-200">"No Force. No prophecy. Just skill, strategy,
+        and the will to rise."</em>
+      </p>
+      <p class="mt-4 text-sm text-void-500">
+        Source: official Steam store listing (App 4078430), checked 2026-07-24.
+      </p>
+    </div>
+  </section>
+
+  <!-- 差异化说明：为什么信任本站 -->
+  <section class="mt-12">
+    <div class="rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
+      <h2 class="text-xl font-semibold text-void-100">Every fact is sourced</h2>
+      <p class="mt-2 max-w-3xl text-void-400">
+        Before launch, most guides on the web mix confirmed details with forum rumours. We
+        don't. Each entry is tagged so you always know what's verified and what isn't:
+      </p>
+      <div class="mt-5 flex flex-wrap gap-2">
+        <StatusBadge status="official" />
+        <StatusBadge status="beta" />
+        <StatusBadge status="trailer" />
+        <StatusBadge status="lore" />
+        <StatusBadge status="unconfirmed" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured imagery -->
+  <section class="mt-12">
+    <h2 class="mb-5 text-2xl font-bold tracking-tight text-void-100">Featured imagery</h2>
+    <p class="mb-5 max-w-3xl text-void-400">
+      Official screenshots from the Star Wars Galactic Racer Steam page, shown here for
+      commentary and reference. All imagery is © Fuse Games / Secret Mode / Lucasfilm.
+    </p>
+    <div class="grid gap-4 md:grid-cols-2">
+      <MediaFigure
+        src={SITE_IMAGES.heroRace.src}
+        alt={SITE_IMAGES.heroRace.alt}
+        width={SITE_IMAGES.heroRace.width}
+        height={SITE_IMAGES.heroRace.height}
+        credit={SITE_IMAGES.heroRace.credit}
+      />
+      <MediaFigure
+        src={SITE_IMAGES.vehiclesArt.src}
+        alt={SITE_IMAGES.vehiclesArt.alt}
+        width={SITE_IMAGES.vehiclesArt.width}
+        height={SITE_IMAGES.vehiclesArt.height}
+        credit={SITE_IMAGES.vehiclesArt.credit}
+      />
+      <MediaFigure
+        src={SITE_IMAGES.cityCircuit.src}
+        alt={SITE_IMAGES.cityCircuit.alt}
+        width={SITE_IMAGES.cityCircuit.width}
+        height={SITE_IMAGES.cityCircuit.height}
+        credit={SITE_IMAGES.cityCircuit.credit}
+      />
+      <MediaFigure
+        src={SITE_IMAGES.lavaCircuit.src}
+        alt={SITE_IMAGES.lavaCircuit.alt}
+        width={SITE_IMAGES.lavaCircuit.width}
+        height={SITE_IMAGES.lavaCircuit.height}
+        credit={SITE_IMAGES.lavaCircuit.credit}
+      />
+    </div>
+  </section>
+
+  <!-- 分类导航 -->
+  <section class="mt-12">
+    <h2 class="mb-5 text-2xl font-bold tracking-tight text-void-100">Explore the wiki</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        categories.map((c) => (
+          <a
+            href={c.href}
+            class="group flex flex-col rounded-xl border border-void-800 bg-void-900/40 p-5 transition-colors hover:border-plasma/40 hover:bg-void-900"
+          >
+            <span class="text-lg font-semibold text-void-100 group-hover:text-plasma">
+              {c.title}
+            </span>
+            <span class="mt-1 flex-1 text-sm text-void-400">{c.desc}</span>
+            {c.count !== null && (
+              <span class="mt-3 text-xs text-void-500">
+                {c.count} {c.countLabel}
+              </span>
+            )}
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- 入门指南 -->
+  <section class="mt-12">
+    <h2 class="mb-5 text-2xl font-bold tracking-tight text-void-100">Where to begin</h2>
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        startHere.map((s) => (
+          <a
+            href={s.href}
+            class="group rounded-xl border border-void-800 bg-void-900/40 p-5 transition-colors hover:border-plasma/40 hover:bg-void-900"
+          >
+            <h3 class="text-base font-semibold text-void-100 group-hover:text-plasma">
+              {s.title}
+            </h3>
+            <p class="mt-1 text-sm text-void-400">{s.desc}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- 发售信息 -->
+  <section class="mt-12 rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
+    <h2 class="text-xl font-semibold text-void-100">Release information</h2>
+    <dl class="mt-4 grid gap-4 sm:grid-cols-3">
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Release date</dt>
+        <dd class="mt-1 text-void-200">October 6, 2026</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Developer</dt>
+        <dd class="mt-1 text-void-200">{SITE.developer}</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Publisher</dt>
+        <dd class="mt-1 text-void-200">{SITE.publisher}</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Genre</dt>
+        <dd class="mt-1 text-void-200">Combat Racing (runs-based)</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Platforms</dt>
+        <dd class="mt-1 text-void-200">{SITE.platforms.join(', ')}</dd>
+      </div>
+      <div>
+        <dt class="text-xs uppercase tracking-wide text-void-500">Franchise</dt>
+        <dd class="mt-1 text-void-200">{SITE.franchise}</dd>
+      </div>
+    </dl>
+  </section>
+</Layout>

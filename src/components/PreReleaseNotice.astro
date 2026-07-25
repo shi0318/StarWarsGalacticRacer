@@ -1,0 +1,23 @@
+---
+// 发售前提示条 —— 提醒读者部分信息基于预告片/星战正史推测，发售后会更新为实测。
+// 方案要求：所有"推测"内容必须显式标注。
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+
+<aside
+  class:list={[
+    'rounded-lg border border-sand/25 bg-sand/[0.06] text-sand',
+    compact ? 'px-3 py-2 text-xs' : 'px-4 py-3 text-sm',
+  ]}
+  role="note"
+>
+  <p>
+    <span class="font-semibold text-sand">Pre-release guide.</span>
+    Star Wars Galactic Racer launches on 2026-10-06. Facts below are marked with a
+    confirmation status — anything based on trailers or Star Wars canon is flagged and will
+    be replaced with verified, hands-on data at launch.
+  </p>
+</aside>

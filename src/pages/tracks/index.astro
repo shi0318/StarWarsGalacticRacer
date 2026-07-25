@@ -1,0 +1,112 @@
+---
+// Tracks 分类聚合页（CollectionPage）—— 方案 5.1
+import Layout from '../../layouts/Layout.astro';
+import MediaFigure from '../../components/MediaFigure.astro';
+import { SITE_IMAGES } from '../../data/images';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { TRACKS, TRACK_SETTING } from '../../data/tracks';
+
+const title = 'All Tracks in Star Wars Galactic Racer — Circuits & Hazards';
+const description =
+  'Every track in Star Wars Galactic Racer: planet circuits, hazards, and difficulty ratings. Each entry carries a verified confirmation status.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Tracks', url: '/tracks/' },
+];
+
+const DIFF_CLASS: Record<string, string> = {
+  Beginner: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
+  Intermediate: 'bg-sky-500/15 text-sky-300 border-sky-500/30',
+  Advanced: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
+  Expert: 'bg-rose-500/15 text-rose-300 border-rose-500/30',
+  Unknown: 'bg-void-600/40 text-void-300 border-void-500/40',
+};
+---
+
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+
+  <PreReleaseNotice />
+  <div class="mb-8 mt-4">
+    <MediaFigure
+      src={SITE_IMAGES.tracksArt.src}
+      alt={SITE_IMAGES.tracksArt.alt}
+      width={SITE_IMAGES.tracksArt.width}
+      height={SITE_IMAGES.tracksArt.height}
+      credit={SITE_IMAGES.tracksArt.credit}
+    />
+  </div>
+
+  <header class="mt-4 max-w-3xl">
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">
+      Star Wars Galactic Racer Tracks
+    </h1>
+    <p class="mt-3 text-lg text-void-400">
+      Races in Star Wars: Galactic Racer run through {TRACK_SETTING.region}'s underground circuit,
+      {TRACK_SETTING.league}. Fuse Games hasn't named individual tracks yet — so instead of
+      inventing them, here's exactly what's confirmed, with every claim tagged by source.
+    </p>
+  </header>
+
+  {
+    TRACKS.length > 0 ? (
+      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+        {TRACKS.map((t) => (
+          <article class="flex flex-col rounded-xl border border-void-800 bg-void-900/40 p-5">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <h2 class="text-lg font-semibold text-void-100">
+                  {t.hasDetailPage ? (
+                    <a href={t.detailHref ?? `/tracks/${t.slug}/`} class="text-plasma hover:underline">
+                      {t.name}
+                    </a>
+                  ) : (
+                    t.name
+                  )}
+                </h2>
+                <p class="mt-0.5 text-xs uppercase tracking-wide text-void-500">{t.planet}</p>
+              </div>
+              <span class={`shrink-0 rounded border px-2 py-0.5 text-[11px] font-medium ${DIFF_CLASS[t.difficulty]}`}>
+                {t.difficulty}
+              </span>
+            </div>
+            <p class="mt-3 flex-1 text-sm text-void-400">{t.summary}</p>
+            <ul class="mt-3 list-inside list-disc space-y-1 text-sm text-void-300">
+              {t.knownHazards.map((h) => (
+                <li>{h}</li>
+              ))}
+            </ul>
+            <div class="mt-4">
+              <StatusBadge status={t.source.status} size="sm" />
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <section class="mt-8 rounded-xl border border-void-800 bg-void-900/40 p-6">
+        <div class="flex items-center gap-3">
+          <StatusBadge status={TRACK_SETTING.source.status} size="sm" />
+          <h2 class="text-lg font-semibold text-void-100">No tracks named yet</h2>
+        </div>
+        <p class="mt-3 text-void-400">
+          Here's what Fuse Games has actually confirmed: you'll race across {TRACK_SETTING.region}
+          in {TRACK_SETTING.league}, set during {TRACK_SETTING.era}. Specific circuits, planets, and
+          hazards haven't been announced.
+        </p>
+        <p class="mt-3 text-void-400">
+          We're deliberately not filling this page with movie locations or made-up courses. The
+          moment Fuse Games reveals a real track, it lands here — sourced and dated.
+        </p>
+      </section>
+    )
+  }
+
+  <p class="mt-6 text-sm text-void-500">
+    Detailed track pages (with racing lines, shortcut maps, and record times) go live once each
+    entry meets our publishing threshold. Until then, everything lives here so you never land on
+    an empty page.
+  </p>
+</Layout>

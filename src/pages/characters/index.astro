@@ -1,0 +1,98 @@
+---
+// Characters 分类聚合页（CollectionPage）—— 方案 5.1
+// 表格：名称 | 阵营 | 已知特长 | 解锁方式 | 确认状态
+import Layout from '../../layouts/Layout.astro';
+import MediaFigure from '../../components/MediaFigure.astro';
+import { SITE_IMAGES } from '../../data/images';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { RACERS } from '../../data/characters';
+
+const title = 'All Characters in Star Wars Galactic Racer — Roster & Unlocks';
+const description =
+  'Every racer in Star Wars Galactic Racer: factions, signature traits, and how to unlock them. Each entry carries a verified confirmation status.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Characters', url: '/characters/' },
+];
+---
+
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+
+  <PreReleaseNotice />
+  <div class="mb-8 mt-4">
+    <MediaFigure
+      src={SITE_IMAGES.charactersArt.src}
+      alt={SITE_IMAGES.charactersArt.alt}
+      width={SITE_IMAGES.charactersArt.width}
+      height={SITE_IMAGES.charactersArt.height}
+      credit={SITE_IMAGES.charactersArt.credit}
+    />
+  </div>
+
+  <header class="mt-4 max-w-3xl">
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">
+      Star Wars Galactic Racer Characters
+    </h1>
+    <p class="mt-3 text-lg text-void-400">
+      The racers you pilot across the galaxy. Below is every character tracked so far, with a
+      confirmation status on each entry. Anything based on trailers or Star Wars canon is flagged
+      as such — never presented as confirmed until launch.
+    </p>
+  </header>
+
+  <div class="mt-8 overflow-x-auto rounded-lg border border-void-800">
+    <table class="w-full border-collapse text-sm">
+      <thead>
+        <tr class="border-b border-void-700 bg-void-900/60 text-left text-void-400">
+          <th class="px-4 py-3 font-medium">Racer</th>
+          <th class="px-4 py-3 font-medium">Faction</th>
+          <th class="px-4 py-3 font-medium">Known traits</th>
+          <th class="px-4 py-3 font-medium">Unlock</th>
+          <th class="px-4 py-3 font-medium">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          RACERS.map((r) => (
+            <tr class="border-b border-void-800 align-top last:border-0 hover:bg-void-900/40">
+              <td class="px-4 py-3">
+                <div class="font-semibold text-void-100">
+                  {r.hasDetailPage ? (
+                    <a href={r.detailHref ?? `/characters/${r.slug}/`} class="text-plasma hover:underline">
+                      {r.name}
+                    </a>
+                  ) : (
+                    r.name
+                  )}
+                </div>
+                <div class="mt-1 text-void-400">{r.summary}</div>
+              </td>
+              <td class="px-4 py-3 text-void-400">{r.faction}</td>
+              <td class="px-4 py-3 text-void-300">
+                <ul class="list-inside list-disc space-y-1">
+                  {r.knownTraits.map((t) => (
+                    <li>{t}</li>
+                  ))}
+                </ul>
+              </td>
+              <td class="px-4 py-3 text-void-400">{r.unlock}</td>
+              <td class="px-4 py-3">
+                <StatusBadge status={r.source.status} size="sm" />
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-6 text-sm text-void-500">
+    Detailed character pages (with stat tables, best vehicle pairings, and unlock walkthroughs)
+    go live once each entry meets our publishing threshold — real unlock routes, verified stats,
+    and at least one build. Until then, everything lives here so you never land on an empty page.
+  </p>
+</Layout>

@@ -1,0 +1,58 @@
+---
+// 联系页 —— AdSense 合规要求之一（提供联系方式与内容移除渠道）。
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SITE } from '../data/site';
+
+const title = 'Contact — Star Wars Galactic Racer Wiki';
+const description =
+  'How to reach Star Wars Galactic Racer Wiki with corrections, questions, or content-removal requests. We reply to every message about accuracy and rights.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact/' },
+];
+---
+
+<Layout title={title} description={description} schemaType="article" breadcrumb={crumbs}>
+  <article class="mx-auto max-w-3xl">
+    <Breadcrumb items={crumbs} />
+
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">Contact us</h1>
+    <p class="mt-3 text-lg text-void-400">
+      Corrections, questions, or a content-removal request — we read every message.
+    </p>
+
+    <div class="prose-body mt-8 space-y-6 text-void-200">
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Email</h2>
+        <p class="mt-2">
+          The fastest way to reach us is by email at
+          <a href={`mailto:${SITE.contactEmail}`} class="text-plasma underline underline-offset-2">
+            {SITE.contactEmail}
+          </a>. We aim to reply within a few days.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Corrections & accuracy</h2>
+        <p class="mt-2">
+          Spotted a fact that is out of date or wrong? Tell us the page and what should change.
+          Because every claim on this site carries a source and a confirmation status, we can
+          usually verify and update quickly. Accuracy is the whole point of this wiki.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Rights & content removal</h2>
+        <p class="mt-2">
+          This is an independent fan site and is not affiliated with {SITE.developer},
+          {SITE.publisher}, or Lucasfilm. Images here are official Steam screenshots and key art
+          used for commentary and reference, credited to their source. If you
+          believe any content infringes your rights, email us with the details and we will
+          review and act on it promptly.
+        </p>
+      </section>
+    </div>
+  </article>
+</Layout>

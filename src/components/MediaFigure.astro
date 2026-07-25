@@ -1,0 +1,47 @@
+---
+// Responsive media figure with SEO-friendly alt, fixed dimensions, lazy loading.
+interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  credit?: string;
+  priority?: boolean;
+  class?: string;
+  figureClass?: string;
+  sizes?: string;
+}
+
+const {
+  src,
+  alt,
+  width = 1600,
+  height = 900,
+  credit,
+  priority = false,
+  class: className = '',
+  figureClass = '',
+  sizes = '(max-width: 768px) 100vw, 960px',
+} = Astro.props;
+---
+
+<figure class:list={['overflow-hidden rounded-xl border border-void-800 bg-void-900/40', figureClass]}>
+  <img
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={priority ? 'eager' : 'lazy'}
+    decoding={priority ? 'sync' : 'async'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    sizes={sizes}
+    class:list={['h-auto w-full object-cover', className]}
+  />
+  {
+    credit && (
+      <figcaption class="border-t border-void-800 px-3 py-2 text-xs text-void-500">
+        {credit}
+      </figcaption>
+    )
+  }
+</figure>

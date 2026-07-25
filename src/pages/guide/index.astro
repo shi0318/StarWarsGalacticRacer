@@ -1,0 +1,195 @@
+---
+// 攻略聚合页 — CollectionPage schema（方案 3.1：列表页不标 Article）。
+// 卡片式列表：缩略图 + 分类标签 + 日期 + 摘要。
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { getCollection } from 'astro:content';
+import { SITE_IMAGES } from '../../data/images';
+
+const title = 'Star Wars Galactic Racer Guide — Racers, Vehicles & Tracks';
+const description =
+  'The complete Star Wars Galactic Racer guide hub. Racer roster, vehicle classes, track hazards, unlocks, and racing tips — every fact sourced and status-tagged.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Guide', url: '/guide/' },
+];
+
+const CATEGORY_LABEL: Record<string, string> = {
+  guide: 'Overview',
+  characters: 'Characters',
+  vehicles: 'Vehicles',
+  tracks: 'Tracks',
+  unlocks: 'Unlocks',
+  tips: 'Tips',
+  news: 'News',
+};
+
+const CATEGORY_ORDER = ['guide', 'characters', 'vehicles', 'tracks', 'unlocks', 'tips', 'news'];
+
+// fallback covers if a guide has no frontmatter cover
+const FALLBACK_COVER: Record<string, string> = {
+  guide: SITE_IMAGES.heroRace.src,
+  characters: SITE_IMAGES.charactersArt.src,
+  vehicles: SITE_IMAGES.vehiclesArt.src,
+  tracks: SITE_IMAGES.tracksArt.src,
+  unlocks: SITE_IMAGES.unlocksArt.src,
+  tips: SITE_IMAGES.tipsArt.src,
+  news: SITE_IMAGES.cityCircuit.src,
+};
+
+const guides = (await getCollection('guides', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const featured = guides.slice(0, 3);
+
+const grouped = new Map<string, typeof guides>();
+for (const g of guides) {
+  const cat = g.data.category;
+  if (!grouped.has(cat)) grouped.set(cat, []);
+  grouped.get(cat)!.push(g);
+}
+
+const sections = CATEGORY_ORDER.filter((c) => grouped.has(c)).map((c) => ({
+  key: c,
+  label: CATEGORY_LABEL[c] ?? c,
+  items: grouped.get(c)!,
+}));
+
+function coverOf(g: (typeof guides)[number]) {
+  return g.data.cover ?? FALLBACK_COVER[g.data.category] ?? SITE_IMAGES.heroRace.src;
+}
+
+function labelOf(cat: string) {
+  return CATEGORY_LABEL[cat] ?? cat;
+}
+---
+
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+
+  <header class="mb-8">
+    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma">Start here</p>
+    <h1 class="mt-2 text-3xl font-bold tracking-tight text-void-100 md:text-5xl">
+      Featured racing guides
+    </h1>
+    <p class="mt-3 max-w-2xl text-lg text-void-400">
+      Every guide carries a confirmation status, so you always know what is official, what is
+      Beta-tested, and what is still based on Star Wars canon.
+    </p>
+  </header>
+
+  <div class="mb-8"><PreReleaseNotice /></div>
+
+  {
+    featured.length > 0 && (
+      <section class="mb-12" aria-label="Featured guides">
+        <ul class="grid gap-5 md:grid-cols-3">
+          {featured.map((g) => (
+            <li>
+              <a
+                href={`/${g.id}/`}
+                class="group flex h-full flex-col overflow-hidden rounded-xl border border-void-800 bg-void-900/50 transition-colors hover:border-plasma/40 hover:bg-void-900"
+              >
+                <div class="aspect-[16/10] overflow-hidden bg-void-950">
+                  <img
+                    src={coverOf(g)}
+                    alt=""
+                    width="640"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div class="flex flex-1 flex-col p-4">
+                  <div class="mb-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-plasma/90">
+                    <span>{labelOf(g.data.category)}</span>
+                    <span class="text-void-600">•</span>
+                    <time datetime={g.data.updatedAt}>{g.data.updatedAt}</time>
+                  </div>
+                  <div class="mb-2 flex items-start justify-between gap-2">
+                    <h2 class="text-base font-semibold leading-snug text-void-100 group-hover:text-plasma md:text-lg">
+                      {g.data.heading ?? g.data.title}
+                    </h2>
+                    <StatusBadge status={g.data.status} size="sm" />
+                  </div>
+                  <p class="line-clamp-3 flex-1 text-sm leading-relaxed text-void-400">
+                    {g.data.description}
+                  </p>
+                  <span class="mt-4 text-sm font-medium text-plasma/90 group-hover:text-plasma">
+                    Read guide →
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    sections.length === 0 ? (
+      <p class="text-void-400">Guides are being written. Check back soon.</p>
+    ) : (
+      <div class="space-y-12">
+        {sections.map((section) => (
+          <section aria-labelledby={`sec-${section.key}`}>
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma/80">
+              Browse by topic
+            </p>
+            <h2
+              id={`sec-${section.key}`}
+              class="mt-2 mb-5 text-2xl font-bold tracking-tight text-void-100 md:text-3xl"
+            >
+              {section.label}
+            </h2>
+            <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {section.items.map((g) => (
+                <li>
+                  <a
+                    href={`/${g.id}/`}
+                    class="group flex h-full flex-col overflow-hidden rounded-xl border border-void-800 bg-void-900/40 transition-colors hover:border-plasma/35 hover:bg-void-900"
+                  >
+                    <div class="aspect-[16/10] overflow-hidden bg-void-950">
+                      <img
+                        src={coverOf(g)}
+                        alt=""
+                        width="640"
+                        height="400"
+                        loading="lazy"
+                        decoding="async"
+                        class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                      />
+                    </div>
+                    <div class="flex flex-1 flex-col p-4">
+                      <div class="mb-2 flex flex-wrap items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-plasma/90">
+                        <span>{labelOf(g.data.category)}</span>
+                        <span class="text-void-600">•</span>
+                        <time datetime={g.data.updatedAt}>{g.data.updatedAt}</time>
+                      </div>
+                      <div class="mb-2 flex items-start justify-between gap-2">
+                        <h3 class="text-base font-semibold leading-snug text-void-100 group-hover:text-plasma">
+                          {g.data.heading ?? g.data.title}
+                        </h3>
+                        <StatusBadge status={g.data.status} size="sm" />
+                      </div>
+                      <p class="line-clamp-3 flex-1 text-sm leading-relaxed text-void-400">
+                        {g.data.description}
+                      </p>
+                      <span class="mt-4 text-sm font-medium text-plasma/90">Read guide →</span>
+                    </div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    )
+  }
+</Layout>

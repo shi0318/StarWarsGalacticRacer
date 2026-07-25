@@ -1,0 +1,96 @@
+---
+// Vehicles 分类聚合页（CollectionPage）—— 方案 5.1
+import Layout from '../../layouts/Layout.astro';
+import MediaFigure from '../../components/MediaFigure.astro';
+import { SITE_IMAGES } from '../../data/images';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import { VEHICLES } from '../../data/vehicles';
+
+const title = 'All Vehicles in Star Wars Galactic Racer — Podracers & Speeders';
+const description =
+  'Every vehicle class in Star Wars Galactic Racer: landspeeders, speeder bikes, skim speeders, and podracers — each with distinct physics and playstyles. Every entry carries a confirmation status.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Vehicles', url: '/vehicles/' },
+];
+---
+
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+
+  <PreReleaseNotice />
+  <div class="mb-8 mt-4">
+    <MediaFigure
+      src={SITE_IMAGES.vehiclesArt.src}
+      alt={SITE_IMAGES.vehiclesArt.alt}
+      width={SITE_IMAGES.vehiclesArt.width}
+      height={SITE_IMAGES.vehiclesArt.height}
+      credit={SITE_IMAGES.vehiclesArt.credit}
+    />
+  </div>
+
+  <header class="mt-4 max-w-3xl">
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">
+      Star Wars Galactic Racer Vehicles
+    </h1>
+    <p class="mt-3 text-lg text-void-400">
+      The machines you race across the galaxy — from twin-engine podracers to nimble speeder
+      bikes. Below is every vehicle tracked so far, with a confirmation status on each entry.
+    </p>
+  </header>
+
+  <div class="mt-8 overflow-x-auto rounded-lg border border-void-800">
+    <table class="w-full border-collapse text-sm">
+      <thead>
+        <tr class="border-b border-void-700 bg-void-900/60 text-left text-void-400">
+          <th class="px-4 py-3 font-medium">Vehicle</th>
+          <th class="px-4 py-3 font-medium">Class</th>
+          <th class="px-4 py-3 font-medium">Known stats</th>
+          <th class="px-4 py-3 font-medium">Acquisition</th>
+          <th class="px-4 py-3 font-medium">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          VEHICLES.map((v) => (
+            <tr class="border-b border-void-800 align-top last:border-0 hover:bg-void-900/40">
+              <td class="px-4 py-3">
+                <div class="font-semibold text-void-100">
+                  {v.hasDetailPage ? (
+                    <a href={v.detailHref ?? `/vehicles/${v.slug}/`} class="text-plasma hover:underline">
+                      {v.name}
+                    </a>
+                  ) : (
+                    v.name
+                  )}
+                </div>
+                <div class="mt-1 text-void-400">{v.summary}</div>
+              </td>
+              <td class="px-4 py-3 text-void-400">{v.class}</td>
+              <td class="px-4 py-3 text-void-300">
+                <ul class="list-inside list-disc space-y-1">
+                  {v.knownStats.map((s) => (
+                    <li>{s}</li>
+                  ))}
+                </ul>
+              </td>
+              <td class="px-4 py-3 text-void-400">{v.acquisition}</td>
+              <td class="px-4 py-3">
+                <StatusBadge status={v.source.status} size="sm" />
+              </td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-6 text-sm text-void-500">
+    Detailed vehicle pages (with full stat bars, upgrade paths, and track-by-track suitability)
+    go live once each entry meets our publishing threshold. Until then, everything lives here so
+    you never land on an empty page.
+  </p>
+</Layout>

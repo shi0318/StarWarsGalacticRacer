@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0c17"/>
+      <stop offset="1" stop-color="#05060d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.35" r="0.6">
+      <stop offset="0" stop-color="#35d0e8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#35d0e8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g opacity="0.9">
+    <path d="M120 470 L720 470 L660 520 L60 520 Z" fill="#1f2338"/>
+    <path d="M150 430 Q400 410 620 430 L600 452 Q400 434 170 452 Z" fill="#35d0e8" opacity="0.7"/>
+  </g>
+  <text x="80" y="230" font-family="Segoe UI, sans-serif" font-size="76" font-weight="700" fill="#d2d5e6">Star Wars</text>
+  <text x="80" y="320" font-family="Segoe UI, sans-serif" font-size="76" font-weight="700" fill="#35d0e8">Galactic Racer</text>
+  <text x="82" y="380" font-family="Segoe UI, sans-serif" font-size="34" font-weight="500" fill="#6f759b">Verified Racers, Vehicles &amp; Track Guides</text>
+  <path d="M980 120 L992 168 L1040 180 L992 192 L980 240 L968 192 L920 180 L968 168 Z" fill="#e8b84b"/>
+</svg>

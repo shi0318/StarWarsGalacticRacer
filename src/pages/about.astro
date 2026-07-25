@@ -1,0 +1,98 @@
+---
+// 关于页 —— AdSense 条件（8.1）：说明站点定位、编辑团队、内容来源标注方式。
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { SITE } from '../data/site';
+import { STATUS_META } from '../data/sources';
+
+const title = 'About Star Wars Galactic Racer Wiki — Editorial & Sourcing';
+const description =
+  'Who runs Star Wars Galactic Racer Wiki, how we verify every fact with a confirmation status, and where our information comes from. An independent fan-made resource.';
+
+const crumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about/' },
+];
+
+const statuses = Object.values(STATUS_META);
+---
+
+<Layout title={title} description={description} schemaType="article" breadcrumb={crumbs}>
+  <article class="mx-auto max-w-3xl">
+    <Breadcrumb items={crumbs} />
+
+    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">About this wiki</h1>
+    <p class="mt-3 text-lg text-void-400">
+      An independent, fan-made guide to Star Wars Galactic Racer — built on one rule: every fact
+      carries a source and a confirmation status.
+    </p>
+
+    <div class="prose-body mt-8 space-y-6 text-void-200">
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">What this site is</h2>
+        <p class="mt-2">
+          Star Wars Galactic Racer Wiki is a community resource covering racers, vehicles, tracks,
+          unlocks, and tips for the upcoming arcade racer. We are not affiliated with
+          {SITE.developer}, {SITE.publisher}, Lucasfilm, or The Walt Disney Company. This is a
+          fan project, and Star Wars is a trademark of Lucasfilm Ltd.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Image sources</h2>
+        <p class="mt-2">
+          The imagery on this site is made up of <strong>official screenshots and key art</strong>
+          from the Star Wars Galactic Racer Steam store page, shown here for commentary and
+          reference. All rights remain with Fuse Games, Secret Mode, and Lucasfilm; each figure
+          credits its Steam source. If a rights holder wants any image removed, contact us and we
+          will act promptly.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Who writes it</h2>
+        <p class="mt-2">
+          The wiki is maintained by an independent editor who follows every official reveal,
+          trailer, and interview, and cross-checks each claim. Before launch, much of the content
+          is drawn from trailers and Star Wars canon — and it is clearly labelled as such, never
+          presented as confirmed fact.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">How we mark confirmation status</h2>
+        <p class="mt-2">
+          This is the core of the site. Instead of blending official facts with rumours, every
+          entry carries one of these labels so you always know how reliable it is:
+        </p>
+        <ul class="mt-3 space-y-2">
+          {
+            statuses.map((s) => (
+              <li class="flex gap-2">
+                <span class="shrink-0">{s.icon}</span>
+                <span>
+                  <strong class="text-void-100">{s.label}</strong> — {s.description}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold text-void-100">Where our information comes from</h2>
+        <p class="mt-2">Our sources, in order of authority:</p>
+        <ul class="mt-2 list-disc space-y-1 pl-5">
+          <li>Official developer channels — store pages, official news, verified social accounts</li>
+          <li>Hands-on testing in Beta or demo builds, with the version number and test date recorded</li>
+          <li>Official trailers, cited with a timestamp where relevant</li>
+          <li>Established Star Wars canon (films and prior games), used only for clearly-labelled inference</li>
+        </ul>
+        <p class="mt-2">
+          Every article ends with a "Sources &amp; verification" table listing the source, game
+          version, and the date we last checked it.
+        </p>
+      </section>
+    </div>
+  </article>
+</Layout>

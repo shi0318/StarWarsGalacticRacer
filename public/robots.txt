@@ -1,0 +1,5 @@
+# Star Wars Galactic Racer Wiki — 允许全部路径，指向 sitemap（方案阶段 0）
+User-agent: *
+Allow: /
+
+Sitemap: https://swgalacticracer.wiki/sitemap-index.xml

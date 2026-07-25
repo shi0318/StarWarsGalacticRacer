@@ -1,0 +1,111 @@
+---
+// 攻略文章布局 —— 内容集合 guides 的每篇 .md 都用它渲染。
+// 统一输出：面包屑 → Pre-release 提示 → H1 → 正文 → 来源表。
+import Layout from './Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import PreReleaseNotice from '../components/PreReleaseNotice.astro';
+import SourceTable from '../components/SourceTable.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import type { ConfidenceStatus, SourceRef } from '../data/sources';
+
+interface Crumb {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  title: string; // <title>
+  heading?: string; // H1（默认取 title）
+  description: string;
+  category: 'guide' | 'characters' | 'vehicles' | 'tracks' | 'unlocks' | 'tips' | 'news';
+  status: ConfidenceStatus;
+  sources?: SourceRef[];
+  preRelease?: boolean;
+  updatedAt: string;
+  datePublished?: string;
+}
+
+const {
+  title,
+  heading,
+  description,
+  category,
+  status,
+  sources = [],
+  preRelease = true,
+  updatedAt,
+  datePublished,
+} = Astro.props;
+
+// 已知路径段的友好显示名（未列出的段用标题化的 slug）
+const SEGMENT_LABEL: Record<string, string> = {
+  guide: 'Guide',
+  characters: 'Characters',
+  vehicles: 'Vehicles',
+  tracks: 'Tracks',
+  unlocks: 'Unlocks',
+  tips: 'Tips',
+  news: 'News',
+  'best-build': 'Best Build',
+  'credits-farming': 'Credits Farming',
+  'fastest-vehicle': 'Fastest Vehicle',
+};
+
+const h1 = heading ?? title;
+const titleize = (s: string) =>
+  s.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+// 面包屑从真实 URL 段推导，保证与 URL 层级严格一致（方案 3.2）。
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const crumbs: Crumb[] = [
+  { name: 'Home', url: '/' },
+  ...segments.map((seg, i) => {
+    const url = '/' + segments.slice(0, i + 1).join('/') + '/';
+    const name =
+      i === segments.length - 1 ? h1 : (SEGMENT_LABEL[seg] ?? titleize(seg));
+    return { name, url };
+  }),
+];
+
+// news 分类用 NewsArticle，其余用 Article
+const schemaType = category === 'news' ? 'news' : 'article';
+
+// E-E-A-T 保护：只有官方/实测（official/beta）的攻略允许被索引。
+// trailer/lore/unconfirmed 属发售前推测框架，noindex 到发售后用实测替换再放开，
+// 与前两个站点（BoR 全 noindex、MS2 官方内容可索引）保持一致的信心分级策略。
+const INDEXABLE_STATUS: ConfidenceStatus[] = ['official', 'beta'];
+const noindex = !INDEXABLE_STATUS.includes(status);
+---
+
+<Layout
+  title={title}
+  description={description}
+  schemaType={schemaType}
+  breadcrumb={crumbs}
+  datePublished={datePublished ?? updatedAt}
+  dateModified={updatedAt}
+  noindex={noindex}
+>
+  <article class="mx-auto max-w-3xl">
+    <Breadcrumb items={crumbs} />
+
+    {preRelease && <PreReleaseNotice />}
+
+    <header class="mt-4 border-b border-void-800 pb-6">
+      <div class="mb-3">
+        <StatusBadge status={status} />
+      </div>
+      <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">{h1}</h1>
+      <p class="mt-3 text-lg text-void-400">{description}</p>
+      <p class="mt-4 text-sm text-void-500">
+        Last verified <time datetime={updatedAt}>{updatedAt}</time>
+      </p>
+    </header>
+
+    <div class="prose-body mt-8 space-y-4 text-void-200">
+      <slot />
+    </div>
+
+    <SourceTable sources={sources} />
+  </article>
+</Layout>

@@ -1,0 +1,51 @@
+---
+// 发售倒计时 —— 首页 Hero 使用。
+// 服务端渲染初始天数（编译期），客户端脚本精确到时分秒并每秒更新。
+import { SITE, daysUntilRelease, isReleased } from '../data/site';
+
+const days = daysUntilRelease();
+const released = isReleased();
+---
+
+{
+  released ? (
+    <div class="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-1.5 text-sm font-medium text-emerald-300">
+      <span class="h-2 w-2 rounded-full bg-emerald-400" />
+      Out now — verified guides live
+    </div>
+  ) : (
+    <div
+      class="inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-void-300"
+      data-countdown
+      data-release={SITE.releaseDate}
+    >
+      <span class="text-void-400">Releases in</span>
+      <span class="font-semibold text-plasma" data-countdown-value>
+        {days} days
+      </span>
+      <span class="text-void-500">· {SITE.releaseDate}</span>
+    </div>
+  )
+}
+
+<script>
+  const el = document.querySelector<HTMLElement>('[data-countdown]');
+  if (el) {
+    const release = new Date(el.dataset.release + 'T00:00:00Z').getTime();
+    const out = el.querySelector<HTMLElement>('[data-countdown-value]');
+    const tick = () => {
+      const diff = release - Date.now();
+      if (diff <= 0) {
+        if (out) out.textContent = 'Out now';
+        return;
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      if (out) out.textContent = `${d}d ${h}h ${m}m ${s}s`;
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+</script>

@@ -1,0 +1,35 @@
+---
+// 面包屑 —— 必须与用户实际看到的导航层级一致（方案 3.2 约束）
+// 仅渲染可见导航；BreadcrumbList JSON-LD 由 Schema.astro 统一输出，避免重复。
+export interface Crumb {
+  name: string;
+  url: string; // 相对路径，如 /vehicles/
+}
+
+interface Props {
+  items: Crumb[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="mb-6 text-sm text-void-400">
+  <ol class="flex flex-wrap items-center gap-1.5">
+    {
+      items.map((c, i) => (
+        <li class="flex items-center gap-1.5">
+          {i < items.length - 1 ? (
+            <a href={c.url} class="hover:text-plasma">
+              {c.name}
+            </a>
+          ) : (
+            <span aria-current="page" class="text-void-300">
+              {c.name}
+            </span>
+          )}
+          {i < items.length - 1 && <span class="text-void-600">/</span>}
+        </li>
+      ))
+    }
+  </ol>
+</nav>

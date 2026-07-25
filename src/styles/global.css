@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* Star Wars Galactic Racer Wiki — 全局主题
+   高速太空竞速：深空午夜蓝 + 引擎等离子青 + 塔图因沙金强调色 */
+@theme {
+  --color-void-950: #05060d;
+  --color-void-900: #0a0c17;
+  --color-void-850: #0f1220;
+  --color-void-800: #151829;
+  --color-void-700: #1f2338;
+  --color-void-600: #2c3150;
+  --color-void-500: #444a6e;
+  --color-void-400: #6f759b;
+  --color-void-300: #a6abc9;
+  --color-void-200: #d2d5e6;
+
+  --color-plasma: #35d0e8;
+  --color-plasma-deep: #1b8fa8;
+  --color-sand: #e8b84b;
+  --color-sand-deep: #b8871f;
+  --color-ion: #7c5cff;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-void-950);
+  color: var(--color-void-200);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 正文排版辅助 */
+.prose-body h2 {
+  scroll-margin-top: 5rem;
+}
+
+/* 焦点可见性（无障碍） */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--color-plasma);
+  outline-offset: 2px;
+}
+
+.prose-body img {
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-void-800);
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
