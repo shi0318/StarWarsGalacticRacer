@@ -1,13 +1,13 @@
 // 站点全局常量 —— 单一数据源，避免各页面硬编码不一致
 export const SITE = {
-  name: 'Star Wars Galactic Racer Wiki',
-  shortName: 'SWGR Wiki',
+  name: 'Star Wars Galactic Racer Guide',
+  shortName: 'SWGR Guide',
   url: 'https://swgalacticracer.wiki',
   // 游戏发售日（方案基准：2026 年 10 月 6 日）
   releaseDate: '2026-10-06',
   tagline: 'Release date, story & guides for the Outer Rim racing game',
   description:
-    'Your source-checked wiki for Star Wars: Galactic Racer, the runs-based combat-racing game from Fuse Games. Release date, the Galactic League story, vehicle classes, and pre-release guides — every fact tagged with its source.',
+    'Your source-checked guide for Star Wars: Galactic Racer, the runs-based combat-racing game from Fuse Games. Release date, the Galactic League story, vehicle classes, and pre-release guides — every fact tagged with its source.',
   locale: 'en',
   // 开发商 / 发行商（官方 Steam 页 App 4078430：Fuse Games 开发，Secret Mode 发行，Star Wars 授权）
   developer: 'Fuse Games',
