@@ -25,7 +25,7 @@ const guides = defineCollection({
     heading: z.string().optional(),
     description: z.string().min(50).max(160), // Meta description 150-160 字符
     // 页面所属分类（决定 Breadcrumb 与 CollectionPage 归属）
-    category: z.enum(['guide', 'characters', 'vehicles', 'tracks', 'unlocks', 'tips', 'news']),
+    category: z.enum(['guide', 'characters', 'vehicles', 'tracks', 'unlocks', 'cheats', 'tips', 'news']),
     // 整篇文章的整体确认状态（多数事实的主导状态）
     status: confidenceStatus,
     // 逐条来源清单，渲染成页面底部"来源与核对"表

@@ -1,6 +1,6 @@
 ---
-title: "Star Wars Galactic Racer Unlock Guide — Racers, Vehicles & Tracks"
-heading: "Star Wars Galactic Racer unlock guide"
+title: "Star Wars Galactic Racer Unlockables — Racers, Vehicles & Tracks Guide"
+heading: "Star Wars Galactic Racer unlockables guide"
 description: "How unlocks are expected to work in Star Wars Galactic Racer: racers, vehicles, tracks, and cosmetics. A clearly sourced pre-release roadmap, updated at launch."
 category: unlocks
 cover: /images/swgr-speeder-showcase.webp

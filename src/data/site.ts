@@ -25,6 +25,7 @@ export const NAV = [
   { label: 'Vehicles', href: '/vehicles/' },
   { label: 'Tracks', href: '/tracks/' },
   { label: 'Unlocks', href: '/unlocks/' },
+  { label: 'Cheats', href: '/cheats/' },
   { label: 'Tips', href: '/tips/' },
 ] as const;
 

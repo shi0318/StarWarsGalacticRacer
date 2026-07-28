@@ -17,7 +17,7 @@ interface Props {
   title: string; // <title>
   heading?: string; // H1（默认取 title）
   description: string;
-  category: 'guide' | 'characters' | 'vehicles' | 'tracks' | 'unlocks' | 'tips' | 'news';
+  category: 'guide' | 'characters' | 'vehicles' | 'tracks' | 'unlocks' | 'cheats' | 'tips' | 'news';
   status: ConfidenceStatus;
   sources?: SourceRef[];
   preRelease?: boolean;
@@ -44,6 +44,7 @@ const SEGMENT_LABEL: Record<string, string> = {
   vehicles: 'Vehicles',
   tracks: 'Tracks',
   unlocks: 'Unlocks',
+  cheats: 'Cheats',
   tips: 'Tips',
   news: 'News',
   'best-build': 'Best Build',
