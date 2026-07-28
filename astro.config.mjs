@@ -27,6 +27,12 @@ export default defineConfig({
       changefreq: 'weekly',
       priority: 0.7,
       filter: (page) => !isNoindexUrl(page),
+      serialize(item) {
+        return {
+          ...item,
+          lastmod: new Date().toISOString(),
+        };
+      },
     }),
   ],
   vite: {
