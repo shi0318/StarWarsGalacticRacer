@@ -2,6 +2,8 @@
 
 Pre-release fan wiki for **Star Wars Galactic Racer** (release 2026-10-06), built with Astro 5 + Tailwind 4. Static output, SEO-first, every fact source-tracked.
 
+🔗 **Live site: https://swgalacticracer.wiki**
+
 Mirrors the architecture of the Mortal Shell II wiki, retargeted to the racing game and the `swgalacticracer.wiki` execution plan (`游戏攻略站/Star Wars Galactic Racer攻略站.docx`).
 
 ## Stack
