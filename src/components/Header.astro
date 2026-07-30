@@ -15,14 +15,14 @@ const isActive = (href: string) =>
     </a>
 
     <!-- 桌面导航 -->
-    <ul class="hidden items-center gap-1 md:flex">
+    <ul class="hidden flex-wrap items-center justify-end gap-1 md:flex">
       {
         NAV.map((item) => (
           <li>
             <a
               href={item.href}
               class:list={[
-                'rounded px-3 py-2 text-sm transition-colors',
+                'rounded px-2.5 py-2 text-sm transition-colors',
                 isActive(item.href)
                   ? 'text-plasma'
                   : 'text-void-300 hover:text-void-100 hover:bg-void-800',

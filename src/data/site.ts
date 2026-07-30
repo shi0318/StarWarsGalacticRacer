@@ -27,6 +27,8 @@ export const NAV = [
   { label: 'Unlocks', href: '/unlocks/' },
   { label: 'Cheats', href: '/cheats/' },
   { label: 'Tips', href: '/tips/' },
+  { label: 'Release Date', href: '/release-date/' },
+  { label: 'Download', href: '/download/' },
 ] as const;
 
 // 是否已发售 —— 编译期计算，控制「Pre-release」标记显隐
