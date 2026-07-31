@@ -66,4 +66,4 @@ The Story Trailer also gave the first look at **podracers being piloted outside 
 - **Confirmed:** Darius Pax founded the League; Kestar Bool is the corrupt champion; Shade has a grudge against the Bool family; Hibi is the per-planet mechanic; the campaign is runs-based with permanent event choices and partial carry-over; Derven Acos is the combined-condition finale.
 - **Not confirmed:** the full rival roster, how many perks carry between runs, the campaign's length, and the identity of the "legendary podracer" ally.
 
-Launch is **October 6, 2026**. See the [release date page](/release-date/) for platform and pre-order details.
+Launch is **October 6, 2026**. See the [release date page](/release-date/) for platform and pre-order details, and [inside Fuse Games](/fuse-games-studio/) for who wrote and built this campaign.
