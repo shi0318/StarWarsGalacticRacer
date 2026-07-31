@@ -1,8 +1,12 @@
 // 角色数据（发售前已知信息）
 // 严格遵循方案第四章：每个角色都带确认状态与来源。
 // 只收录官方 Steam 页 (App 4078430) 已确认的内容。
-// 官方设定：帝国覆灭后的新共和国时代，原创主角 Shade，无原力、无预言。
-// 因此不收录电影正史角色（Anakin/Sebulba/Boba 等）——那些在本作设定中不成立。
+// 官方设定：帝国覆灭后的新共和国时代，原创主角 Shade。
+// 官方商店原文："No Force. No prophecy. Just skill, strategy, and the will to rise."
+// 注意：这句讲的是故事前提（不是绝地故事），不等于本作排除星战正史角色。
+// App 4078430 新闻中心 2026-06-05 关于首个故事预告的报道即点名 Sebulba 等既有角色出场。
+// 因此下面的名单不收录他们，原因只是官方尚未确认其为可驾驶车手——而非其"在本作设定中不成立"。
+// 一旦第一方来源确认为可玩车手，再按同样的 source 规范补入。
 import type { SourceRef } from './sources';
 
 export interface Racer {
@@ -40,7 +44,7 @@ export const RACERS: Racer[] = [
       sourceUrl: 'https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/',
       note: 'Official Steam description: "Become Shade, a lone racer chasing revenge and glory."',
       sourceDate: '2026-07-24',
-      lastChecked: '2026-07-24',
+      lastChecked: '2026-07-31',
     },
     hasDetailPage: false,
   },

@@ -2,8 +2,9 @@
 // 重要：截至核对日，官方（Steam App 4078430）尚未公布任何具体赛道名称。
 // 官方仅确认比赛发生在「帝国覆灭后新共和国重建期的 Outer Rim 地下赛车联盟
 // The Galactic League」。此前站内列出的 Tatooine Boonta Eve / Coruscant /
-// Endor / Kessel Run / Hoth / Mustafar 均为电影正史地点，与「无原力、原创主角、
-// 帝国已覆灭」的官方设定冲突，属编造内容，已移除。
+// Endor / Kessel Run / Hoth / Mustafar 均无任何官方来源支撑，属编造内容，已移除。
+// 注意：移除理由是「查无官方来源」，而不是「与设定冲突」——podracer 是官方确认的
+// 载具类别，这些星球在帝国覆灭后也依然存在，本站不主张它们不可能出现。
 // 发售后（或官方公布赛道时）用确认信息填充下表。
 import type { SourceRef } from './sources';
 
@@ -36,6 +37,6 @@ export const TRACK_SETTING = {
     status: 'official',
     sourceUrl: 'https://store.steampowered.com/app/4078430/',
     note: 'Races take place in the Outer Rim’s underground Galactic League. No individual tracks named yet.',
-    lastChecked: '2026-07-24',
+    lastChecked: '2026-07-31',
   } satisfies SourceRef,
 } as const;

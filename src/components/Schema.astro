@@ -84,7 +84,9 @@ if (type === 'home') {
       // VideoGame 辅助实体：帮助 Google 理解游戏，不期待富结果
       '@type': 'VideoGame',
       name: 'Star Wars Galactic Racer',
-      gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S', 'Nintendo Switch 2'],
+      // 仅列官方确认的平台。官方 2026-04-30 预购公告明确 "coming to PC"，
+      // 主机版本至今无任何第一方公告，因此不写入 Schema，避免向 Google 提交未确认事实。
+      gamePlatform: ['PC'],
       applicationCategory: 'Game',
       author: { '@type': 'Organization', name: SITE.developer },
       publisher: { '@type': 'Organization', name: SITE.publisher },
