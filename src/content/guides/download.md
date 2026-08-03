@@ -7,15 +7,15 @@ cover: /images/swgr-cockpit-pilot.webp
 status: official
 preRelease: true
 order: 6
-updatedAt: "2026-07-30"
+updatedAt: "2026-08-03"
 sources:
   - status: official
     sourceUrl: "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/"
-    sourceDate: "2026-07-24"
-    lastChecked: "2026-07-30"
-    note: "Official Steam store listing — App 4078430, Fuse Games / Secret Mode. Only confirmed distribution channel."
+    sourceDate: "2026-08-03"
+    lastChecked: "2026-08-03"
+    note: "Official Steam store listing — App 4078430, Fuse Games / Secret Mode. Only confirmed distribution channel. Store page now lists $59.99 and a Minimum PC requirements tier including 50 GB storage."
   - status: official
-    lastChecked: "2026-07-30"
+    lastChecked: "2026-08-03"
     note: "No demo, beta, or playable build has been announced by Fuse Games or Secret Mode as of the checked date."
 ---
 
@@ -36,7 +36,8 @@ That is Steam **App 4078430** — developed by **Fuse Games** and published by *
 | Developer | Fuse Games |
 | Publisher | Secret Mode |
 | Demo / beta | **None announced** |
-| Price | Not listed on the store page yet |
+| Price | $59.99 (Standard, Steam) |
+| Install size | 50 GB available space, SSD required |
 
 ## Is there a demo, beta, or early access build?
 
@@ -52,7 +53,7 @@ The Steam listing is the only store page we can verify, so **PC via Steam is the
 
 ## How much space will it need?
 
-**Not published.** No install size, and no minimum or recommended PC specs, have been posted to the Steam page yet. Arcade racers are usually far lighter than open-world titles, but we are not going to invent a number. Specs land on this page as soon as they are on the store page.
+**50 GB.** The Steam page now lists **50 GB available space**, with an **SSD required**, in the minimum requirements. Those minimum specs also name Windows 10, an Intel Core i5-8400 / AMD Ryzen 5 2600, 12 GB RAM, and an Nvidia RTX 2060 / Intel Arc A580 / AMD Radeon RX 5600 XT (6 GB) GPU tier. No recommended tier has been published yet. The full breakdown, plus what DLSS 4.5 and ray-traced Lumen change here, is on our [PC requirements page](/pc-requirements/).
 
 ## What you are actually waiting for
 
@@ -67,8 +68,8 @@ Star Wars: Galactic Racer is a runs-based combat racer set in the **Galactic Lea
 ## Launch-day checklist
 
 1. Wishlist on the official [Steam page](https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/) so Steam emails you at unlock
-2. Watch this page for the install size and PC specs when they are published
-3. Free up drive space on an SSD once a figure exists
+2. Check your rig against the [official minimum specs](/pc-requirements/) — RTX 2060 tier, 12 GB RAM
+3. Free up **50 GB on an SSD**, which the minimum requirements list as mandatory
 4. On October 6, 2026 check back — our pre-release framework pages get replaced with hands-on content
 
 ## Related pages
