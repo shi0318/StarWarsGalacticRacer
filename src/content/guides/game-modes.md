@@ -58,7 +58,7 @@ Aggressive contact is part of the design. The creative director, an ex-Criterion
 
 - Whether multiplayer is ranked-only or has casual playlists.
 - Split-screen or local multiplayer support.
-- Cross-platform play.
+- The specific platform combinations, party rules, and cross-progression policy. Steam now lists **Cross-Platform Multiplayer**, but it does not publish that implementation detail; see [our cross-platform status guide](/cross-platform-pvp-status/).
 - The number of Scenarios, and whether they expand post-launch.
 
 We will fill these in as Fuse Games and Secret Mode confirm them, each with a source. For the vehicles you will take into these modes, see the [vehicles hub](/vehicles/); for the campaign, [story and campaign](/story-campaign/).
