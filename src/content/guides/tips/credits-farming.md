@@ -16,7 +16,7 @@ sources:
 
 ## Before you farm anything
 
-Star Wars Galactic Racer launches **2026-10-06**. There is no confirmed currency name, payout table, or farming route yet. This page explains **how credit economies usually work in racing games** so you're ready on day one — and it will be rewritten with real, tested numbers the moment the game is live.
+Star Wars Galactic Racer launches **October 6, 2026**. There is no confirmed currency name, payout table, or farming route yet. This page explains **how credit economies usually work in racing games** so you're ready on day one — and it will be rewritten with real, tested numbers the moment the game is live.
 
 📖 The game is built around **runs** in the Galactic League — a high-stakes, roguelike-flavoured loop. In games like that, a run's payout usually scales with how far you push before cashing out, which changes farming strategy (see below). The exact soft currency for unlocks and upgrades is unconfirmed.
 

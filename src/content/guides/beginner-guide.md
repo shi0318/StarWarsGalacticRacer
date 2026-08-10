@@ -20,7 +20,7 @@ sources:
 
 ## Start here
 
-This is the first page to read if Star Wars Galactic Racer is your first racing game in a while. The game is not out yet (launch **2026-10-06**), so this guide covers **transferable fundamentals** plus what the developer has officially confirmed about the racing. Confirmed, game-specific tuning arrives at launch.
+This is the first page to read if Star Wars Galactic Racer is your first racing game in a while. The game is not out yet (launch **October 6, 2026**), so this guide covers **transferable fundamentals** plus what the developer has officially confirmed about the racing. Confirmed, game-specific tuning arrives at launch.
 
 ✅ **What's official:** You play as **Shade**, a lone racer chasing revenge and glory in the underground **Galactic League** of the Outer Rim, in the years after the fall of the Empire. This is a **combat racer** — you don't just outdrive rivals, you slam, shunt, and take them down. There's **no Force and no prophecy — just skill, strategy, and the will to rise.**
 

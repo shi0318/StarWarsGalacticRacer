@@ -18,7 +18,7 @@ sources:
     sourceUrl: "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/"
     sourceDate: "2026-07-31"
     lastChecked: "2026-07-31"
-    note: "Steam store page App 4078430: Oct 6, 2026 release date field, $59.99 price, Windows platform support, and the Cross-Platform Multiplayer category tag."
+    note: "Steam store page App 4078430: October 6, 2026 release date field, $59.99 price, Windows platform support, and the Cross-Platform Multiplayer category tag."
   - status: official
     sourceUrl: "https://store.steampowered.com/news/app/4078430"
     sourceDate: "2026-03-10"
@@ -69,6 +69,6 @@ Full contents are broken down on our [editions page](/editions/). Pre-order bonu
 
 ## How we cover the run-up to launch
 
-This is a **pre-release wiki**. Between now and 2026-10-06 we add a page per racer, vehicle, and track as details firm up, tag every fact with its confirmation status, and replace projections with tested data once the game is playable. Where a claim rests on a trailer rather than a written statement, it is labelled that way.
+This is a **pre-release wiki**. Between now and October 6, 2026 we add a page per racer, vehicle, and track as details firm up, tag every fact with its confirmation status, and replace projections with tested data once the game is playable. Where a claim rests on a trailer rather than a written statement, it is labelled that way.
 
 See our [beginner guide](/beginner-guide/) for how the game is shaping up, [inside Fuse Games](/fuse-games-studio/) for who is building it, and the [full guide hub](/guide/) for every topic.

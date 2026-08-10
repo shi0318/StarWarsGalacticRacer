@@ -20,7 +20,7 @@ sources:
 
 ## What "best build" means before launch
 
-Star Wars Galactic Racer is not out yet — it releases **2026-10-06**. Nothing on this page is a confirmed meta build. The developer has confirmed you **customise and build your ride**, but no stat tables are public. What follows is a **framework** for how racing-game builds usually work (📖), mapped onto what's officially known (✅). When the game launches, this page becomes a live, tested build guide.
+Star Wars Galactic Racer is not out yet — it releases **October 6, 2026**. Nothing on this page is a confirmed meta build. The developer has confirmed you **customise and build your ride**, but no stat tables are public. What follows is a **framework** for how racing-game builds usually work (📖), mapped onto what's officially known (✅). When the game launches, this page becomes a live, tested build guide.
 
 ## The four levers that will decide your build
 

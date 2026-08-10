@@ -20,7 +20,7 @@ sources:
 
 ## The honest answer, pre-launch
 
-Nobody has confirmed the fastest vehicle in Star Wars Galactic Racer — the game releases **2026-10-06** and no stat tables are public. What we *do* know is official: the game features **four classes of repulsorcraft**, each with "distinct physics and playstyles." This page ranks those classes by **expected** raw top speed (📖) and updates to a tested, ranked list once the game is out.
+Nobody has confirmed the fastest vehicle in Star Wars Galactic Racer — the game releases **October 6, 2026** and no stat tables are public. What we *do* know is official: the game features **four classes of repulsorcraft**, each with "distinct physics and playstyles." This page ranks those classes by **expected** raw top speed (📖) and updates to a tested, ranked list once the game is out.
 
 ## The four confirmed classes
 

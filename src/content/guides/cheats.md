@@ -20,7 +20,7 @@ sources:
 
 ## Does Star Wars Galactic Racer have cheat codes?
 
-Short answer: **nothing is confirmed yet.** Star Wars Galactic Racer is not out (launch **2026-10-06**), and neither Fuse Games nor Secret Mode has announced a cheat-code system, console commands, or built-in unlock shortcuts. This page tracks the honest state of things — no fabricated codes — and will be rewritten with confirmed cheats the day they're real.
+Short answer: **nothing is confirmed yet.** Star Wars Galactic Racer is not out (launch **October 6, 2026**), and neither Fuse Games nor Secret Mode has announced a cheat-code system, console commands, or built-in unlock shortcuts. This page tracks the honest state of things — no fabricated codes — and will be rewritten with confirmed cheats the day they're real.
 
 Everything below is flagged as official (✅) or inference (📖) so you always know what's confirmed.
 
