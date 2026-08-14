@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Breadcrumb from '../../../components/Breadcrumb.astro';
+import PreReleaseNotice from '../../../components/PreReleaseNotice.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import Pagination from '../../../components/Pagination.astro';
+import { SITE_IMAGES } from '../../../data/images';
+
+const PAGE_SIZE = 9;
+const title = `Star Wars Galactic Racer Guide — Page ${Astro.params.page}`;
+const description = 'More Star Wars Galactic Racer guides, sorted by the latest verified update date.';
+const crumbs = [{ name: 'Home', url: '/' }, { name: 'Guide', url: '/guide/' }, { name: `Page ${Astro.params.page}`, url: `/guide/page/${Astro.params.page}/` }];
+const CATEGORY_LABEL: Record<string, string> = { guide: 'Overview', characters: 'Characters', vehicles: 'Vehicles', tracks: 'Tracks', unlocks: 'Unlocks', tips: 'Tips', news: 'News' };
+const FALLBACK_COVER: Record<string, string> = { guide: SITE_IMAGES.heroRace.src, characters: SITE_IMAGES.charactersArt.src, vehicles: SITE_IMAGES.vehiclesArt.src, tracks: SITE_IMAGES.tracksArt.src, unlocks: SITE_IMAGES.unlocksArt.src, tips: SITE_IMAGES.tipsArt.src, news: SITE_IMAGES.cityCircuit.src };
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 9;
+  const guides = (await getCollection('guides', ({ data }) => !data.draft)).sort((a, b) => b.data.updatedAt.localeCompare(a.data.updatedAt) || a.id.localeCompare(b.id));
+  const totalPages = Math.ceil(guides.length / PAGE_SIZE);
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, i) => { const page = i + 2; return { params: { page: String(page) }, props: { guides, page, totalPages } }; });
+}
+const { guides, page, totalPages } = Astro.props;
+const visibleGuides = guides.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+function coverOf(g: (typeof guides)[number]) { return g.data.cover ?? FALLBACK_COVER[g.data.category] ?? SITE_IMAGES.heroRace.src; }
+---
+<Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
+  <Breadcrumb items={crumbs} />
+  <header class="mb-8"><p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma">Latest guides first</p><h1 class="mt-2 text-3xl font-bold tracking-tight text-void-100 md:text-5xl">Galactic Racer guides — page {page}</h1><p class="mt-3 max-w-2xl text-lg text-void-400">Page {page} of {totalPages}; entries are sorted by their latest verified update.</p></header>
+  <div class="mb-8"><PreReleaseNotice /></div>
+  <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{visibleGuides.map((g) => <GuideCard href={`/${g.id}/`} title={g.data.heading ?? g.data.title} description={g.data.description} cover={coverOf(g)} label={CATEGORY_LABEL[g.data.category] ?? g.data.category} verified={g.data.updatedAt} status={g.data.status} />)}</ul>
+  <Pagination currentPage={page} totalPages={totalPages} basePath="/guide/" />
+</Layout>
