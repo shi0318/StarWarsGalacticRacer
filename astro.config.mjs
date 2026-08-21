@@ -29,6 +29,7 @@ function lastmodFor(url) {
 // 发售后用实测内容改为 official/beta 时，从此列表移除即可重新收录。
 const NOINDEX_GUIDE_URLS = [
   '/beginner-guide/',
+  '/cheats/',
   '/unlocks/',
   '/tips/best-build/',
   '/tips/credits-farming/',

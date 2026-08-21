@@ -58,7 +58,7 @@ const GA_ID = import.meta.env.PUBLIC_GA4_ID;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- Open Graph / 社交分享 -->
     <meta property="og:type" content="website" />
