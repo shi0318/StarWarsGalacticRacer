@@ -13,7 +13,7 @@ export const SITE = {
   developer: 'Fuse Games',
   publisher: 'Secret Mode',
   franchise: 'Star Wars',
-  contactEmail: 'hello@swgalacticracer.wiki',
+  contactEmail: 'nmlkareem161@gmail.com',
   // 仅列官方确认的平台：Steam 页明确的是 PC/Steam。主机平台官方来源未确认前不写，避免编造。
   platforms: ['Steam (PC)'] as const,
 } as const;
