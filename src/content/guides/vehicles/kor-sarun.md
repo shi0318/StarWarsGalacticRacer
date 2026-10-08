@@ -3,7 +3,7 @@ title: "Kor Sarun Vehicles — Deluxe Hulls and What They Add"
 heading: "The three Kor Sarun deluxe vehicles"
 description: "What the Kor Sarun Darc X, Ciza T, and Rak S actually are in Star Wars Galactic Racer, and what else the Deluxe upgrade includes."
 category: vehicles
-cover: /images/guide/livery-editor.webp
+cover: /images/guide/cave-landspeeder.webp
 status: official
 preRelease: false
 order: 5
@@ -12,8 +12,11 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/livery-editor.webp" alt="A customized landspeeder in the editor" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/guide/cave-landspeeder.webp" alt="A landspeeder, the class the Darc X belongs to" width="1400" height="788" loading="lazy" decoding="async" />
 </figure>
+
+The three named hulls do not have separate showcase shots here. The craft above is a landspeeder, the class the Darc X uses. It is not a photo of the Darc X, Ciza T, or Rak S.
+
 
 The Deluxe upgrade adds three named hulls, not three new physics classes.
 

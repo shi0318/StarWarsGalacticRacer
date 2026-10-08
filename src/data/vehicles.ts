@@ -29,7 +29,7 @@ export const VEHICLES: Vehicle[] = [
     acquisition: 'Available in the campaign garage from the opening tours.',
     source: { status: 'official', lastChecked: '2026-10-08' },
     hasDetailPage: true,
-    image: '/images/guide/livery-editor.webp',
+    image: '/images/guide/cave-landspeeder.webp',
   },
   {
     slug: 'speeder-bikes',
@@ -89,7 +89,7 @@ export const VEHICLES: Vehicle[] = [
     source: { status: 'official', lastChecked: '2026-10-08' },
     hasDetailPage: true,
     detailHref: '/vehicles/kor-sarun/',
-    image: '/images/guide/livery-editor.webp',
+    image: '/images/guide/cave-landspeeder.webp',
   },
   {
     slug: 'kor-sarun-ciza-t',

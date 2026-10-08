@@ -3,7 +3,7 @@ title: "Landspeeders — Class Guide and When to Pick One"
 heading: "Landspeeders: the tank that still wins laps"
 description: "How landspeeders handle in Star Wars Galactic Racer, why they are the first-tour pick, and which planets punish a lighter class instead."
 category: vehicles
-cover: /images/guide/livery-editor.webp
+cover: /images/guide/cave-landspeeder.webp
 status: official
 preRelease: false
 order: 1
@@ -12,7 +12,7 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/livery-editor.webp" alt="A landspeeder in the livery bay" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/guide/cave-landspeeder.webp" alt="A landspeeder boosting out of a cave" width="1400" height="788" loading="lazy" decoding="async" />
 </figure>
 
 Landspeeders are the class the launch notes call the tanks. Great acceleration, real top speed, enough resilience to survive a shunt, and a drift that actually rotates the nose. If a tour is going badly, this is the hull you put back on.
