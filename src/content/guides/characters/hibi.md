@@ -3,7 +3,7 @@ title: "Hibi — Mechanic, Workshop, and Upgrades"
 heading: "Hibi and the paddock workshop"
 description: "Hibi is Shade's Ardennian mechanic in Star Wars Galactic Racer. What her workshop sells, and when to spend credits between events."
 category: characters
-cover: /images/guide/workshop-droid.webp
+cover: /images/characters/hibi.webp
 status: official
 preRelease: false
 order: 2
@@ -12,7 +12,7 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/workshop-droid.webp" alt="A workshop droid on an ice paddock at dusk" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/characters/hibi.webp" alt="Hibi in a cap, goggles, and mechanic overalls" width="900" height="1125" loading="lazy" decoding="async" />
 </figure>
 
 Hibi is not a racer you pick. She is the reason the garage works. Fuse Games describes her as Shade's mechanic and the loudest person in the paddock: an Ardennian who fits parts, sells upgrades, and will tell you when an experimental piece is about to cook the speeder.

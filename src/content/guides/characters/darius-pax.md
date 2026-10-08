@@ -3,7 +3,7 @@ title: "Darius Pax — Who Founded the Galactic League"
 heading: "Darius Pax, the Besalisk who built the League"
 description: "Darius Pax founded the Galactic League in Star Wars Galactic Racer, then lost it to Kestar Bool. What he wants from Shade, and where he sits in the story."
 category: characters
-cover: /images/guide/besalisk-paddock.webp
+cover: /images/characters/pax.webp
 status: official
 preRelease: false
 order: 4
@@ -12,10 +12,10 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/besalisk-paddock.webp" alt="A Besalisk in racing leathers on a desert paddock" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/characters/pax.webp" alt="Darius Pax, a Besalisk in a formal coat" width="900" height="1125" loading="lazy" decoding="async" />
 </figure>
 
-Darius Pax built the Galactic League and then watched his champion take it. He is a Besalisk businessman with a showman's voice, and the line Fuse Games hangs on him is simple: he wants racing back, the way it was.
+Darius Pax built the Galactic League and then watched his champion take it. He is a Besalisk businessman with a showman's voice, and the line Fuse Games hangs on him is simple: he wants racing back, the way it was. Character notes add that he once worked as a mechanic for the Hutts before he tried to make the League a sanctioned circuit. That past is flavor. It does not put him on the garage select.
 
 That is the whole recruitment pitch. He cannot unseat Kestar Bool himself, so he brings in Shade, who already wants the Bool family gone. Hibi and a legendary podracer are the other two names on that side of the table.
 

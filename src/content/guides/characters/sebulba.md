@@ -3,7 +3,7 @@ title: "Sebulba — Podracing Guide and Where He Shows Up"
 heading: "Sebulba and the podracing stretch"
 description: "Sebulba returns in Star Wars Galactic Racer's podracing events. When pods unlock, why they race apart from speeders, and what he tells Shade."
 category: characters
-cover: /images/guide/stadium-pod.webp
+cover: /images/characters/sebulba.webp
 status: official
 preRelease: false
 order: 5
@@ -12,10 +12,12 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/stadium-pod.webp" alt="An orange podracer ripping past a packed grandstand" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/characters/sebulba.webp" alt="Sebulba, the Dug podracer, in racing gear" width="900" height="1125" loading="lazy" decoding="async" />
 </figure>
 
-Sebulba is the one classic podracer the launch material puts back in a cockpit. He is not a skin on a landspeeder. Pods run their own events because they are faster and much larger than the three speeder classes, and he lives in that half of the game.
+Sebulba is the Dug podracer from the Boonta Eve Classic, and the character card puts him in the League years later, still unwilling to let newer pilots erase the name. He is not a skin on a landspeeder. Pods run their own events because they are faster and much larger than the three speeder classes, and he lives in that half of the game.
+
+Player guides give him two pod traits rather than a speeder style: he takes less collision damage and deals more, and his boost fuel comes back slower. Those traits are for the pod grid. Do not equip them in your head onto a landspeeder. The same guides unlock him with the other classic pod racers, not on the Rank 2 to Rank 40 speeder track.
 
 In the release trailer he stops Shade short of Kestar Bool. The point of the scene is practice. He will not wave a new pilot onto a pod and point them at the champion. He also wants his own machine back. Both things can be true.
 

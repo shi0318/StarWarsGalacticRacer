@@ -3,7 +3,7 @@ title: "Shade — Star Wars Galactic Racer Character Guide"
 heading: "Shade, the pilot you actually race as"
 description: "Who Shade is in Star Wars Galactic Racer, how the campaign run works around her, and what carries over when a tour wrecks out."
 category: characters
-cover: /images/guide/shade-overlook.webp
+cover: /images/characters/shade.webp
 status: official
 preRelease: false
 order: 1
@@ -12,10 +12,10 @@ sources: []
 ---
 
 <figure>
-  <img src="/images/guide/shade-overlook.webp" alt="Shade looking out over a desert paddock" width="1400" height="788" loading="lazy" decoding="async" />
+  <img src="/images/characters/shade.webp" alt="Shade in a flight helmet and racing suit" width="900" height="1125" loading="lazy" decoding="async" />
 </figure>
 
-Shade is the pilot on the stick. The campaign does not hand you a roster select and ask who you want to be. You are Shade, a lone racer Darius Pax pulls in because she already has a reason to hate the Bool family.
+Shade is the pilot on the stick. The campaign does not hand you a roster select and ask who you want to be. Darius Pax pulls Shade in because of a grudge against the Bool family. Player guides add a hometown, Gathleon, and a cargo-pilot past under that conglomerate. The store page does not print the hometown. In multiplayer, those same guides list Shade as the default racer, style Ramjet Rider, not a Rank 1 unlock.
 
 ## What she is doing in the League
 

@@ -24,5 +24,7 @@ A racer style is a way of spending the tour. It is not a fifth vehicle class, an
 - If you are in the pod stretch, the style has to survive a separate grid. A speeder style does not carry its habits onto Sebulba's event.
 - If a trophy names a style, read the condition before you respec. Some pops want you to finish a tour inside that style, not merely to open the menu.
 
+The named styles on the multiplayer roster — Ramjet Rider, Tech Expert, Afterburner, Redliner, Engineer, Survivor, Clean Racer, Tenacious, Slipstreamer, Firebug, Brawler, Stunt Runner, and Weaponised — are listed on the [character page](/characters/). A style is still not a fifth vehicle class.
+
 The [build order](/tips/campaign-builds/) is the parts. This page is the label on the tour. Paint is still last.
 
