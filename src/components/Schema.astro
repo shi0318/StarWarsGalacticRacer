@@ -72,26 +72,64 @@ if (type === 'home') {
     description: SITE.description,
     publisher: { '@id': `${SITE.url}/#organization` },
     inLanguage: 'en',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE.url}/search/?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
     about: {
       // VideoGame 辅助实体：帮助 Google 理解游戏，不期待富结果
       '@type': 'VideoGame',
       name: 'Star Wars Galactic Racer',
       // 仅列官方确认的平台。官方 2026-04-30 预购公告明确 "coming to PC"，
       // 主机版本至今无任何第一方公告，因此不写入 Schema，避免向 Google 提交未确认事实。
-      gamePlatform: ['PC'],
+      gamePlatform: ['PC', 'PlayStation 5', 'Xbox Series X|S'],
       applicationCategory: 'Game',
       author: { '@type': 'Organization', name: SITE.developer },
       publisher: { '@type': 'Organization', name: SITE.publisher },
       datePublished: SITE.releaseDate,
     },
+  });
+  graph.push({
+    '@type': 'FAQPage',
+    '@id': `${SITE.url}/#faq`,
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Is Star Wars Galactic Racer any good?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Buy it if you want a combat tour where a shunt is legal and a wreck ends the run. Skip it if you want a long ranked career, a friend lobby, or a 20-course cup. Standard edition is $59.99 on Steam.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Star Wars Galactic Racer a roguelike?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. It is runs-based. You pick events and cannot unpick them. Crash out too often and the tour ends, with only some perks carrying over. That is not a deck-building roguelike.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How long does it take to beat Star Wars Galactic Racer?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A first tour is an evening if you do not wreck out, and a weekend if you restart the same fragile bike. Arcade golds and the online tour are separate clocks.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does Star Wars Galactic Racer have a campaign?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. You play Shade, Hibi fits the speeder, and the tour climbs toward champion Kestar Bool. Arcade and online exist beside that campaign.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Star Wars Galactic Racer on Switch 2 or Game Pass?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No. It launched on PC, PlayStation 5, and Xbox Series X|S. It is not a Switch 2 game and it did not launch on Game Pass.',
+        },
+      },
+    ],
   });
 } else if (type === 'article' || type === 'news') {
   graph.push(organization);

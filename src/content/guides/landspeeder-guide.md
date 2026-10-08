@@ -11,7 +11,7 @@ updatedAt: "2026-10-08"
 sources: []
 ---
 
-This page used to be a pre-launch note. The class page is the one to use now.
+This page now points at the class page. Use that one.
 
 Landspeeders shipped as the durable option: acceleration, top speed, a drift that rotates, and enough resilience to take a shunt. They share the grid with bikes and skim speeders. They do not line up against pods.
 

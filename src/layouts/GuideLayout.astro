@@ -75,7 +75,7 @@ const schemaType = category === 'news' ? 'news' : 'article';
 // trailer/lore/unconfirmed 属发售前推测框架，noindex 到发售后用实测替换再放开，
 // 与前两个站点（BoR 全 noindex、MS2 官方内容可索引）保持一致的信心分级策略。
 const INDEXABLE_STATUS: ConfidenceStatus[] = ['official', 'beta'];
-const noindex = !INDEXABLE_STATUS.includes(status);
+const noindex = !INDEXABLE_STATUS.includes(status) || Astro.url.pathname === '/landspeeder-guide/';
 ---
 
 <Layout
@@ -86,6 +86,7 @@ const noindex = !INDEXABLE_STATUS.includes(status);
   datePublished={datePublished ?? updatedAt}
   dateModified={updatedAt}
   noindex={noindex}
+  canonical={Astro.url.pathname === '/landspeeder-guide/' ? 'https://swgalacticracer.wiki/vehicles/landspeeders/' : undefined}
 >
   <article class="mx-auto max-w-3xl">
     <Breadcrumb items={crumbs} />

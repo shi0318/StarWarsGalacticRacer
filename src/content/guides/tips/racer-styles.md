@@ -1,5 +1,5 @@
 ---
-title: "Star Wars Galactic Racer Racer Styles"
+title: "Star Wars Galactic Racer Styles"
 heading: "Styles change the tour, not the class"
 description: "Racer Styles in Star Wars Galactic Racer are how a tour specializes. They are not a second vehicle class and not a cheat."
 category: tips

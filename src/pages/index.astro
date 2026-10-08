@@ -71,6 +71,9 @@ const startHere = [
     title: 'Platforms',
     desc: 'PC, PS5, and Xbox Series. Not Switch 2. Not Game Pass.',
   },
+];
+
+const moreStart = [
   {
     href: '/game-overview/',
     title: 'What you can play',
@@ -90,6 +93,29 @@ const startHere = [
     href: '/vehicles/',
     title: 'Vehicle classes',
     desc: 'Tanks, Kinetic Burst, Knife Edge, and why pods race alone.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Is Star Wars Galactic Racer any good?',
+    a: 'Buy it if you want a combat tour where a shunt is legal and a wreck ends the run. Skip it if you want a long ranked career, a friend lobby, or a 20-course cup. Standard edition is $59.99 on Steam.',
+  },
+  {
+    q: 'Is it a roguelike?',
+    a: 'No. It is runs-based. You pick events and cannot unpick them. Crash out too often and the tour ends, with only some perks carrying over. That is not a deck-building roguelike.',
+  },
+  {
+    q: 'How long does it take to beat?',
+    a: 'A first tour is an evening if you do not wreck out, and a weekend if you restart the same fragile bike. Arcade golds and the online tour are separate clocks, not part of that number.',
+  },
+  {
+    q: 'Does it have a campaign?',
+    a: 'Yes. You play Shade, Hibi fits the speeder, and the tour climbs toward champion Kestar Bool. Arcade and online exist beside that campaign.',
+  },
+  {
+    q: 'Is it on Switch 2 or Game Pass?',
+    a: 'No. It launched on PC, PlayStation 5, and Xbox Series X|S. It is not a Switch 2 game and it did not launch on Game Pass.',
   },
 ];
 ---
@@ -117,6 +143,9 @@ const startHere = [
             <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-plasma/30 bg-plasma/10 px-3 py-1 text-xs font-medium text-plasma">
               Out now · Launched October 6, 2026
             </p>
+            <p class="mb-4 text-xs text-void-400">
+              Last verified <time datetime="2026-10-08">October 8, 2026</time>
+            </p>
           ) : (
             <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-plasma/30 bg-plasma/10 px-3 py-1 text-xs font-medium text-plasma">
               Pre-release Guide · Launch October 6, 2026
@@ -124,7 +153,7 @@ const startHere = [
           )
         }
         <h1 class="text-4xl font-bold tracking-tight text-void-100 md:text-5xl">
-          Star Wars Galactic Racer <span class="text-plasma">Racer, Vehicle &amp; Track Guide</span>
+          Star Wars Galactic Racer: <span class="text-plasma">Racers, Vehicles &amp; Track Guide</span>
         </h1>
         <p class="mx-auto mt-4 max-w-2xl text-lg text-void-300">
           Shade, the four repulsorcraft classes, and the planets the Galactic League
@@ -133,6 +162,18 @@ const startHere = [
 
         {!released && <div class="mt-8"><Countdown /></div>}
 
+        <nav class="mt-6 flex flex-wrap justify-center gap-2" aria-label="Start here">
+          {
+            startHere.map((item) => (
+              <a
+                href={item.href}
+                class="rounded-full border border-plasma/40 bg-void-950/70 px-3 py-1.5 text-sm text-void-100 hover:border-plasma hover:text-plasma"
+              >
+                {item.title}
+              </a>
+            ))
+          }
+        </nav>
         <div class="mt-8 flex flex-wrap justify-center gap-3">
           <a
             href="/guide/"
@@ -179,6 +220,20 @@ const startHere = [
       <p class="mt-4 text-sm text-void-500">
         Standard edition is {SITE.price} on Steam. Pods race on their own grid. The three speeder classes share one.
       </p>
+    </div>
+  </section>
+
+  <section class="mt-12" id="faq">
+    <h2 class="text-2xl font-bold tracking-tight text-void-100">Common questions</h2>
+    <div class="mt-5 space-y-3">
+      {
+        faqs.map((item) => (
+          <details class="rounded-xl border border-void-800 bg-void-900/40 px-5 py-4" open>
+            <summary class="cursor-pointer text-base font-semibold text-void-100">{item.q}</summary>
+            <p class="mt-2 max-w-3xl text-void-300">{item.a}</p>
+          </details>
+        ))
+      }
     </div>
   </section>
 
@@ -305,9 +360,14 @@ const startHere = [
   <!-- 入门指南 -->
   <section class="mt-12">
     <h2 class="mb-5 text-2xl font-bold tracking-tight text-void-100">Where to begin</h2>
+    <p class="mb-5 max-w-3xl text-void-400">
+      If you only open one race page, start with
+      <a href="/tracks/sentinel-one/" class="text-plasma hover:underline">Sentinel One</a>.
+      The acid pools are where an unprepared tour actually ends.
+    </p>
     <div class="grid gap-4 sm:grid-cols-2">
       {
-        startHere.map((s) => (
+        moreStart.map((s) => (
           <a
             href={s.href}
             class="group rounded-xl border border-void-800 bg-void-900/40 p-5 transition-colors hover:border-plasma/40 hover:bg-void-900"
