@@ -40,10 +40,19 @@ const tips = (await getCollection('guides', ({ data }) => !data.draft && data.ca
       Star Wars Galactic Racer Tips
     </h1>
     <p class="mt-3 text-lg text-void-400">
-      Build order, credit spending, and the class that actually finishes a tour. Written for
-      the game that is already out.
+      Build order, the tour systems trophies name, and the class that actually finishes a race.
     </p>
   </header>
+
+  <section class="mt-8">
+    <h2 class="text-lg font-semibold text-void-100">Start with the buy questions</h2>
+    <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+      <li><a class="text-plasma hover:underline" href="/achievements/">Achievements and trophies</a></li>
+      <li><a class="text-plasma hover:underline" href="/how-long-to-beat/">How long a tour takes</a></li>
+      <li><a class="text-plasma hover:underline" href="/is-it-worth-it/">Is it worth buying?</a></li>
+      <li><a class="text-plasma hover:underline" href="/platforms/">Platforms, Switch 2, Game Pass</a></li>
+    </ul>
+  </section>
 
   {
     tips.length === 0 ? (
