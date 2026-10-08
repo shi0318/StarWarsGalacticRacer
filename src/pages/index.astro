@@ -3,7 +3,6 @@
 // 结构：Hero → 差异化说明 → 图片 → 分类 → 入门 → 发售信息。
 import Layout from '../layouts/Layout.astro';
 import Countdown from '../components/Countdown.astro';
-import StatusBadge from '../components/StatusBadge.astro';
 import { SITE, isReleased } from '../data/site';
 import { RACERS } from '../data/characters';
 import { VEHICLES } from '../data/vehicles';
@@ -16,7 +15,7 @@ const released = isReleased();
 // 首页 TDK（方案 5.3 核心页面 TDK）
 const title = 'Star Wars Galactic Racer Wiki & Guide';
 const description =
-  'Star Wars Galactic Racer wiki and guide: every racer, vehicle, and track, plus cheats, unlocks, and tips. Each fact carries a source and confirmation status.';
+  'Star Wars Galactic Racer is out. Racers, vehicle classes, planet circuits, campaign builds, and multiplayer tours — a guide for the game you can play now.';
 
 // 内容分类入口
 const categories = [
@@ -53,24 +52,24 @@ const categories = [
 // 入门指南卡片
 const startHere = [
   {
-    href: '/guide/',
-    title: 'Beginner Guide',
-    desc: 'Core racing systems, boosting, and drifting explained for new players.',
+    href: '/game-overview/',
+    title: 'What you can play',
+    desc: 'Campaign runs, arcade, pods, and the six-race multiplayer tour.',
   },
   {
-    href: '/tips/best-build/',
-    title: 'Best Build',
-    desc: 'Early recommendations for the strongest racer and vehicle pairings.',
+    href: '/tips/campaign-builds/',
+    title: 'Build order',
+    desc: 'Resilience first, then afterburner. Ramjet only after the line is learned.',
   },
   {
     href: '/tracks/',
-    title: 'Tracks',
-    desc: 'The Galactic League circuits across the Outer Rim, with confirmation status on every entry.',
+    title: 'Planet circuits',
+    desc: 'Jakku, Ando Prime, Crait, Sentinel One, Lantaana, and Derven Acos.',
   },
   {
-    href: '/unlocks/',
-    title: 'Unlock Guide',
-    desc: 'What is unlockable, and the most efficient order to chase rewards.',
+    href: '/vehicles/',
+    title: 'Vehicle classes',
+    desc: 'Tanks, Kinetic Burst, Knife Edge, and why pods race alone.',
   },
 ];
 ---
@@ -94,18 +93,22 @@ const startHere = [
     <div class="relative px-6 py-14 md:px-10 md:py-20">
       <div class="mx-auto max-w-3xl text-center">
         {
-          !released && (
+          released ? (
+            <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-plasma/30 bg-plasma/10 px-3 py-1 text-xs font-medium text-plasma">
+              Out now · Launched October 6, 2026
+            </p>
+          ) : (
             <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-plasma/30 bg-plasma/10 px-3 py-1 text-xs font-medium text-plasma">
               Pre-release Guide · Launch October 6, 2026
             </p>
           )
         }
         <h1 class="text-4xl font-bold tracking-tight text-void-100 md:text-5xl">
-          Star Wars Galactic Racer <span class="text-plasma">Cheats &amp; Unlocks Guide</span>
+          Star Wars Galactic Racer <span class="text-plasma">Racer, Vehicle &amp; Track Guide</span>
         </h1>
         <p class="mx-auto mt-4 max-w-2xl text-lg text-void-300">
-          The field guide to the galaxy's fastest race. Every racer, vehicle, and track —
-          with a clear source and confirmation status on every fact.
+          Shade, the four repulsorcraft classes, and the planets the Galactic League
+          actually races. Written for the game that launched on October 6, 2026.
         </p>
 
         {!released && <div class="mt-8"><Countdown /></div>}
@@ -140,10 +143,10 @@ const startHere = [
       <h2 class="text-xl font-semibold text-void-100">What is Star Wars Galactic Racer?</h2>
       <p class="mt-3 max-w-3xl text-void-300">
         <strong class="text-void-100">Star Wars Galactic Racer</strong> is a runs-based combat
-        racing game from {SITE.developer}, published by {SITE.publisher} and launching
-        October 6, 2026. You play as <strong class="text-void-100">Shade</strong>, a lone racer
-        chasing revenge and glory through the underground <strong class="text-void-100">Galactic
-        League</strong> of the Outer Rim, in the years after the fall of the Empire.
+        racing game from {SITE.developer}, published by {SITE.publisher}. It launched October 6, 2026 on PC, PlayStation 5, and
+        Xbox Series X|S. You play as <strong class="text-void-100">Shade</strong>, a lone racer
+        chasing revenge through the underground <strong class="text-void-100">Galactic
+        League</strong> of the Outer Rim.
       </p>
       <p class="mt-3 max-w-3xl text-void-400">
         This is a combat racer — you don't just outdrive rivals, you slam, shunt, and take them
@@ -154,26 +157,8 @@ const startHere = [
         and the will to rise."</em>
       </p>
       <p class="mt-4 text-sm text-void-500">
-        Source: official Steam store listing (App 4078430), checked 2026-07-31.
+        Standard edition is {SITE.price} on Steam. Pods race on their own grid. The three speeder classes share one.
       </p>
-    </div>
-  </section>
-
-  <!-- 差异化说明：为什么信任本站 -->
-  <section class="mt-12">
-    <div class="rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
-      <h2 class="text-xl font-semibold text-void-100">Every fact is sourced</h2>
-      <p class="mt-2 max-w-3xl text-void-400">
-        Before launch, most guides on the web mix confirmed details with forum rumours. We
-        don't. Each entry is tagged so you always know what's verified and what isn't:
-      </p>
-      <div class="mt-5 flex flex-wrap gap-2">
-        <StatusBadge status="official" />
-        <StatusBadge status="beta" />
-        <StatusBadge status="trailer" />
-        <StatusBadge status="lore" />
-        <StatusBadge status="unconfirmed" />
-      </div>
     </div>
   </section>
 
@@ -181,8 +166,7 @@ const startHere = [
   <section class="mt-12">
     <h2 class="mb-5 text-2xl font-bold tracking-tight text-void-100">Featured imagery</h2>
     <p class="mb-5 max-w-3xl text-void-400">
-      Official screenshots from the Star Wars Galactic Racer Steam page, shown here for
-      commentary and reference. All imagery is © Fuse Games / Secret Mode / Lucasfilm.
+      In-game shots of the circuits, pods, and paddock you will actually race.
     </p>
     <div class="grid gap-4 md:grid-cols-2">
       <MediaFigure
@@ -246,25 +230,17 @@ const startHere = [
     <h2 class="text-2xl font-bold tracking-tight text-void-100">What each section covers</h2>
 
     <div class="rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
-      <h3 class="text-lg font-semibold text-void-100">Tracks: the Galactic League circuits</h3>
+      <h3 class="text-lg font-semibold text-void-100">Tracks: planets, not a numbered cup</h3>
       <p class="mt-3 max-w-3xl text-void-300">
-        Every race in Star Wars Galactic Racer runs through the underground
-        <strong class="text-void-100">Galactic League</strong> of the Outer Rim, set in the years
-        after the fall of the Empire during the New Republic's rebuilding. That single detail
-        shapes the whole track list: these are not the sanctioned podracing arenas of the prequel
-        era but illegal circuits run by racers with something to prove.
+        The League hops planets. Jakku is wreckage and dust. Ando Prime freezes you unless you
+        hit the heat tunnels. Crait blinds you for drafting. Sentinel One is acid off the racing
+        line. Lantaana is lava heat. Derven Acos is the custom arena the tour and the multiplayer
+        showdown both point at.
       </p>
       <p class="mt-3 max-w-3xl text-void-400">
-        Here is the honest status — <strong class="text-void-200">Fuse Games has not announced a
-        single track name yet</strong>. You will find lists elsewhere naming Tatooine's Boonta Eve,
-        Coruscant, Kessel, or Mustafar. We do not repeat them, for one reason only: no official
-        source names any of them. That is a sourcing problem, not a canon problem — podracers are a
-        confirmed vehicle class and those planets still exist after the Empire falls, so we are not
-        claiming such a track is impossible either. What official screenshots do show
-        is real variety in circuit environments, including dense city routes and volcanic terrain,
-        which points to planet-specific hazards mattering to your line and vehicle choice. Our
-        <a href="/tracks/" class="text-plasma hover:underline">tracks page</a> holds the framework
-        and fills in with verified layouts, hazards, and difficulty ratings the moment names drop.
+        There is still no useful minimap, so the first pass on each planet is reconnaissance.
+        The <a href="/tracks/" class="text-plasma hover:underline">track list</a> covers the hazard
+        that actually ends the run, not a fake corner count.
       </p>
     </div>
 
@@ -279,40 +255,29 @@ const startHere = [
         in the developer's own words.
       </p>
       <p class="mt-3 max-w-3xl text-void-400">
-        That is a meaningful design choice rather than a cosmetic one. Landspeeders read as the
-        approachable all-rounder, speeder bikes trade durability for raw speed and agility in a
-        game where rivals actively ram you, skim speeders suggest surface-hugging handling quirks,
-        and podracers carry the franchise's most extreme speed-versus-control tradeoff. Because
-        this is a combat racer, survivability matters as much as lap time — the fastest class is
-        not automatically the best pick when a grudge match turns physical. You also build and
-        upgrade your ride between runs, so class choice compounds over a campaign. Exact rosters,
-        stats, and unlock paths are not yet detailed by Fuse Games; our
-        <a href="/vehicles/" class="text-plasma hover:underline">vehicles page</a> tracks each
-        class with its confirmation status attached.
+        Landspeeders are the tanks. Speeder bikes are fast, fragile, and live on Kinetic Burst.
+        Skim speeders sit between them and ask you to hold a Knife Edge. Podracers do not share
+        that grid — they are faster and larger, so they race alone. Two boosts sit on top of the
+        class: afterburner, which you can tap, and ramjet, which you must hold and which cooks
+        the craft if you do not lift. The
+        <a href="/vehicles/" class="text-plasma hover:underline">vehicle pages</a> cover each class
+        and the three Deluxe Kor Sarun hulls.
       </p>
     </div>
 
     <div class="rounded-xl border border-void-800 bg-void-900/40 p-6 md:p-8">
-      <h3 class="text-lg font-semibold text-void-100">Characters: Shade and the rival grid</h3>
+      <h3 class="text-lg font-semibold text-void-100">Characters: Shade against the Bool family</h3>
       <p class="mt-3 max-w-3xl text-void-300">
-        You play <strong class="text-void-100">Shade</strong>, an original character and the only
-        racer officially named so far — a lone driver chasing revenge and glory through the League.
-        The campaign is story-driven, following Shade's rise through shifting alliances and
-        strategic PvP grudge matches against rivals who remember what you did to them.
+        You play <strong class="text-void-100">Shade</strong>. <strong class="text-void-100">Hibi</strong>
+        fits the speeder between events. <strong class="text-void-100">Darius Pax</strong> founded
+        the League. <strong class="text-void-100">Kestar Bool</strong> took it. <strong class="text-void-100">Sebulba</strong>
+        is back on the pod grid, and he will not wave a new pilot at the champion without the practice.
       </p>
       <p class="mt-3 max-w-3xl text-void-400">
-        The official pitch is blunt about the tone: <em class="text-void-200">"No Force. No
-        prophecy. Just skill, strategy, and the will to rise."</em> No Jedi, no chosen-one arc, no
-        lightsabers deciding a race. That is a statement about the story premise, though — not a
-        statement that established <em>Star Wars</em> characters stay out. Press coverage of the
-        first story trailer, syndicated to the game's own Steam news hub on 5 June 2026, describes
-        <strong class="text-void-200">Sebulba</strong> and other familiar faces appearing in it. We
-        still do not list them as racers, because no first-party source has confirmed any of them as
-        a playable driver — that is the bar, and it has not been met yet. The rival grid beyond
-        Shade has not been revealed, and neither have unlock requirements for additional drivers. Our
-        <a href="/characters/" class="text-plasma hover:underline">characters page</a> carries
-        every confirmed racer with faction, traits, and unlock method where known, and flags the
-        rest as unannounced until Secret Mode says otherwise.
+        The pitch is still <em class="text-void-200">"No Force. No prophecy. Just skill, strategy,
+        and the will to rise."</em> The
+        <a href="/characters/" class="text-plasma hover:underline">character pages</a> cover who you
+        can race as, who only shows up in the paddock, and who is a story target rather than a garage unlock.
       </p>
     </div>
   </section>

@@ -30,8 +30,8 @@ const guides = defineCollection({
     status: confidenceStatus,
     // 逐条来源清单，渲染成页面底部"来源与核对"表
     sources: z.array(sourceRef).default([]),
-    // 发售前标记：为 true 时页面顶部显示 "Pre-release" 提示
-    preRelease: z.boolean().default(true),
+    // 旧文若仍标 preRelease，页面顶部才显示发售前提示。新攻略默认不标。
+    preRelease: z.boolean().default(false),
     // 排序与发布控制
     order: z.number().default(100),
     draft: z.boolean().default(false),

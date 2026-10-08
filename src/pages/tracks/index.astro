@@ -4,13 +4,12 @@ import Layout from '../../layouts/Layout.astro';
 import MediaFigure from '../../components/MediaFigure.astro';
 import { SITE_IMAGES } from '../../data/images';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { TRACKS, TRACK_SETTING } from '../../data/tracks';
 
 const title = 'All Tracks in Star Wars Galactic Racer — Circuits & Hazards';
 const description =
-  'Every track in Star Wars Galactic Racer: planet circuits, hazards, and difficulty ratings. Each entry carries a verified confirmation status.';
+  'Planet circuits in Star Wars Galactic Racer: Jakku, Tatooine, Ando Prime, Crait, Sentinel One, Lantaana, and the Derven Acos finale. Hazards and what to drive.';
 
 const crumbs = [
   { name: 'Home', url: '/' },
@@ -29,7 +28,6 @@ const DIFF_CLASS: Record<string, string> = {
 <Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
   <Breadcrumb items={crumbs} />
 
-  <PreReleaseNotice />
   <div class="mb-8 mt-4">
     <MediaFigure
       src={SITE_IMAGES.tracksArt.src}
@@ -45,9 +43,9 @@ const DIFF_CLASS: Record<string, string> = {
       Star Wars Galactic Racer Tracks
     </h1>
     <p class="mt-3 text-lg text-void-400">
-      Races in Star Wars: Galactic Racer run through {TRACK_SETTING.region}'s underground circuit,
-      {TRACK_SETTING.league}. Fuse Games hasn't named individual tracks yet — so instead of
-      inventing them, here's exactly what's confirmed, with every claim tagged by source.
+      Races run through {TRACK_SETTING.region}'s {TRACK_SETTING.league}. The list below is the
+      planets players are actually racing, with the hazard that ends the run — not a numbered
+      cup the game does not have.
     </p>
   </header>
 
@@ -55,7 +53,13 @@ const DIFF_CLASS: Record<string, string> = {
     TRACKS.length > 0 ? (
       <div class="mt-8 grid gap-5 sm:grid-cols-2">
         {TRACKS.map((t) => (
-          <article class="flex flex-col rounded-xl border border-void-800 bg-void-900/40 p-5">
+          <article class="flex flex-col overflow-hidden rounded-xl border border-void-800 bg-void-900/40">
+            {t.image && (
+              <a href={t.detailHref ?? `/tracks/${t.slug}/`} class="block">
+                <img src={t.image} alt="" width="1400" height="788" loading="lazy" decoding="async" class="aspect-video w-full object-cover" />
+              </a>
+            )}
+            <div class="flex flex-1 flex-col p-5">
             <div class="flex items-start justify-between gap-2">
               <div>
                 <h2 class="text-lg font-semibold text-void-100">
@@ -82,38 +86,23 @@ const DIFF_CLASS: Record<string, string> = {
             <div class="mt-4">
               <StatusBadge status={t.source.status} size="sm" />
             </div>
+            </div>
           </article>
         ))}
       </div>
     ) : (
       <section class="mt-8 rounded-xl border border-void-800 bg-void-900/40 p-6">
-        <div class="flex items-center gap-3">
-          <StatusBadge status={TRACK_SETTING.source.status} size="sm" />
-          <h2 class="text-lg font-semibold text-void-100">No tracks named yet</h2>
-        </div>
+        <h2 class="text-lg font-semibold text-void-100">Track list is empty</h2>
         <p class="mt-3 text-void-400">
-          Here's what Fuse Games has actually confirmed: you'll race across {TRACK_SETTING.region}
-          in {TRACK_SETTING.league}, set during {TRACK_SETTING.era}. Specific circuits, planets, and
-          hazards haven't been announced.
-        </p>
-        <p class="mt-3 text-void-400">
-          We're deliberately not filling this page with movie locations or made-up courses. The
-          moment Fuse Games reveals a real track, it lands here — sourced and dated.
+          The planet pages should be linked from this list. If you are seeing this, the track data
+          did not load.
         </p>
       </section>
     )
   }
 
-  <p class="mt-6 text-sm text-void-500">
-    Detailed track pages (with racing lines, shortcut maps, and record times) go live once each
-    entry meets our publishing threshold. Until then, everything lives here so you never land on
-    an empty page.
-  </p>
-
-  <p class="mt-4 text-void-400">
-    Official story material also names the League's finale, <strong class="text-void-300">Derven Acos</strong>,
-    as a custom arena that combines planetary conditions into one gauntlet. This is a confirmed
-    story detail, not a complete list of released circuits; the source-tracked explanation lives in
-    the <a href="/story-campaign/" class="text-plasma hover:underline">story and campaign guide</a>.
+  <p class="mt-6 text-void-400">
+    Open a planet for the hazard and the class that survives it. Derven Acos is the finale, not a
+    separate ruleset — a wreck there still ends the tour.
   </p>
 </Layout>

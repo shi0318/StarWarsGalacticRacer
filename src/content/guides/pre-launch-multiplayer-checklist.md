@@ -1,71 +1,30 @@
 ---
-title: "Star Wars Galactic Racer Pre-Launch Multiplayer Checklist"
-heading: "Star Wars Galactic Racer pre-launch multiplayer checklist"
-description: "A source-tracked Star Wars Galactic Racer checklist for the October 6 launch: 12-player races, modes, podracing, cross-platform wording, and unknowns."
-category: news
-status: official
-preRelease: true
-order: 1
-updatedAt: "2026-08-14"
-cover: /images/swgr-cockpit-pilot.webp
-sources:
-  - status: official
-    sourceUrl: "https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/"
-    lastChecked: "2026-08-14"
-    note: "Steam product page, release date, vehicle classes, platform listing, modes, and multiplayer categories."
-  - status: official
-    sourceUrl: "https://store.steampowered.com/news/app/4078430"
-    sourceDate: "2026-02-12"
-    lastChecked: "2026-08-14"
-    note: "Official gameplay trailer announcement covering Arcade, Scenarios, and online multiplayer."
-  - status: official
-    sourceUrl: "https://store.steampowered.com/news/app/4078430"
-    sourceDate: "2026-06-05"
-    lastChecked: "2026-08-14"
-    note: "Official story trailer announcement covering podracing and multiplayer events."
+title: "Star Wars Galactic Racer Multiplayer Checklist"
+heading: "Before you queue a multiplayer tour"
+description: "A post-launch checklist for Star Wars Galactic Racer online: resilience, the right queue, cross-play, and the private lobby that is not there."
+category: guide
+cover: /images/guide/night-stadium.webp
+status: beta
+preRelease: false
+order: 10
+updatedAt: "2026-10-08"
+sources: []
 ---
 
-If you are preparing for **Star Wars Galactic Racer multiplayer**, the confirmed starting point is a game scheduled for **October 6, 2026** with online races for up to **12 players**. The official material describes the modes and vehicle families, but it does not yet provide a final track list, matchmaking rulebook, or competitive ranking formula.
+The pre-launch checklist is obsolete. This is the one that matches the build you can install.
 
 <figure>
-  <img src="/images/swgr-cockpit-pilot.webp" alt="Official Star Wars Galactic Racer cockpit screenshot" width="1920" height="1080" loading="lazy" decoding="async" />
-  <figcaption>Official Steam media for Star Wars Galactic Racer.</figcaption>
+  <img src="/images/guide/night-stadium.webp" alt="A night straight, the kind of lobby you are about to enter" width="1400" height="788" loading="lazy" decoding="async" />
 </figure>
 
-## Confirmed multiplayer frame
+## Before you ready up
 
-Steam lists online multiplayer and up to 12 players. The official story-trailer material also calls out podracer-focused online events. That supports a large online race format, but it does not confirm whether every mode supports 12 players, whether parties can cross regions, or how private lobbies work.
+1. Put resilience on the speeder. The six-race tour includes the acid planet. A stock bike does not finish it.
+2. Pick the queue on purpose. Quick race, six-race tour, and pod events are different buttons.
+3. Cross-play is on. Your friend on PS5 or Xbox Series can be in the same race. They cannot be in a private room, because that room does not exist.
+4. Check the binding for ramjet before the first shunt. In-game rebinding is limited. A boost you cannot reach is a wall.
+5. Do not expect a pod in the speeder quick race. Open the pod event if that is the race you wanted.
 
-The Steam listing also uses cross-platform multiplayer wording. Until Fuse Games or Secret Mode explains the implementation, do not promise cross-progression, shared unlocks, or a particular console platform.
+## After a bad lobby
 
-## Modes to understand before launch
-
-The official gameplay trailer announcement describes **Arcade** with time trials and precision-driving challenges, plus **Scenarios** with unique events and goals. Podracing is available from Arcade at the start according to the story-trailer material, so it is not a campaign unlock claim.
-
-The solo campaign is runs-based: Shade works through branching events on the way through the Galactic League. The official story materials connect the campaign’s rivalry with Kestar Bool to the wider racing structure, but they do not publish every event node or fail-state rule.
-
-## Vehicle classes currently named by official material
-
-The Steam description names four pilotable repulsorcraft families:
-
-- Landspeeders
-- Speeder bikes
-- Skim speeders
-- Podracers
-
-That list does not establish a fastest class, universal handling tier, or final multiplayer build. A real comparison needs launch-build acceleration, top-speed, boost, durability, and track-specific tests.
-
-## Pre-launch questions to leave open
-
-- Are all modes available in public and private multiplayer?
-- Does the 12-player cap apply to every online event?
-- How do cross-platform parties and voice communication work?
-- Are unlocks shared between campaign, Arcade, and online events?
-- Which tracks and event rules are in the launch build?
-
-These are useful topics to test on day one, not blanks to fill with assumptions. The safest pre-launch preparation is to learn the mode names, vehicle families, and official campaign structure, then record the actual lobby and race rules after release.
-
-## Sources
-
-- [Star Wars Galactic Racer on Steam](https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/) — platform, release date, vehicle classes, and multiplayer listing. Checked August 14, 2026.
-- [Official Star Wars Galactic Racer Steam news hub](https://store.steampowered.com/news/app/4078430) — gameplay and story trailer announcements. Checked August 14, 2026.
+One wreck in a tour is the mode. Restarting the same glass build is the mistake. Change the class or the part, then queue again. The longer notes are on the [multiplayer tour page](/tips/multiplayer-tour/).

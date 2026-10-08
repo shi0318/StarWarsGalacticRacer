@@ -1,60 +1,39 @@
 ---
-title: "Star Wars Galactic Racer Beginner Guide — Where to Start"
-heading: "Star Wars Galactic Racer beginner guide"
-description: "New to Star Wars Galactic Racer? Start here: the racing fundamentals to master first, which repulsorcraft class to pick, and the habits that win races."
+title: "Star Wars Galactic Racer Beginner Guide"
+heading: "Where to start after launch"
+description: "A first-hour Star Wars Galactic Racer guide: which class to drive, how the two boosts work, and why the first pass on a planet is not a race."
 category: guide
-cover: /images/swgr-desert-dunes.webp
-status: lore
-preRelease: true
-order: 5
-updatedAt: "2026-07-24"
-sources:
-  - status: official
-    sourceUrl: "https://store.steampowered.com/app/4078430/"
-    note: "Setting, repulsorcraft classes, and combat-racing mechanics confirmed on the Steam store page."
-    lastChecked: "2026-07-24"
-  - status: lore
-    note: "Beginner habits drawn from arcade combat-racer conventions. Marked as inference until launch."
-    lastChecked: "2026-07-24"
+cover: /images/guide/wreck-dunes.webp
+status: beta
+preRelease: false
+order: 2
+updatedAt: "2026-10-08"
+sources: []
 ---
 
-## Start here
+The game is out. You do not need a trailer recap. You need the first hour not to end the tour.
 
-This is the first page to read if Star Wars Galactic Racer is your first racing game in a while. The game is not out yet (launch **October 6, 2026**), so this guide covers **transferable fundamentals** plus what the developer has officially confirmed about the racing. Confirmed, game-specific tuning arrives at launch.
+<figure>
+  <img src="/images/guide/wreck-dunes.webp" alt="A first-hour desert race through wreckage" width="1400" height="788" loading="lazy" decoding="async" />
+</figure>
 
-✅ **What's official:** You play as **Shade**, a lone racer chasing revenge and glory in the underground **Galactic League** of the Outer Rim, in the years after the fall of the Empire. This is a **combat racer** — you don't just outdrive rivals, you slam, shunt, and take them down. There's **no Force and no prophecy — just skill, strategy, and the will to rise.**
+## The three habits that still matter
 
-## The three habits that win races
+1. **See the corner before you boost it.** There is no useful minimap. Players on the first weekend kept boosting into walls the road did not mark. Lift once, then commit.
+2. **Afterburner in traffic, ramjet on a straight you have already seen.** Afterburner deploys whenever the meter is up. Ramjet is stronger, must be held, and explodes the craft if you do not lift.
+3. **A takedown that puts you in acid is a loss.** Sentinel One and Lantaana punish the shunt more than they reward it.
 
-Whatever the final systems look like, these carry across almost every arcade racer:
+## Which class to start in
 
-1. **Slow in, fast out.** Brake before the corner, not in it. A clean exit speed beats a late-braking lunge over a full lap.
-2. **Manage your boost.** Spend boost on straights where it compounds, not into corners where you'll scrub it off. The trailer clearly shows an engine-plasma boost.
-3. **Pick your fights.** This is a combat racer. Learn when a takedown is worth the time it costs you, and when you're better off just holding your line.
+Take a **landspeeder**. Launch notes call them the tanks: acceleration, top speed, and enough resilience to survive the lesson. Leave the speeder bike until Kinetic Burst is a choice rather than a panic button. Leave pods for Arcade. They do not share the speeder grid, and the campaign stretch that unlocks them is later.
 
-## Which vehicle class should a beginner pick?
+The class pages are [landspeeders](/vehicles/landspeeders/), [speeder bikes](/vehicles/speeder-bikes/), [skim speeders](/vehicles/skim-speeders/), and [podracers](/vehicles/podracers/).
 
-✅ The game confirms four classes of repulsorcraft — **landspeeders, speeder bikes, skim speeders, and podracers** — each with distinct physics and playstyles. See [all vehicle classes](/vehicles/) for what's known about each.
+## First hour
 
-📖 Based on how these classes usually behave, a **landspeeder** is the natural starter: the most grounded, forgiving handling to learn tracks on. Leave the high-ceiling **podracer** until your lines are clean — its speed punishes mistakes hard.
+1. Run Jakku twice without the ramjet. The wreckage is the chicane.
+2. Spend the first credits on **resilience**, not paint. Hibi sells the parts. The livery editor does not.
+3. Do not queue Sentinel One or a six-race multiplayer tour until that resilience is on the speeder.
+4. If you only wanted Sebulba, open Arcade. Story pods are gated. Arcade pods are not.
 
-## Your first hour (expected)
-
-📖 A sensible opening loop for most racers:
-
-1. Run the opening event twice: once cautiously to learn the layout, once pushing.
-2. Bank starting credits on a forgiving landspeeder before committing to a specialist class.
-3. Spend your first upgrades on **handling/grip**, not top speed. See [best build](/tips/best-build/).
-
-## What we will confirm at launch
-
-- The real control scheme and any assist options
-- The actual starter vehicle and opening event
-- How the combat (slam/shunt/takedown) actually rewards or punishes you
-- Whether there's a difficulty setting for newcomers
-
-## Related pages
-
-- [Full guide hub](/guide/) · [Beginner tips](/tips/)
-- [Unlock guide](/unlocks/) — what to chase first
-- [All vehicle classes](/vehicles/) — the four confirmed repulsorcraft types
+The spending order is on the [build page](/tips/campaign-builds/). The planets are on the [track list](/tracks/).

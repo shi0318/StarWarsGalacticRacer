@@ -1,30 +1,17 @@
-// 角色数据（发售前已知信息）
-// 严格遵循方案第四章：每个角色都带确认状态与来源。
-// 只收录官方 Steam 页 (App 4078430) 已确认的内容。
-// 官方设定：帝国覆灭后的新共和国时代，原创主角 Shade。
-// 官方商店原文："No Force. No prophecy. Just skill, strategy, and the will to rise."
-// 注意：这句讲的是故事前提（不是绝地故事），不等于本作排除星战正史角色。
-// App 4078430 新闻中心 2026-06-05 关于首个故事预告的报道即点名 Sebulba 等既有角色出场。
-// 因此下面的名单不收录他们，原因只是官方尚未确认其为可驾驶车手——而非其"在本作设定中不成立"。
-// 一旦第一方来源确认为可玩车手，再按同样的 source 规范补入。
+// 已发售角色数据。只收录发售公告、故事预告和配音介绍里点名的人物。
 import type { SourceRef } from './sources';
 
 export interface Racer {
   slug: string;
   name: string;
-  // 一句话定位
   summary: string;
-  // 阵营 / 派系
   faction: string;
-  // 已知特长（发售前多为推测/预告片信息）
   knownTraits: string[];
-  // 解锁方式
   unlock: string;
   source: SourceRef;
-  // 是否已满足详情页拆分门槛（方案 5.2）。false = 仅存在于聚合页表格
   hasDetailPage: boolean;
-  // optional override when guide lives outside /characters/<slug>/
   detailHref?: string;
+  image?: string;
 }
 
 export const RACERS: Racer[] = [
@@ -32,28 +19,80 @@ export const RACERS: Racer[] = [
     slug: 'shade',
     name: 'Shade',
     summary:
-      'The protagonist and the only named racer confirmed so far — a lone driver chasing revenge and glory in the Galactic League.',
-    faction: 'The Galactic League',
+      'The player character. A lone pilot with a personal grudge against the Bool family, recruited to take the Galactic League back from its champion.',
+    faction: 'Independent / Galactic League',
     knownTraits: [
-      'Player-character; the story-driven campaign follows Shade',
-      'Rises through the League via shifting alliances and grudge matches',
+      'Campaign protagonist on every run',
+      'Starts each tour fresh after a wreck-out, with only some perks carrying over',
     ],
-    unlock: 'Playable from the start as the campaign protagonist.',
-    source: {
-      status: 'official',
-      sourceUrl: 'https://store.steampowered.com/app/4078430/STAR_WARS_Galactic_Racer/',
-      note: 'Official Steam description: "Become Shade, a lone racer chasing revenge and glory."',
-      sourceDate: '2026-07-24',
-      lastChecked: '2026-07-31',
-    },
-    hasDetailPage: false,
+    unlock: 'Playable from the first campaign run.',
+    source: { status: 'official', lastChecked: '2026-10-08' },
+    hasDetailPage: true,
+    image: '/images/guide/shade-overlook.webp',
+  },
+  {
+    slug: 'hibi',
+    name: 'Hibi',
+    summary:
+      'Shade’s mechanic and paddock partner. An energetic Ardennian who fits parts between events and warns you when an upgrade is more experiment than plan.',
+    faction: 'Shade’s crew',
+    knownTraits: [
+      'Runs a workshop on every planet’s paddock',
+      'Sells and installs parts that change stats and abilities',
+      'Voiced with a Liverpool accent',
+    ],
+    unlock: 'Present in the paddock from the start of the campaign. Not a rival you select.',
+    source: { status: 'official', lastChecked: '2026-10-08' },
+    hasDetailPage: true,
+    image: '/images/guide/workshop-droid.webp',
+  },
+  {
+    slug: 'kestar-bool',
+    name: 'Kestar Bool',
+    summary:
+      'Reigning champion of the Galactic League and the campaign antagonist. A callous Caskadag who uses the title to threaten other pilots and extend the Bool family’s reach.',
+    faction: 'Bool family',
+    knownTraits: [
+      'League champion and the rival Shade is built to unseat',
+      'Smug, entitled delivery — the performance is meant to make you want the takedown',
+    ],
+    unlock: 'Story rival. He is the target of a campaign run, not a starter pilot.',
+    source: { status: 'official', lastChecked: '2026-10-08' },
+    hasDetailPage: true,
+    image: '/images/guide/canyon-combat.webp',
+  },
+  {
+    slug: 'darius-pax',
+    name: 'Darius Pax',
+    summary:
+      'The brash Besalisk who founded the Galactic League because he wanted racing “the way it was.” He loses control of it to Kestar Bool and recruits Shade.',
+    faction: 'Galactic League',
+    knownTraits: [
+      'League founder and showman',
+      'Besalisk businessman, not the player’s rival on track',
+    ],
+    unlock: 'Story character. He sets the campaign in motion rather than appearing as an unlockable racer.',
+    source: { status: 'official', lastChecked: '2026-10-08' },
+    hasDetailPage: true,
+    image: '/images/guide/besalisk-paddock.webp',
+  },
+  {
+    slug: 'sebulba',
+    name: 'Sebulba',
+    summary:
+      'The Dug podracer from the Mos Espa circuit, back in the League’s podracing events. He will not let Shade near Kestar Bool in a pod until the practice is done.',
+    faction: 'Podracing circuit',
+    knownTraits: [
+      'Tied to the separate podracer class, not the mixed speeder grid',
+      'Appears in the campaign’s podracing stretch and in arcade pod events',
+    ],
+    unlock: 'Reached through the campaign’s podracing path. Arcade pod events are available without finishing that stretch.',
+    source: { status: 'official', lastChecked: '2026-10-08' },
+    hasDetailPage: true,
+    image: '/images/guide/stadium-pod.webp',
   },
 ];
 
-// 发售前说明：官方尚未公布完整车手名单。除主角 Shade 外，
-// 其余车手（联盟对手、辛迪加赞助的选手等）需等官方公布或实机确认后再补充。
 export const ROSTER_STATUS =
-  'Beyond the protagonist Shade, the developer has not announced the racer roster. ' +
-  'The Galactic League is described as a circuit where syndicates sponsor pilots, so ' +
-  'rival racers are expected — but no names are confirmed yet. This page updates as ' +
-  'the developer reveals them.';
+  'The named cast at launch is Shade, Hibi, Darius Pax, Kestar Bool, and Sebulba. ' +
+  'Rival pilots fill the grid, but Fuse Games has not published a full unlockable roster beyond that core.';

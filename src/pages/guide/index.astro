@@ -3,7 +3,6 @@
 // 卡片式列表：缩略图 + 分类标签 + 日期 + 摘要。
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import Pagination from '../../components/Pagination.astro';
 import { getCollection } from 'astro:content';
@@ -11,7 +10,7 @@ import { SITE_IMAGES } from '../../data/images';
 
 const title = 'Star Wars Galactic Racer Guide — Racers, Vehicles & Tracks';
 const description =
-  'The complete Star Wars Galactic Racer guide hub. Racer roster, vehicle classes, track hazards, unlocks, and racing tips — every fact sourced and status-tagged.';
+  'Star Wars Galactic Racer guides for the launched game: racers, vehicle classes, planet circuits, campaign builds, and the multiplayer tour.';
 
 const crumbs = [
   { name: 'Home', url: '/' },
@@ -65,12 +64,10 @@ function labelOf(cat: string) {
       Latest racing guides
     </h1>
     <p class="mt-3 max-w-2xl text-lg text-void-400">
-      Every guide carries a confirmation status, so you always know what is official, what is
-      Beta-tested, and what is still based on Star Wars canon.
+      Character, vehicle, and planet pages live in their own sections. This hub is the
+      longer reads: modes, builds, and the systems that sit between races.
     </p>
   </header>
-
-  <div class="mb-8"><PreReleaseNotice /></div>
 
   <section class="latest-guides" aria-label="Latest guides">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma">Latest guides first</p>

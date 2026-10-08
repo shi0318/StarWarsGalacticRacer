@@ -5,13 +5,12 @@ import Layout from '../../layouts/Layout.astro';
 import MediaFigure from '../../components/MediaFigure.astro';
 import { SITE_IMAGES } from '../../data/images';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-import PreReleaseNotice from '../../components/PreReleaseNotice.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { RACERS } from '../../data/characters';
 
 const title = 'All Characters in Star Wars Galactic Racer — Roster & Unlocks';
 const description =
-  'Every racer in Star Wars Galactic Racer: factions, signature traits, and how to unlock them. Each entry carries a verified confirmation status.';
+  'Shade, Hibi, Darius Pax, Kestar Bool, and Sebulba in Star Wars Galactic Racer — who you race as, who fits the speeder, and who is only a story target.';
 
 const crumbs = [
   { name: 'Home', url: '/' },
@@ -22,7 +21,6 @@ const crumbs = [
 <Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
   <Breadcrumb items={crumbs} />
 
-  <PreReleaseNotice />
   <div class="mb-8 mt-4">
     <MediaFigure
       src={SITE_IMAGES.charactersArt.src}
@@ -38,9 +36,9 @@ const crumbs = [
       Star Wars Galactic Racer Characters
     </h1>
     <p class="mt-3 text-lg text-void-400">
-      The racers you pilot across the galaxy. Below is every character tracked so far, with a
-      confirmation status on each entry. Anything based on trailers or Star Wars canon is flagged
-      as such — never presented as confirmed until launch.
+      The named cast at launch. Shade is the only pilot you race as. Hibi and Darius Pax live in
+      the paddock. Kestar Bool is the champion you are trying to unseat. Sebulba sits on the
+      separate pod grid.
     </p>
   </header>
 
@@ -60,6 +58,9 @@ const crumbs = [
           RACERS.map((r) => (
             <tr class="border-b border-void-800 align-top last:border-0 hover:bg-void-900/40">
               <td class="px-4 py-3">
+                {r.image && (
+                  <img src={r.image} alt="" width="160" height="90" loading="lazy" decoding="async" class="mb-2 aspect-video w-36 rounded object-cover" />
+                )}
                 <div class="font-semibold text-void-100">
                   {r.hasDetailPage ? (
                     <a href={r.detailHref ?? `/characters/${r.slug}/`} class="text-plasma hover:underline">
@@ -90,16 +91,8 @@ const crumbs = [
     </table>
   </div>
 
-  <p class="mt-6 text-sm text-void-500">
-    Detailed character pages (with stat tables, best vehicle pairings, and unlock walkthroughs)
-    go live once each entry meets our publishing threshold — real unlock routes, verified stats,
-    and at least one build. Until then, everything lives here so you never land on an empty page.
-  </p>
-
-  <p class="mt-4 text-void-400">
-    For how Shade, champion Kestar Bool, league founder Darius Pax, and engineer Hibi fit
-    together, read our <a href="/story-campaign/" class="text-plasma hover:underline">story and
-    campaign guide</a>. For the people who created them, see
-    <a href="/fuse-games-studio/" class="text-plasma hover:underline">inside Fuse Games</a>.
+  <p class="mt-6 text-void-400">
+    Open a name for the role they actually play. For the garage that sits between their scenes,
+    start with the <a href="/tips/campaign-builds/" class="text-plasma hover:underline">build order</a>.
   </p>
 </Layout>

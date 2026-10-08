@@ -1,6 +1,6 @@
 ---
 // 攻略文章布局 —— 内容集合 guides 的每篇 .md 都用它渲染。
-// 统一输出：面包屑 → Pre-release 提示 → H1 → 正文 → 来源表。
+// 统一输出：面包屑 →（仅未发售文）提示 → H1 → 正文。来源表只在 frontmatter 写了 sources 时出现。
 import Layout from './Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import PreReleaseNotice from '../components/PreReleaseNotice.astro';
@@ -107,6 +107,6 @@ const noindex = !INDEXABLE_STATUS.includes(status);
       <slot />
     </div>
 
-    <SourceTable sources={sources} />
+    {sources.length > 0 && <SourceTable sources={sources} />}
   </article>
 </Layout>

@@ -1,34 +1,29 @@
 ---
-title: "Star Wars Galactic Racer Cheats & Unlockables — Codes, Tips & Secrets"
-heading: "Star Wars Galactic Racer cheats"
-description: "Star Wars Galactic Racer cheats: what's confirmed, what to expect at launch, and the legit ways to unlock every racer, vehicle, and track."
+title: "Star Wars Galactic Racer Cheats"
+heading: "There are no cheat codes"
+description: "Star Wars Galactic Racer has no published cheat codes after launch. What players can actually change: assists, workshop parts, and edition hulls."
 category: cheats
-cover: /images/swgr-speeder-showcase.webp
-status: unconfirmed
-preRelease: true
+cover: /images/guide/livery-editor.webp
+status: official
+preRelease: false
 order: 8
-updatedAt: "2026-07-27"
-sources:
-  - status: official
-    sourceUrl: "https://store.steampowered.com/app/4078430/"
-    note: "Genre, setting, and combat-racing mechanics confirmed on the Steam store page. No cheat system announced."
-    lastChecked: "2026-07-27"
+updatedAt: "2026-10-08"
+sources: []
 ---
 
-## Does Star Wars Galactic Racer have cheat codes?
+<figure>
+  <img src="/images/guide/livery-editor.webp" alt="The livery editor is cosmetic, not a cheat menu" width="1400" height="788" loading="lazy" decoding="async" />
+</figure>
 
-**No cheat-code system is confirmed in the official material currently tracked.** Star Wars Galactic Racer is scheduled for **October 6, 2026**, and the Steam listing and official announcements do not publish console commands, button-combination codes, debug options, or an unlock-everything toggle.
+## Are there cheat codes?
 
-This page is kept as a status answer for the search query, not as a list of invented codes. “No confirmed cheats” is different from “the game will never have cheats”; the answer can change only when Fuse Games or Secret Mode publishes a real feature or the shipped game exposes one that can be reproduced.
+No. The shipped game does not publish console commands, button-combination codes, or an unlock-everything toggle. Searching for a code list is how fake-trainer sites get installs. There is nothing to paste.
 
-## What is confirmed instead
+## What people mistake for cheats
 
-Official Steam material confirms a runs-based campaign following **Shade** through the Galactic League, the rival **Kestar Bool**, vehicle families, Arcade and Scenario modes, and online racing. None of those facts establishes a cheat system or a fastest unlock route.
+- **Workshop parts.** Resilience, afterburner, and ramjet are purchases from Hibi. They are the progression, not a code.
+- **Edition hulls.** The Kor Sarun Darc X, Ciza T, and Rak S are Deluxe bodies on the existing three speeder classes. They are not faster physics.
+- **Accessibility options.** The Steam page lists adjustable difficulty, text size, subtitles, and camera comfort. Those are settings. They are not an "unlock all tracks" switch.
+- **Arcade.** If you want pods without the campaign gate, open Arcade. That is a mode, not a cheat.
 
-Do not treat accessibility assists, edition cosmetics, campaign perks, or normal progression as cheat codes unless the game explicitly labels them that way. The launch guide will record the exact menu name, platform, build, and source if a genuine code or command appears.
-
-## Related guides
-
-- [Star Wars Galactic Racer gameplay preview](/star-wars-galactic-racer-gameplay-preview/)
-- [Campaign run planning](/campaign-run-planning/)
-- [Vehicle classes and multiplayer](/vehicle-classes-multiplayer-guide/)
+If a later patch adds a real code, it will have a menu name. Until then, the [build order](/tips/campaign-builds/) is the only "unlock" that changes a lap.
