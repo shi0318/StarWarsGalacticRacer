@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 4
 cover: "/images/guide/stadium-pod.webp"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-23"
 sources: []
 ---
 

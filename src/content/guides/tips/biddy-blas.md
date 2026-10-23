@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 7
 cover: "/images/guide/canyon-combat.webp"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-23"
 sources: []
 ---
 

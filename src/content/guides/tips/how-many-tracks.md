@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 9
 cover: "/images/guide/forest-pass.webp"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-23"
 sources: []
 ---
 

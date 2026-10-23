@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 8
 cover: "/images/swgr-hero-snow-racer.webp"
-updatedAt: "2026-10-21"
+updatedAt: "2026-10-23"
 sources: []
 ---
 

@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 6
 cover: "/images/guide/cliff-drop.webp"
-updatedAt: "2026-10-20"
+updatedAt: "2026-10-23"
 sources: []
 ---
 
