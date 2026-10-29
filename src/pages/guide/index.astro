@@ -83,6 +83,8 @@ function labelOf(cat: string) {
       <li><a class="text-plasma hover:underline" href="/tips/race-stutters/">Tiny stutters</a> — a hitch every few races is not the boot-check fail.</li>
       <li><a class="text-plasma hover:underline" href="/tips/shunt-takedown/">Shunts and takedowns</a> — set up contact without throwing the next corner.</li>
       <li><a class="text-plasma hover:underline" href="/tips/dlss-45-settings/">DLSS 4.5 PC settings</a> — drivers, SSD baseline, and symptom checks.</li>
+      <li><a class="text-plasma hover:underline" href="/tips/galactic-racer-first-tour-plan/">First campaign tour plan</a> — prepare the vehicle, upgrade, and Backer contract.</li>
+      <li><a class="text-plasma hover:underline" href="/tips/galactic-racer-arcade-practice-guide/">Arcade practice guide</a> — learn one course without risking a tour.</li>
       <li><a class="text-plasma hover:underline" href="/tracks/all-tracks-planets/">All tracks and planets</a> — launch hazards and the Derven Acos finale.</li>
     </ul>
   </section>
@@ -90,6 +92,7 @@ function labelOf(cat: string) {
   <section class="latest-guides" aria-label="Latest guides">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma">Latest guides first</p>
     <h2 class="mt-2 mb-5 text-2xl font-bold tracking-tight text-void-100 md:text-3xl">New and recently updated</h2>
+    <p class="mb-5 text-sm text-void-400">Core references: <a class="text-plasma hover:underline" href="/tips/shunt-takedown/">shunts and takedowns</a>, <a class="text-plasma hover:underline" href="/tips/dlss-45-settings/">PC settings</a>, and <a class="text-plasma hover:underline" href="/tracks/all-tracks-planets/">all tracks and planets</a>.</p>
     <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {visibleGuides.map((g) => <GuideCard href={`/${g.id}/`} title={g.data.heading ?? g.data.title} description={g.data.description} cover={coverOf(g)} label={labelOf(g.data.category)} verified={g.data.updatedAt} status={g.data.status} />)}
     </ul>
