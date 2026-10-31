@@ -15,6 +15,20 @@ updatedAt: "2026-10-30"
   <figcaption>The October accolades trailer reflects early reception; mode choice should still follow what you want from a session.</figcaption>
 </figure>
 
+If you are choosing what to play after the October 27 accolades trailer and the quality-of-life update, start from the session you actually want. The trailer is a snapshot of early reception, not a hidden tier list or a promise that one event type pays more than another. The update added campaign customization, so take a moment to review vehicle choices before continuing a Tour that you started on an older build. A livery or vehicle change made in the workshop may not be the setup you expect when you return to a campaign event.
+
+## Pick a mode by the kind of session you want
+
+Campaign is the natural place to keep progressing through the structured solo experience and to test the effect of customization changes. Arcade is useful when you want to practice in shorter bursts without turning every run into a group scheduling exercise. Online Tours are the social option: the October update raised the party size from three to six, making it easier for a larger group to queue together. These recommendations describe how to choose a session, not an undocumented reward multiplier. If a mode-specific payout matters to you, compare the displayed result in your own current build and record the event, placement, and settings.
+
+For a group, agree on the event before inviting everyone. A six-person lobby is more useful when the players know whether they are joining a quick race or committing to a longer Tour. Ask each person to install the same update, restart after installation, and check that the party menu accepts the full group before selecting an event. If a friend cannot join, verify their build and network status before changing campaign progress or deleting local data. The new limit expands the size of an online party; it does not mean every race, event, or matchmaking queue must contain six human drivers.
+
+## Use accolades as a starting point, then set your own goal
+
+The accolades trailer can help a new player understand that several play styles are being celebrated, but it cannot tell you which mode will feel best with your equipment, controls, and available time. Pick one goal for a session: learn a track, finish a campaign segment, race with friends, or compare a vehicle setup. Then avoid changing several variables at once. If you swap the vehicle, control preset, and event together, it becomes difficult to tell which change improved your result.
+
+Keyboard players should check the new layout presets before a serious run. Select the preset that feels comfortable, test steering and braking in a low-pressure session, and adjust only after you know which input is causing trouble. Controller players should still check their bindings rather than assume the update changed them. In either case, a repeatable lap or event is a better test than a single first attempt. The goal is not to claim that an accolades list identifies a universally strongest mode; it is to translate the recent update into a useful next session without inventing hidden balance data.
+
 On **October 27**, the developers published an accolades trailer for **STAR WARS: Galactic Racer**, sharing praise from reviewers, creators, and players. The announcement also said the team had released its first quality-of-life patch the previous week and would continue working from player feedback. The useful takeaway for players is that the game is in an active early post-launch period: use each mode for a different purpose, and check the current update before assuming a control or multiplayer detail is unchanged.
 
 ## Read an accolade as a reaction, not a mode guide
