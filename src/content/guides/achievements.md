@@ -20,11 +20,11 @@ There is no cheat that pops the list. Steam, PlayStation, and Xbox each ship the
 
 ## Campaign
 
-These track a finished tour, not a single clean lap. Shade's run, a wreck-out that you actually restart, and reaching Kestar Bool are the spine. If a trophy name mentions the Galactic League or the champion, it lives on the [qualify page](/qualify-for-kestar/) and the [Kestar page](/characters/kestar-bool/). Do not replay Jakku hoping a campaign trophy is hiding in the first dune.
+These track a finished tour, not a single clean lap. Shade's run, a wreck-out that you actually restart, and reaching Kestar Bool are the spine. If a trophy name mentions the Galactic League or the champion, it lives on the [qualify page](/tips/qualify-for-kestar/) and the [Kestar page](/characters/kestar-bool/). Do not replay Jakku hoping a campaign trophy is hiding in the first dune.
 
 ## Arcade and pods
 
-Arcade golds and pod-only events are a separate pile. Pods do not share the speeder grid, so a speeder gold does not clear a podracer trophy. Times are not printed here. A gold you have not driven is a number someone else invented. The [arcade gold page](/arcade-gold-times/) is the rule. The [pod page](/vehicles/podracers/) is the class.
+Arcade golds and pod-only events are a separate pile. Pods do not share the speeder grid, so a speeder gold does not clear a podracer trophy. Times are not printed here. A gold you have not driven is a number someone else invented. The [arcade gold page](/tips/arcade-gold-times/) is the rule. The [pod page](/vehicles/podracers/) is the class.
 
 ## Online and side systems
 
