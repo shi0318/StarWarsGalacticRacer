@@ -64,35 +64,27 @@ function labelOf(cat: string) {
       Latest racing guides
     </h1>
     <p class="mt-3 max-w-2xl text-lg text-void-400">
-      Character, vehicle, and planet pages live in their own sections. Start with the four
-      questions people ask after launch, then the longer reads.
+      Character, vehicle, and planet pages live in their own sections. Choose a practical topic below, then browse the most recently edited guides.
     </p>
   </header>
 
   <section class="mb-10">
-    <h2 class="mb-4 text-xl font-semibold text-void-100">After launch</h2>
+    <h2 class="mb-4 text-xl font-semibold">Start with the task</h2>
     <ul class="grid gap-3 sm:grid-cols-2">
-      <li><a class="text-plasma hover:underline" href="/achievements/">Achievements and trophies</a> — grouped by system, not by a fake time sheet.</li>
-      <li><a class="text-plasma hover:underline" href="/how-long-to-beat/">How long to beat</a> — campaign, retries, and arcade are different clocks.</li>
-      <li><a class="text-plasma hover:underline" href="/is-it-worth-it/">Worth buying?</a> — the tour, not a ranked ladder.</li>
-      <li><a class="text-plasma hover:underline" href="/platforms/">Platforms</a> — PC, PS5, Xbox Series. Not Switch 2. Not Game Pass.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/no-private-lobbies/">No private lobbies</a> — three friends still fill with randoms.</li>
-      <li><a class="text-plasma hover:underline" href="/driver-hotfix/">Driver hotfix</a> — boot check, shader rebuild, DLSS stability.</li>
-      <li><a class="text-plasma hover:underline" href="/hdr-black-screens/">HDR and black screens</a> — blown-out image, race-transition hangs, corrupted saves.</li>
-      <li><a class="text-plasma hover:underline" href="/rubberbanding-ai/">Rubberbanding AI</a> — campaign bots catch up; online is bumper cars.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/race-stutters/">Tiny stutters</a> — a hitch every few races is not the boot-check fail.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/shunt-takedown/">Shunts and takedowns</a> — set up contact without throwing the next corner.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/dlss-45-settings/">DLSS 4.5 PC settings</a> — drivers, SSD baseline, and symptom checks.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/galactic-racer-first-tour-plan/">First campaign tour plan</a> — prepare the vehicle, upgrade, and Backer contract.</li>
-      <li><a class="text-plasma hover:underline" href="/tips/galactic-racer-arcade-practice-guide/">Arcade practice guide</a> — learn one course without risking a tour.</li>
-      <li><a class="text-plasma hover:underline" href="/tracks/all-tracks-planets/">All tracks and planets</a> — launch hazards and the Derven Acos finale.</li>
+      <li><a href="/game-overview/">Buying, platforms and completion expectations</a></li>
+      <li><a href="/game-modes/">Choose a mode for the session</a></li>
+      <li><a href="/tips/galactic-racer-first-tour-plan/">Prepare a campaign Tour</a></li>
+      <li><a href="/six-player-tour-race-plan/">Organize an online group</a></li>
+      <li><a href="/tips/shunt-takedown/">Plan contact and preserve the exit</a></li>
+      <li><a href="/tracks/all-named-tracks/">Read the selected track and layout</a></li>
+      <li><a href="/pc-requirements/">Diagnose PC symptoms</a></li>
     </ul>
   </section>
 
   <section class="latest-guides" aria-label="Latest guides">
     <p class="text-xs font-semibold uppercase tracking-[0.18em] text-plasma">Latest guides first</p>
     <h2 class="mt-2 mb-5 text-2xl font-bold tracking-tight text-void-100 md:text-3xl">New and recently updated</h2>
-    <p class="mb-5 text-sm text-void-400">Core references: <a class="text-plasma hover:underline" href="/tips/shunt-takedown/">shunts and takedowns</a>, <a class="text-plasma hover:underline" href="/tips/dlss-45-settings/">PC settings</a>, and <a class="text-plasma hover:underline" href="/tracks/all-tracks-planets/">all tracks and planets</a>.</p>
+
     <ul class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {visibleGuides.map((g) => <GuideCard href={`/${g.id}/`} title={g.data.heading ?? g.data.title} description={g.data.description} cover={coverOf(g)} label={labelOf(g.data.category)} verified={g.data.updatedAt} status={g.data.status} />)}
     </ul>

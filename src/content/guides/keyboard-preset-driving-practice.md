@@ -1,10 +1,11 @@
 ---
-title: "Galactic Racer Keyboard Presets: Build Consistent Steering Before Rebinding Arrives"
+title: "Galactic Racer Keyboard Presets and Consistent Steering Checks"
 description: "Choose a Galactic Racer keyboard preset, check AZERTY and handedness options, and practice steering with a repeatable route and clear settings checks."
 category: "tips"
 status: "official"
 order: 3
-updatedAt: "2026-11-01"
+datePublished: "2026-11-01"
+updatedAt: "2026-11-17"
 cover: "/images/swgr-hero-snow-racer.webp"
 preRelease: false
 sources: []
@@ -41,4 +42,4 @@ The quality-of-life patch included a fix for an AMD Frame Interpolation crash. T
 ## Take the chosen preset into multiplayer carefully
 When your baseline route feels manageable, try the layout in a normal multiplayer session. Traffic and pressure create situations a quiet test cannot reproduce, so allow a short adjustment period. Focus on maintaining a line and recovering from an imperfect corner rather than immediately matching an experienced player's pace. The online party limit is now six, which can make group practice easier, but the larger party does not make every friend an equivalent benchmark for your current level of familiarity.
 
-Finish by recording the preset you kept and one specific remaining limitation. If full rebinding arrives in a later update, that note will tell you which action actually needs attention. Until then, use current menu labels and verify announcements before claiming a promised feature is already available. For organizing practice with friends, read <a href="/six-player-tour-race-plan/">the six-player Tour guide</a>. For choosing a consistent baseline, browse <a href="/vehicles/">the vehicle directory</a>. A useful control setup is the one that lets you repeat deliberate decisions while racing, then recognize and correct your own mistakes.
+Finish by recording the preset you kept and one specific remaining limitation. If your installed version provides rebinding, use that note to identify the action that needs attention. Otherwise, work with the available presets and current menu labels; the October announcement alone does not establish what a later build includes. For organizing practice with friends, read <a href="/six-player-tour-race-plan/">the six-player Tour guide</a>. For choosing a consistent baseline, browse <a href="/vehicles/">the vehicle directory</a>. A useful control setup is the one that lets you repeat deliberate decisions while racing, then recognize and correct your own mistakes.

@@ -1,5 +1,5 @@
 ---
-// 基础布局 —— 所有页面共用。负责 <head> meta、GA4、JSON-LD、Header、Footer。
+// Shared metadata and navigation. No advertising or analytics tags are loaded.
 import '../styles/global.css';
 import { SITE } from '../data/site';
 import Header from '../components/Header.astro';
@@ -17,7 +17,7 @@ interface Props {
   title: string; // <title>，60 字符以内
   description: string; // meta description，150-160 字符
   // Schema 类型
-  schemaType?: 'home' | 'article' | 'news' | 'collection';
+  schemaType?: 'home' | 'article' | 'news' | 'collection' | 'page';
   breadcrumb?: Crumb[];
   datePublished?: string;
   dateModified?: string;
@@ -32,7 +32,7 @@ interface Props {
 const {
   title,
   description,
-  schemaType = 'article',
+  schemaType = 'page',
   breadcrumb = [],
   datePublished,
   dateModified,
@@ -46,8 +46,11 @@ const path = Astro.url.pathname;
 const canonicalUrl = canonical ?? new URL(path, SITE.url).href;
 const ogImageUrl = new URL(ogImage, SITE.url).href;
 
-// GA4 测量 ID —— 部署时通过环境变量注入，未配置则不渲染脚本
-const GA_ID = 'G-NXF7FV9GKL';
+// Previous analytics configuration, intentionally inactive. Restore the tag only
+// after implementing a real consent mechanism and updating the privacy policy.
+// This identifier is a public measurement configuration, not an AdSense ID.
+const pausedGA4 = { measurementId: 'G-NXF7FV9GKL', enabled: false } as const;
+
 ---
 
 <!doctype html>
@@ -96,20 +99,6 @@ const GA_ID = 'G-NXF7FV9GKL';
       dateModified={dateModified}
     />
 
-    <!-- Google Analytics 4 —— 仅当配置了 PUBLIC_GA4_ID 时加载（标准 async 方式） -->
-    {
-      GA_ID && (
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-          <script is:inline set:html={`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_ID}');
-          `} />
-        </>
-      )
-    }
   </head>
   <body class="flex min-h-screen flex-col">
     <AmbientParticles />

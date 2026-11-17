@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "test": "node --test tests/*.test.mjs",
+    "test": "node --test tests/*.test.mjs && npm run check:site",
+    "check:site": "node scripts/verify-site.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

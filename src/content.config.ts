@@ -38,6 +38,7 @@ const guides = defineCollection({
     // optional card thumbnail for list pages
     cover: z.string().optional(),
     updatedAt: z.coerce.string(),
+    datePublished: z.coerce.string().optional(),
   }),
 });
 

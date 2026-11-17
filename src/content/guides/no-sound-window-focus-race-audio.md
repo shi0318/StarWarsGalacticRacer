@@ -4,6 +4,7 @@ description: "Troubleshoot missing Galactic Racer audio after a window or monito
 category: "tips"
 status: "official"
 order: 3
+datePublished: "2026-11-10"
 updatedAt: "2026-11-10"
 cover: "/images/swgr-cockpit-pilot.webp"
 preRelease: false

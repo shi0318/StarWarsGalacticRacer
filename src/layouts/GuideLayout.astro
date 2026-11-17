@@ -5,7 +5,7 @@ import Layout from './Layout.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import PreReleaseNotice from '../components/PreReleaseNotice.astro';
 import SourceTable from '../components/SourceTable.astro';
-import StatusBadge from '../components/StatusBadge.astro';
+import { SITE } from '../data/site';
 import type { ConfidenceStatus, SourceRef } from '../data/sources';
 
 interface Crumb {
@@ -32,7 +32,7 @@ const {
   category,
   status,
   sources = [],
-  preRelease = true,
+  preRelease = false,
   updatedAt,
   datePublished,
 } = Astro.props;
@@ -71,9 +71,8 @@ const crumbs: Crumb[] = [
 // news 分类用 NewsArticle，其余用 Article
 const schemaType = category === 'news' ? 'news' : 'article';
 
-// E-E-A-T 保护：只有官方/实测（official/beta）的攻略允许被索引。
-// trailer/lore/unconfirmed 属发售前推测框架，noindex 到发售后用实测替换再放开，
-// 与前两个站点（BoR 全 noindex、MS2 官方内容可索引）保持一致的信心分级策略。
+// Retain the legacy indexing categories during the content consolidation.
+// These internal values do not certify developer approval or hands-on testing.
 const INDEXABLE_STATUS: ConfidenceStatus[] = ['official', 'beta'];
 const noindex = !INDEXABLE_STATUS.includes(status) || Astro.url.pathname === '/landspeeder-guide/';
 ---
@@ -83,7 +82,7 @@ const noindex = !INDEXABLE_STATUS.includes(status) || Astro.url.pathname === '/l
   description={description}
   schemaType={schemaType}
   breadcrumb={crumbs}
-  datePublished={datePublished ?? updatedAt}
+  datePublished={datePublished}
   dateModified={updatedAt}
   noindex={noindex}
   canonical={Astro.url.pathname === '/landspeeder-guide/' ? 'https://swgalacticracer.wiki/vehicles/landspeeders/' : undefined}
@@ -94,20 +93,72 @@ const noindex = !INDEXABLE_STATUS.includes(status) || Astro.url.pathname === '/l
     {preRelease && <PreReleaseNotice />}
 
     <header class="mt-4 border-b border-void-800 pb-6">
-      <div class="mb-3">
-        <StatusBadge status={status} />
-      </div>
       <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">{h1}</h1>
       <p class="mt-3 text-lg text-void-400">{description}</p>
       <p class="mt-4 text-sm text-void-500">
-        Last verified <time datetime={updatedAt}>{updatedAt}</time>
+        By <a href="/editorial/" class="underline hover:text-plasma">{SITE.name} editorial team</a>
+        <span aria-hidden="true"> · </span>
+        Last updated <time datetime={updatedAt}>{updatedAt}</time>
+        {datePublished && <> · Published <time datetime={datePublished}>{datePublished}</time></>}
       </p>
     </header>
 
-    <div class="prose-body mt-8 space-y-4 text-void-200">
+    <div class="guide-copy prose-body mt-8 space-y-4 text-void-200">
       <slot />
     </div>
 
     {sources.length > 0 && <SourceTable sources={sources} />}
   </article>
 </Layout>
+
+<style>
+  .guide-copy :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 650;
+    line-height: 1.35;
+    color: var(--color-void-100);
+  }
+  .guide-copy :global(h3) {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-void-100);
+  }
+  .guide-copy :global(a) {
+    color: var(--color-plasma);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    overflow-wrap: anywhere;
+  }
+  .guide-copy :global(ul), .guide-copy :global(ol) { padding-left: 1.5rem; }
+  .guide-copy :global(ul) { list-style-type: disc; }
+  .guide-copy :global(ol) { list-style-type: decimal; }
+  .guide-copy :global(li + li) { margin-top: 0.4rem; }
+  .guide-copy :global(table) {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .guide-copy :global(th), .guide-copy :global(td) {
+    min-width: 8rem;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--color-void-700);
+    text-align: left;
+    vertical-align: top;
+  }
+  .guide-copy :global(th) {
+    color: var(--color-void-100);
+    background: var(--color-void-900);
+    font-weight: 600;
+  }
+  .guide-copy :global(pre) { overflow-x: auto; padding: 0.75rem; }
+  .guide-copy :global(blockquote) {
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-void-700);
+    color: var(--color-void-300);
+  }
+</style>

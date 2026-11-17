@@ -4,6 +4,7 @@ description: "Set up a six-player Galactic Racer party, understand mid-Tour cred
 category: "tips"
 status: "official"
 order: 3
+datePublished: "2026-11-01"
 updatedAt: "2026-11-01"
 cover: "/images/swgr-hero-snow-racer.webp"
 preRelease: false

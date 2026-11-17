@@ -1,93 +1,26 @@
 ---
-// 隐私政策 —— AdSense 审核硬性要求（说明 Cookie、广告、分析数据的使用）。
-import Layout from '../layouts/Layout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
+import SitePage from '../layouts/SitePage.astro';
 import { SITE } from '../data/site';
-
-const title = 'Privacy Policy — Star Wars Galactic Racer Wiki';
-const description =
-  'How Star Wars Galactic Racer Wiki handles cookies, analytics, and advertising data. A plain-language privacy policy for our independent fan site.';
-
-const crumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Privacy Policy', url: '/privacy/' },
-];
-
-const updated = '2026-07-24';
 ---
 
-<Layout title={title} description={description} schemaType="article" breadcrumb={crumbs}>
-  <article class="mx-auto max-w-3xl">
-    <Breadcrumb items={crumbs} />
+<SitePage title="Privacy Policy — Star Wars Galactic Racer Guide" heading="Privacy policy" description="How this fan guide handles page requests and contact emails, why analytics is paused, and what would need to change before advertising is introduced.">
 
-    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">Privacy Policy</h1>
-    <p class="mt-3 text-lg text-void-400">
-      What we collect, why, and the choices you have. Last updated {updated}.
-    </p>
-
-    <div class="prose-body mt-8 space-y-6 text-void-200">
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Who we are</h2>
-        <p class="mt-2">
-          {SITE.name} is an independent, fan-made resource. You can reach us at
-          <a href={`mailto:${SITE.contactEmail}`} class="text-plasma underline underline-offset-2">
-            {SITE.contactEmail}
-          </a>.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Analytics</h2>
-        <p class="mt-2">
-          We may use Google Analytics to understand which guides are useful, in aggregate. This
-          uses cookies to record anonymised data such as pages viewed, approximate region, and
-          device type. We do not use it to identify you personally.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Advertising</h2>
-        <p class="mt-2">
-          This site may display ads served by Google AdSense and its partners. These third
-          parties may use cookies to serve ads based on your prior visits to this and other
-          websites. Google's use of advertising cookies enables it and its partners to serve
-          ads based on your visits. You can opt out of personalised advertising by visiting
-          <a
-            href="https://www.google.com/settings/ads"
-            rel="nofollow noopener"
-            target="_blank"
-            class="text-plasma underline underline-offset-2"
-          >
-            Google Ads Settings
-          </a>.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Cookies</h2>
-        <p class="mt-2">
-          Cookies are small text files stored by your browser. You can block or delete cookies
-          in your browser settings. Some features may not work as expected if you disable them,
-          but you can always read our guides.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Your choices</h2>
-        <ul class="mt-2 list-disc space-y-1 pl-5">
-          <li>Adjust or disable cookies in your browser settings.</li>
-          <li>Opt out of personalised ads via Google Ads Settings.</li>
-          <li>Contact us to ask what data relates to you, or to raise a concern.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Changes to this policy</h2>
-        <p class="mt-2">
-          We may update this policy as the site grows or as advertising and analytics providers
-          change. The "last updated" date above always reflects the current version.
-        </p>
-      </section>
-    </div>
-  </article>
-</Layout>
+<section><h2>Who operates this site</h2>
+<p>This policy covers {SITE.name} at swgalacticracer.wiki. It is an independent fan guide, not a service operated by the game's developer, publisher or Star Wars rights holders. Contact the site operator at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a> for privacy questions or requests about correspondence.</p></section>
+<section><h2>What happens when you read a page</h2>
+<p>The site serves public guide pages without an account or a login. Its current application has no registration, checkout, public comments, newsletter sign-up, on-site contact form or file-upload feature. Reading a guide does not require giving us your name or email address. The application does not request your device's precise location.</p>
+<p>Your browser still sends ordinary network information when requesting a page or image. That includes the requested address, an IP address and browser information needed to deliver the response. Hosting and network providers may process request and security logs to deliver pages, diagnose errors or protect the service. These network records are distinct from an advertising profile. We do not promise that no technical data is processed merely because a page is static.</p></section>
+<section><h2>Analytics is paused</h2>
+<p>The current site template <strong>does not load Google Analytics</strong> or another third-party audience-measurement tag. A previously configured Google Analytics 4 tag was paused during the November 17, 2026 revision because it loaded without a visitor consent choice. Pausing that tag stops new browser collection by that integration on the revised pages; it does not itself delete any data previously collected by the analytics provider.</p>
+<p>We have not confirmed the previous property's retention settings or historical records from its dashboard. Contact us if your request concerns earlier collection, and identify the approximate dates without sending passwords or additional sensitive information. If analytics returns, this policy must identify the active service and the site must implement the relevant consent controls before loading the tag.</p></section>
+<section><h2>Cookies, storage and advertising</h2>
+<p>The current guide application does not set analytics or advertising cookies, create a local-storage visitor identifier, or run a personalised-advertising system. The site <strong>does not currently serve advertising</strong> and does not load Google AdSense code. There is no advertising consent banner or Google-certified advertising consent platform active on the current site. A statement in this policy is not a consent mechanism.</p>
+<p>Previously stored cookies may remain in your browser after an integration is paused. You can inspect, block or delete site cookies through your browser settings and continue reading the guides. Hosting-provider security measures and the websites reached through external links may have their own cookie behaviour.</p>
+<p>If advertising is introduced, this policy will need to describe the active providers, identifiers, purposes and available choices. Where advertising requires consent, visitors must be given an appropriate choice before the relevant advertising is activated.</p></section>
+<section><h2>Messages you choose to send</h2>
+<p>Using an email link opens your own email application. Sending a message discloses your email address, message and any attachments to the site's mailbox provider and operator. We use that correspondence to respond to the issue you raised, such as correcting a guide or reviewing an image-rights concern. We do not use the contact channel to build an advertising audience.</p>
+<p>Please send only information needed for the issue. Do not include passwords, payment details, account recovery codes, government documents or unrelated personal data. We do not intentionally solicit personal information from children. If you believe a child has sent personal information, contact us so the correspondence can be reviewed.</p></section>
+<section><h2>Requests, retention and external services</h2>
+<p>You may ask to access, correct or delete correspondence you sent. Describe the message and date so that the operator can locate it. We may need to confirm that a request concerns your own address. The current application does not have an automated deletion or retention system for email. Messages may remain while a correction, rights request or dispute is being handled, and provider backups or legally required records may limit immediate deletion. We cannot change records held independently by a third-party website.</p>
+<p>External store, support and reference links lead to services with their own policies. Our <a href="/contact/">contact page</a> is the route for concerns about this site. Changes to these practices will be reflected in this policy's update date; the date does not represent a review of every third-party provider's account settings.</p></section>
+</SitePage>

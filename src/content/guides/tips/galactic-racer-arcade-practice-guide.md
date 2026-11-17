@@ -7,7 +7,7 @@ status: official
 preRelease: false
 order: 2
 cover: "/images/guide/ice-gate.webp"
-updatedAt: "2026-10-28"
+updatedAt: "2026-11-17"
 ---
 
 <figure>
@@ -28,11 +28,11 @@ Take a screenshot or write down the target from the event screen if you want to 
 
 On the first attempt, let the event show you the road. Do not spend that run chasing takedowns, drafting for the entire straight, or holding ramjet into a corner you have not seen. Identify the braking marker, the entry angle, and the hazard edge. If there is a jump, note where the vehicle lands and what the next turn demands. This first pass is reconnaissance, even if the game does not give it a special label.
 
-On the second attempt, repeat the same vehicle and change only one driving choice. Brake earlier at the ice gate, release the draft before Crait's blind approach, or delay boost until the landing is stable. A specific change gives you a useful comparison. Swapping vehicles and adding a ramjet upgrade simultaneously may create a faster result, but it will not tell you which choice made the difference.
+On the second attempt, repeat the same vehicle and change only one driving choice. Brake earlier at the ice gate, leave a wake before it hides your approach, or delay boost until the landing is stable. A specific change gives you a useful comparison. Swapping vehicles and adding a ramjet upgrade simultaneously may create a faster result, but it will not tell you which choice made the difference.
 
 ## Learn the hazard before you learn the shortcut
 
-The track list describes distinct hazards across the game's planets. Jakku has wreckage and dust; Tatooine's pod courses have tight canyon walls and cables; Ando Prime combines ice with heat tunnels; Crait can punish a racer who remains in another pilot's draft; Sentinel One has acid pools; Lantaana includes lava caves and heat management; Derven Acos is described as a finale that combines conditions. These are broad course reminders, not turn-by-turn map coordinates.
+Read the environment visible in your selected event. Wreckage, a narrow canyon entrance, an obscured approach or a bright transition can change the line you can read. Do not infer a precise damage or heat rule from the scenery. Derven Acos is described in the official story introduction as combining the planetary conditions encountered during the Tour, so it is worth learning the underlying adjustments rather than memorizing a single visual theme.
 
 Use a simple hazard drill:
 
@@ -41,13 +41,13 @@ Use a simple hazard drill:
 3. Choose a line that leaves a safe exit after the obstacle.
 4. Repeat the same approach before attempting a faster pass.
 
-If dust hides a racing line, reduce the number of simultaneous inputs. If an ice section causes a slide, enter with control rather than trying to fix the vehicle at the apex. In a heat section, do not treat the ramjet gauge as a cosmetic indicator: an overheated ramjet can destroy a speeder. Practise the hazard with afterburner or without a boost until the exit is known.
+If dust hides a racing line, reduce the number of simultaneous inputs. If the craft drifts away from the intended line, correct the approach rather than assuming a wheel-traction model from the snowy scenery. In a heat section, do not treat the ramjet gauge as a cosmetic indicator: an overheated ramjet can destroy a speeder. Practise the hazard with afterburner or without a boost until the exit is known.
 
 ## Add speed in a controlled order
 
 After a clean lap, add the short afterburner to a corner exit or a safe straight where you can see the next marker. It is easier to compare a run when the boost is used in the same place each time. Once you can finish with that approach, test ramjet on a straight you have already driven. Lift before the heat limit, then check whether the extra speed improved the event result or simply reduced your control.
 
-Drafting is another tool to layer in. Join a rival's wake on a straight, then leave before braking or a hazard that the wake obscures. On Crait, the draft itself can blind you, so the planned exit is part of the maneuver. A shunt should come after you can hold a clean line; make contact on a straight and complete the maneuver before the apex rather than starting it while you are still learning the corner.
+Drafting is another tool to layer in. Join a rival's wake on a straight, then leave before braking or a hazard that the wake obscures. When a wake or vehicle hides the road, the planned exit is part of the maneuver. A shunt should come after you can hold a clean line; make contact on a straight and complete the maneuver before the apex rather than starting it while you are still learning the corner.
 
 ## Choose a vehicle for the lesson
 
@@ -87,8 +87,8 @@ Use the current game screen for your event. A patch, layout, or vehicle variatio
 
 ## Related guides
 
-- [All tracks and planets](/tracks/all-tracks-planets/)
-- [Match the vehicle to the hazard](/tips/match-the-pod-to-the-hazard/)
+- [All tracks and planets](/tracks/all-named-tracks/)
+- [Match the vehicle to the hazard](/tracks/all-named-tracks/)
 - [Boost and ramjet heat](/tips/ramjet-heat/)
 - [Drafting and slipstream](/tips/draft-and-slipstream/)
-- [How to qualify](/tips/how-to-qualify/)
+- [How to qualify](/tips/galactic-racer-first-tour-plan/)

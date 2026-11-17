@@ -1,111 +1,82 @@
 ---
-title: "Star Wars Galactic Racer Track List: All Named Tracks by Planet"
-heading: "Every named track, with laps and length"
-description: "Every named Star Wars Galactic Racer track by planet, with laps, lap length and podracer-only layouts, from Scrap Spiral to the 35.7 km Championship."
+title: "Galactic Racer Track Practice: Read Layouts, Hazards and Event Rules"
+heading: "Galactic Racer Track Practice: Read Layouts, Hazards and Event Rules"
+description: "Prepare for Galactic Racer circuits with a practical layout log, visible hazard checks and repeatable practice. Avoid confusing planets, variants and events."
 category: tracks
-status: beta
+status: official
 preRelease: false
-order: 21
-cover: "/images/tracks/swg-tracks-by-planet.webp"
-updatedAt: "2026-10-17"
+order: 5
+cover: "/images/guide/forest-pass.webp"
+updatedAt: "2026-11-17"
 sources: []
 ---
 
-<figure>
-  <img src="/images/tracks/swg-tracks-by-planet.webp" alt="Star Wars Galactic Racer track count by planet with the longest and shortest named track on each" width="1600" height="900" loading="eager" decoding="async" />
-  <figcaption>Race layouts per planet, with the longest and shortest lap on each.</figcaption>
-</figure>
+A planet name, a circuit, a reversed layout and an event are different entries in a race plan. Start with the event visible in your game, then record the route and permitted vehicle. This reference helps you prepare for that event; it does not claim a verified complete count of every named course or publish unsupported track dimensions.
 
-Star Wars Galactic Racer has **46 named tracks across seven planets**. The names only show up in **Arcade**. In the campaign and online, the game hands you a random track from the planet you picked, and it can run forward, reversed or as a podrace. That is why players who only race the campaign often cannot name the circuit they just lost on.
+![A repulsorcraft following a wooded racing route](/images/guide/forest-pass.webp)
 
-This page lists every named race layout by planet. Use the planet pages for hazards and builds: [Jakku](/tracks/jakku/), [Tatooine](/tracks/tatooine/), [Ando Prime](/tracks/ando-prime/), [Crait](/tracks/crait/), [Sentinel One](/tracks/sentinel-one/), [Lantaana](/tracks/lantaana/) and [Derven Acos](/tracks/derven-acos/).
+## Identify what you are practicing
 
-## Jakku: 6 tracks
+Before an attempt, write down the event name exactly as the menu shows it. Add the location, vehicle, direction or variant if displayed, and the objective. Those details prevent a common comparison problem: calling two different layouts the same track because they share a planet.
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| The Giants' Graveyard | 1 | 14.8 km | Point to point; the main layout is podracer only |
-| The War Fields | 2 | 7.0 km | Forward, reverse and alternative routes |
-| Debris Dunes | 2 | 6.5 km | Five configurations; the reverse layout is podracer only |
-| Star Destroyer Speedway | 5 | 1.9 km | Short circuit |
-| Scrap Spiral | 5 | 1.3 km | Shortest lap in the game |
-| Fallen Empire | 5 | 2.3 km | Short circuit, single event |
+The official launch announcement confirms races across varied circuits and a full online run culminating in a showdown on Derven Acos. Its description is not a complete measured course database. Use the measurements shown in the current event when a distance or lap count matters to your objective.
 
-## Tatooine: 2 tracks
+You can still make a useful practice log without pretending it is a universal database. Keep the entries tied to the screen you are looking at. If you later compare attempts with a friend, exchange the event and layout first. Comparing an unfamiliar reverse run to someone's clean forward lap produces a misleading diagnosis.
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| [Mos Espa Speedway](/tracks/mos-espa-speedway/) | 3 | 12.6 km | Podracer only, forward and reverse |
-| Hunk of Junk | 1 | 12.1 km | Point to point, podracer only, campaign only |
+## A simple track card
 
-## Ando Prime: 7 tracks
+| Field | Record from the current event |
+| --- | --- |
+| Event | Exact title and mode |
+| Vehicle | Class and selected craft |
+| Route | Location, direction and variant if shown |
+| Objective | Finish, time target, precision goal or other displayed condition |
+| First mistake | The earliest avoidable error |
+| Next change | One approach, control or line adjustment |
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| Andobi Edge | 4 | 3.9 km | Short circuit |
-| Dai Bendu Ascension | 1 | 20.9 km | Point to point, raced in reverse |
-| [Ice Field Circuit](/tracks/ice-field-circuit/) | 2 | 10.9 km | Ten configurations, including mined routes |
-| Mawhonic Speedway | 2 | 12.3 km | Podracer only |
-| Monastery Mountains | 2 | 8.3 km | Forward, reverse and a Special B route |
-| Mountain to Sea | 1 | 19.7 km | Point to point |
-| Vonium Pipeline | 4 | 2.6 km | Short circuit, single event |
+Leave a field blank when you cannot verify it. A blank is more useful than an invented lap length. If you keep your own elapsed times, label them as your attempts and record whether the run was clean. They are not benchmark records for every vehicle or hardware configuration.
 
-## Crait: 6 tracks
+## First pass: read the route
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| Crimson Mines | 2 | 9.9 km | Forward is podracer only; reverse is 10.1 km |
-| Crystal Caverns | 6 | 3.0 km | Short circuit plus a 9.3 km campaign sprint |
-| Forgil Canyon | 2 | 10.9 km | Long circuit, podracer only |
-| Quadinaros' Revenge | 2 | 18.9 km | Podracer circuit |
-| Rhodochrosite Run | 1 | 14.2 km | Point to point |
-| Salt Circle | 8 | 1.7 km | Most laps of any track |
+Use an appropriate practice event where available. Start at a pace that lets you see how turns connect. A spectacular recovery can hide the fact that the previous bend left you on the wrong side of the road. Look beyond the next obstacle and identify where the vehicle needs to be for the following section.
 
-## Sentinel I: 7 tracks
+Choose stable landmarks. Large structures and changes in the route are usually easier to recognize than an indistinct patch of surface. Check that a landmark remains visible when another racer is ahead. If your only reference disappears in traffic, choose a different approach before adding speed.
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| Bool River Run | 1 | 15.5 km | Point to point; four configurations |
-| Caustic Fields | 2 | 7.3 km | Forward, reverse and a Special B route |
-| Corrosion Hypersphere | 4 | 2.3 km | Special A circuit |
-| Mineral Loop | 5 | 2.0 km | Single event |
-| Sentinel Lakes | 2 | 7.0 km | Forward layouts are podracer only |
-| Skakoan Gambit | 6 | 2.0 km | Campaign and single event |
-| The Acid Ring | 6 | 1.9 km | Short circuit |
+Record the first point where you lose the intended line. Do not list every subsequent collision as a separate mystery. The earliest error may explain the whole sequence. On the next attempt, correct that point and leave the rest of your routine unchanged.
 
-## Lantaana: 8 tracks
+## Hazards: separate visible danger from assumed formulas
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| Ahlren Jungle Speedway | 5 | 2.8 km | Short circuit, single event |
-| Dhunkri River Circuit | 5 | 1.5 km | Short circuit |
-| Geothermal Tour | 1 | 16.0 km | Point to point, speeder and podracer versions |
-| Griffin's Flight | 2 | 10.1 km | Main circuit plus a 9.6 km campaign route |
-| Holdfast's Folly | 2 | 12.9 km | Podracer circuit, forward and reverse |
-| Moro Kehn Tunnels | 2 | 7.4 km | Four configurations, one speeder-bike only |
-| Overflow Rally | 4 | 3.4 km | Alternative-route circuit |
-| The Pyroducts | 5 | 2.5 km | Short circuit |
+The game's environments can make a line more difficult to read or leave less recovery space. Watch what the current event actually shows. A dark opening calls for earlier visual preparation; a narrow boundary calls for more passing margin; a route with poor visibility makes following another craft more demanding.
 
-## Derven Acos: 3 tracks
+Do not turn a screenshot into an exact damage or temperature formula. A visible pool, a snow scene or a lava-lit cave does not by itself establish immunity, a fixed resilience threshold or a safe boost duration. Use the vehicle's displayed information and your own event feedback before adopting a claim about a particular hazard.
 
-| Track | Laps | Lap length | Notes |
-| --- | --- | --- | --- |
-| [The Galactic Gauntlet](/tracks/the-galactic-gauntlet/) | 2 | 23.9 km | Main arena circuit, any vehicle |
-| [The Galactic League Championship](/tracks/galactic-league-championship/) | 2 | 35.7 km | Longest lap in the game, podracer only |
-| Stadium Showdown | 6 | 5.7 km | Campaign only |
+If the route contains a danger you cannot reliably avoid, first improve the approach. Equipment may matter, but a change cannot be evaluated while you continue hitting the same obstacle from different angles. Use the [speeder-class comparison](/vehicles/landspeeders/) when deciding whether the craft's handling suits the line you are trying to learn.
 
-## What makes up the rest of the 46
+## If the event offers a reverse layout
 
-The 39 layouts above are the race tracks. The other named entries are **campaign prologue stages** (on Jakku, Ando Prime, Sentinel I and Crait) and special events such as **The Qualifier** and **Sebulba's Challenge**, which appear in the track index but not in any planet's race list. You cannot pick these in Arcade the way you pick a circuit.
+If your selected event offers a reverse layout, a familiar environment can feel unfamiliar when the direction changes. An exit can become an entry, and a landmark that once warned you early may now arrive too late. Treat a new direction as its own practice problem instead of assuming that knowledge of the scenery guarantees the braking points.
 
-## Reading the list
+Build a fresh opening sequence: first reference, first bend, first safe exit. Keep the approach conservative until those connect cleanly. Then extend the sequence one section at a time. This is more reliable than trying to drive the entire reverse route at the speed you used in the familiar direction.
 
-- **Laps fall as lap length rises.** Every track under 4 km runs four laps or more; almost every track over 14 km runs a single lap. The exceptions are Quadinaros' Revenge and the two Derven Acos finales, which run two.
-- **"Podracer only" layouts never mix with speeders.** Pods race on their own grid. If you only own a speeder build, Tatooine, Forgil Canyon and Bool River Run are not where to grind credits.
-- **One name, many routes.** Ice Field Circuit alone has ten configurations. In the campaign you will meet the same track reversed or rerouted, so learn the planet's hazards rather than a single racing line.
+For a timed event, learn where contact or hesitation is costing you before chasing small differences on a straight. The biggest useful gain may be removing an avoidable impact. Without controlled attempts, an apparently faster setup can simply be the run in which you happened not to crash.
 
-## Related pages
+## Traffic changes the available line
 
-- [Planet hazard chart](/tracks/hazard-and-build-chart/)
-- [All tracks and planets](/tracks/all-tracks-planets/)
-- [Arcade gold times](/tips/arcade-gold-times/)
+The cleanest solo path may be blocked during a race. Before moving into a draft or attempting a shunt, identify the next exit and an alternative. If both are occupied, preserve room rather than forcing a gap that is closing.
+
+Use the [drafting and visibility guide](/tips/draft-and-slipstream/) to plan when to leave another craft's wake. Use the [contact guide](/tips/shunt-takedown/) when the problem is a deliberate attack or displacement. Keep route learning and combat practice separate until the basic line is repeatable.
+
+Podracers need their own clearance judgment. A gap learned in a speeder does not automatically have the same margin in a larger craft. If your campaign has just switched vehicles, use the [Act 3 practice plan](/act-three-podrace-vehicle-switch-plan/) and the [podracer reference](/vehicles/podracers/) before blaming an entire location for the difficulty.
+
+## Derven Acos: prepare for combined conditions
+The official story introduction describes Derven Acos as a custom-built League arena combining the planetary conditions encountered earlier in a Tour. Prepare by reviewing the kinds of adjustments that caused trouble before: reading the approach, leaving recovery room and monitoring the craft's displayed status. Do not assume that familiarity with one visual setting covers the entire finale.
+
+The same introduction describes Hibi's workshop in each planet's paddock, where Shade can fit earned or purchased parts. Before choosing the next campaign event, inspect the setup there. Event choice is a commitment: the campaign's branching structure does not allow turning back after an event is chosen. Too many crashes cause a wreck-out and a new run; only certain perks and unlocks carry over. That makes preparation more valuable than chasing a speculative best route.
+
+## From practice back to a Tour
+
+Before committing to the next campaign event, compare its displayed information with your notes. Is it the same class and layout you practiced? Is the objective different? Does your current craft still match the setup you expected? Those checks are more actionable than choosing a route from an unverified all-planets ranking.
+
+For a longer online run, share the actual event goal with the group and agree whether the session is for learning or competition. Derven Acos being named as the full-run showdown does not make every event there identical. Read the current rules when you arrive.
+
+End with one useful note for the next session: the approach you corrected, the section still uncertain, and the mode in which you can practice it. A dependable personal reference is better than a large table of precise figures that nobody can reproduce.

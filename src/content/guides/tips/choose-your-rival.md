@@ -1,68 +1,70 @@
 ---
-title: "Choose Your Rival in Galactic Racer"
-heading: "Learn the rival's line before you stake a League Token"
-description: "Kestar is the campaign antagonist. Other pilots can escalate a rivalry, and a League Token can end up on that bet. Watch them first."
+title: "Galactic Racer Rivalries: Observe the Pilot Before Staking a Token"
+heading: "Galactic Racer Rivalries: Observe the Pilot Before Staking a Token"
+description: "Prepare a Galactic Racer rivalry by reading the stake, observing the opponent and separating optional contact from the contract and Tour you need to finish."
 category: tips
 status: official
 preRelease: false
 order: 5
 cover: "/images/guide/canyon-combat.webp"
-updatedAt: "2026-10-23"
+updatedAt: "2026-11-17"
 sources: []
 ---
 
-![Pods in combat in a canyon during STAR WARS: Galactic Racer](/images/guide/canyon-combat.webp)
+Read the rivalry stake before accepting it, then judge the opponent from more than one encounter. The official Rivals and Backers explanation says campaign decisions can escalate another pilot's rivalry and warns you to know their racing style before putting a League Token on the line. The useful preparation is observation and a race plan, not a guessed friendship meter or a universal best rival.
 
-**Kestar** is the main antagonist in the campaign. Fuse Games said so in the Rivals and Backers note on **October 20, 2026**. The same note says every other league pilot has a motive to beat you, and that decisions during a run can make another pilot escalate a rivalry. You choose the rival. You are supposed to know their racing style before you put a **League Token** on the line.
+![Racers sharing a narrow canyon section](/images/guide/canyon-combat.webp)
 
-That last clause is the whole guide. A rivalry is not a taunt menu. It is a stake. The token is also what a Backer supplies so you can enter the tour. Betting it on a pilot you have not watched is how a story beat becomes a restart.
+## Separate the antagonist from the rivalry offered
 
-STAR WARS: Galactic Racer launched **October 6, 2026**. Two weeks later Steam was Very Positive, **7,372** of **8,494**, at **$59.99** with no discount. The rivalry system is a reason to run the league again, not a reason to skip the first clean lap.
+Kestar Bool is the campaign's main antagonist. That does not mean he is the only pilot who can become a serious rival. The official explanation also uses Biddy Blas as an example of a rivalry developing during a run. Treat that as an illustration of the system, not a requirement to choose Biddy or a claim that the character is the easiest target.
 
-## Watch before you name them
+Read the actual offer and the consequences displayed in your campaign. Note the pilot, the stake and any event condition. Do not replace that information with a generic claim that every contact immediately triggers a rivalry. The official description says certain decisions can escalate one; it does not publish a complete trigger table.
 
-The note's instruction is specific: get to know their racing style before the token is on the line. That means at least one race where you are not the one who escalated.
+For the cast's story roles, use the [character reference](/characters/shade/). For the League Token's role in entering a Tour, use the [Backer guide](/tips/league-token-and-backers/). Those details help you understand the decision before you enter the race.
 
-What to watch:
+## Observe without turning the observation into another wager
 
-- Where they brake relative to the marker you use. A rival who brakes later is a shunt you should not attempt from inside their draft.
-- Whether they defend the inside or the jump. A crowd-contract jump and a rivalry shove do not fit in the same meter of track.
-- Whether they punt on the straight or in the corner. [Set up the shunt](/tips/set-up-the-shunt/) on the straight, in clean air. A rival who only crashes people in corners is a rival you leave alone until the straight.
+Watch where the pilot changes line, how the vehicle approaches bends and what happens when traffic constrains the exit. Choose a section you know well enough that your own route uncertainty does not consume all your attention.
 
-Kestar is the named antagonist, which means the campaign will push that fight. It does not mean Kestar is the only pilot who can escalate. If another pilot's rivalry is the one the run is offering, read that offer. "Main antagonist" is not "only rival." The note lists both.
+Do not deliberately sacrifice a whole event merely to follow. Observe when the situation gives you room, and keep the current objective in view. A useful note is specific: the opponent moved inside when the outer line became blocked. A statement that the pilot always attacks the inside is much stronger and may not survive the next race.
 
-Crocin Biddy Blas is the other name the same post uses, as a cantankerous rivalry you might nurse. That is an example of the system, not a secret best target. If Biddy is the pilot your decisions angered, that is the rivalry in front of you. Learn the style anyway. A nickname is not a racing line.
+Compare several encounters before drawing a pattern. One collision could reflect a crowded road, an obstacle or your own approach. Rival behavior is a decision input, not a deterministic script established by a single hit.
 
-## What escalates, and what it costs
+## Check what you can afford to risk
 
-The note says certain decisions during the run may cause another pilot to escalate. It does not print a friendship meter. So treat escalation as something you notice, not something you min-max from a table that was not published.
+The official explanation specifically identifies a League Token as a possible rivalry stake. Read the current offer to understand what you are committing. A token used for Tour participation and a token risked in a rivalry are related resources with different purposes.
 
-If a pilot starts treating you as the target, you have a choice the note already framed: engage, and risk the token, or refuse to put the token on a style you have not seen. Refusal is allowed. The post says you have the option to start a serious rivalry. An option is not a requirement. Qualifying and a Backer contract can be the whole evening. [The League Token](/tips/league-token-and-backers/) is the tour entry. Do not spend the tour to win an argument with a pilot you spun out once.
+Before adding the wager, review the current contract and your preparation for the next event. Can you perform the Backer's requested action? Is the vehicle in a condition you understand? Do you know the route well enough to respond to the rival without losing the objective? If several answers are uncertain, the rivalry adds another problem to solve at once.
 
-When you do engage, stake the token only after a race you finished behind them on purpose, watching the line. One crash does not teach a style. A full lap does. If you cannot say where they brake, you do not know the style, and the note told you not to bet yet.
+This is a recommendation to avoid unnecessary uncertainty, not a promise that a particular choice guarantees Token replacement. If the campaign progresses differently after a result, follow the objective now shown. Do not rely on an invented immediate recovery loop.
 
-## How a rivalry changes the lap
+## Plan the road after contact
 
-A rival is another body in the draft. The exit rules do not relax because the body has a name.
+An attack should leave you able to complete the next section. Identify the next bend and an alternative line before trying to displace the rival. A successful impact followed by a wall can defeat the purpose of the move even if it looked decisive.
 
-Leave the wake at the braking marker. Leave earlier if the planet hazard is the thing they use to punt you. Crait's salt flat can blind you if you stay tucked in. A rival who wants you blind will sit in that wake. That is a style. The answer is still to leave, not to prove you can see through salt.
+Use the [shunt guide](/tips/shunt-takedown/) for execution. Use the [drafting guide](/tips/draft-and-slipstream/) if following the rival hides your reference point. Do not interpret a named rivalry as permission to remain blind in the wake until the turn has already arrived.
 
-Do not change pods mid-rivalry because one shunt felt slow. A slow shove is often a hitch or a bad angle. [Match the pod to the hazard](/tips/match-the-pod-to-the-hazard/) on the planet you are racing, then go back to the pilot. A new pod plus a new rival is two lessons. You will learn neither.
+If the rival closes the opening you intended to use, reassess rather than forcing the original plan. Keeping the craft on a usable line preserves options for the next section. Retaliation is not automatically the best route to the result you want.
 
-Class abilities still belong to the pod, not to the feud. If the ability is the overtake, use it on the straight where you set the shunt up. Using it in the corner because the rival is there is how the token leaves.
+## Keep contract execution separate
 
-## A rivalry you can afford
+A Backer contract can ask for a maneuver that competes with an aggressive line. For example, the official Vranki introduction uses crowd-pleasing jumps. If your current contract has such a condition, know where and how you intend to attempt it before adding rivalry contact.
 
-1. Finish a race with the pilot still on track. Note one braking point and one punt spot.
-2. Check that your Backer contract for this tour is already something you can fly. A failed contract and a lost token is a dead run.
-3. Escalate only if the token is a stake you can replace by keeping the Backer happy. The note ties resources to that happiness.
-4. Race them on a track you know. A new planet is a bad first grudge.
-5. If you lose the token, go back to the Backer contract. Do not immediately pick a second rival to "win it back." That is how a run ends.
+Read the [jump-contract guide](/tips/vranki-jump-contract/) when that is the actual task. It does not assert that every jump must succeed or invent how the game scores a crash. The contract's wording and result determine whether your action counted.
 
-**49** achievements are on the Steam listing. **Achievement10** was **92.3%** on October 20. Three of the rarest in the global sample were **0.1%**. A rivalry is not a checklist for those. It is a lap with a name on it. Kestar will still be there if you wait one race. The token might not.
+When two goals compete for the same approach, decide which one has priority. Chasing both without a plan can make the final result hard to diagnose. You may fail the maneuver because you followed the rival's line rather than your own, then mistakenly blame the vehicle or contract.
 
-The Backer sitting behind that token is the other half of the same October 20 video. Vranki, Sidon Ithano, and Q-33N are the names on the contract side. A rivalry that escalates during a Vranki jump contract is two systems asking for the same corner. Fly the jump you signed. Watch the rival's brake point on a later lap. The note's promise is that no two runs match once both systems are live. That promise is not an invitation to trigger both on lap one.
+## Recognize when the problem is your preparation
 
-Platforms do not change the rule. The game is on PC, PlayStation 5, and Xbox Series X|S, and the Steam listing is the Windows copy at **$59.99**. A rival on a console pad is still a body with a braking marker. Controller support does not reveal their line for you. You still have to finish a race behind them and be able to say where they punt. If you cannot say it, the token stays in the tour.
+If the same route boundary catches you alone and beside the rival, practice the route. If a technical hitch interrupts unrelated events, use the [PC troubleshooting order](/pc-requirements/). If the craft behaves differently after an update, inspect customization before treating the opponent as the cause.
 
-Minimum spec is **12 GB** of RAM, an RTX 2060-class card, and **50 GB** on an SSD. A rivalry race that hitches at the braking marker will look like a psychic punt. It is a load. Fix the hitch, then judge the pilot. Recommended memory is **16 GB** and a 3060 Ti-class card. You do not need that card to learn a line. You need a stable frame at the marker you are trying to remember. Kestar can wait for that frame. A token bet cannot survive a stutter you mistook for intent.
+Similarly, a new class changes the comparison. The official class descriptions give landspeeders, bikes and skim speeders different handling approaches. Practice the class before staking a resource on an unfamiliar vehicle-and-rival combination. Use the [speeder reference](/vehicles/landspeeders/) for that decision.
+
+Do not diagnose cheating or hidden bonuses from an isolated overtake. Record the circumstances and use the game's available reporting route if there is evidence of misconduct. A lost race alone does not establish why the other craft was faster.
+
+## Review the decision, not only the finish
+
+Afterward, compare the displayed result with the stake you accepted. Then ask whether the preparation was sound: did you understand the offer, recognize the route, and leave yourself choices when the rival moved? A win does not validate every risky input, and a loss can still reveal a clear correction.
+
+Keep one useful adjustment for the next attempt. Improve the approach if contact left you off line, practice the contract if attention was divided, or observe the rival longer if you acted on a weak assumption. Rivalry adds stakes to a race; good preparation makes those stakes an informed choice.

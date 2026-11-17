@@ -1,10 +1,10 @@
-// 内容真实性体系（方案第四章）
-// 每个事实都必须携带来源与确认状态，这是本站与竞品 starwarsgalacticracer.xyz 的核心差异。
+// Legacy editorial categories, retained for content-schema compatibility.
+// A category does not prove developer approval, personal testing or verification.
 
 // 4.2 确认状态标签体系
 export type ConfidenceStatus =
-  | 'official' // ✅ 开发商在官网/Steam/Discord 正式公布
-  | 'beta' // 🔬 在 Beta/Demo 版本中亲自验证
+  | 'official' // Legacy general-guide category
+  | 'beta' // Legacy general-guide category; not evidence of personal testing
   | 'trailer' // 👁️ 预告片中出现但系统细节未知
   | 'lore' // 📖 基于星战正史（电影/游戏）推测
   | 'unconfirmed'; // ❓ 论坛流传但无官方来源（不作页面主体）
@@ -19,16 +19,16 @@ export interface StatusMeta {
 
 export const STATUS_META: Record<ConfidenceStatus, StatusMeta> = {
   official: {
-    label: 'Official',
-    icon: '✅',
+    label: 'Guide',
+    icon: '',
     classes: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30',
-    description: 'Confirmed by the developer via official website, Steam, or Discord.',
+    description: 'Editorial guide. This label does not certify a claim or imply affiliation.',
   },
   beta: {
-    label: 'Beta-tested',
-    icon: '🔬',
+    label: 'Editorial analysis',
+    icon: '',
     classes: 'bg-sky-500/15 text-sky-300 border-sky-500/30',
-    description: 'Personally verified in a Beta or demo build. Version and test date noted.',
+    description: 'Editorial guide. No hands-on testing is implied by this legacy category.',
   },
   trailer: {
     label: 'Trailer',
@@ -40,7 +40,7 @@ export const STATUS_META: Record<ConfidenceStatus, StatusMeta> = {
     label: 'Lore-based',
     icon: '📖',
     classes: 'bg-amber-500/15 text-amber-300 border-amber-500/30',
-    description: 'Inferred from Star Wars canon (films, prior games). To be verified after launch.',
+    description: 'Discussion of Star Wars lore, separate from confirmed game mechanics.',
   },
   unconfirmed: {
     label: 'Unconfirmed',

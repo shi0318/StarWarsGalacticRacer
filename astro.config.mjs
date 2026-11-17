@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -9,6 +9,9 @@ import { dirname, join } from 'node:path';
 const SITE = 'https://swgalacticracer.wiki';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
+// The host consumes these as real HTTP redirects. No Astro redirect HTML is built.
+const redirects = JSON.parse(readFileSync(join(ROOT, 'src/data/content-redirects.json'), 'utf8'));
+writeFileSync(join(ROOT, 'public/_redirects'), Object.entries(redirects).map(([from, to]) => `${from} ${to} 301`).join('\n') + '\n');
 function frontmatterDate(file) {
   const source = readFileSync(join(ROOT, file), 'utf8');
   const match = source.match(/^updatedAt:\s*["']?(\d{4}-\d{2}-\d{2})/m);
@@ -27,7 +30,7 @@ function lastmodFor(url) {
 // 发售前推测框架内容（GuideLayout 已对这些 status 设 noindex）——
 // 与页面的 noindex 保持一致，一并从 sitemap 排除，避免把 noindex 页交给 Google。
 // 发售后用实测内容改为 official/beta 时，从此列表移除即可重新收录。
-const NOINDEX_GUIDE_URLS = ['/landspeeder-guide/'];
+const NOINDEX_GUIDE_URLS = Object.keys(redirects);
 const isNoindexUrl = (url) =>
   NOINDEX_GUIDE_URLS.some((path) => url.endsWith(path));
 

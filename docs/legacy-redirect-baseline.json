@@ -1,0 +1,10 @@
+{
+  "capturedAt": "2026-11-17",
+  "purpose": "Regression fixture for the four redirects already live before content consolidation. Destinations remain defined only in src/data/content-redirects.json.",
+  "requiredLegacySources": [
+    "/characters/anakin-skywalker/",
+    "/vehicles/anakin-podracer/",
+    "/tracks/tatooine-canyon/",
+    "/landspeeder-guide/"
+  ]
+}

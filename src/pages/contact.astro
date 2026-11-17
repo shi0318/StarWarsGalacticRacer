@@ -1,58 +1,20 @@
 ---
-// 联系页 —— AdSense 合规要求之一（提供联系方式与内容移除渠道）。
-import Layout from '../layouts/Layout.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
+import SitePage from '../layouts/SitePage.astro';
 import { SITE } from '../data/site';
-
-const title = 'Contact — Star Wars Galactic Racer Wiki';
-const description =
-  'How to reach Star Wars Galactic Racer Wiki with corrections, questions, or content-removal requests. We reply to every message about accuracy and rights.';
-
-const crumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Contact', url: '/contact/' },
-];
 ---
 
-<Layout title={title} description={description} schemaType="article" breadcrumb={crumbs}>
-  <article class="mx-auto max-w-3xl">
-    <Breadcrumb items={crumbs} />
+<SitePage title="Contact — Star Wars Galactic Racer Guide" heading="Contact the editorial team" description="Send a specific guide correction, privacy question or rights request to the Star Wars Galactic Racer Guide operator through the site email contact.">
 
-    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">Contact us</h1>
-    <p class="mt-3 text-lg text-void-400">
-      Corrections, questions, or a content-removal request — we read every message.
-    </p>
-
-    <div class="prose-body mt-8 space-y-6 text-void-200">
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Email</h2>
-        <p class="mt-2">
-          The fastest way to reach us is by email at
-          <a href={`mailto:${SITE.contactEmail}`} class="text-plasma underline underline-offset-2">
-            {SITE.contactEmail}
-          </a>. We aim to reply within a few days.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Corrections & accuracy</h2>
-        <p class="mt-2">
-          Spotted a fact that is out of date or wrong? Tell us the page and what should change.
-          Because every claim on this site carries a source and a confirmation status, we can
-          usually verify and update quickly. Accuracy is the whole point of this wiki.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-xl font-semibold text-void-100">Rights & content removal</h2>
-        <p class="mt-2">
-          This is an independent fan site and is not affiliated with {SITE.developer},
-          {SITE.publisher}, or Lucasfilm. Images here are official Steam screenshots and key art
-          used for commentary and reference, credited to their source. If you
-          believe any content infringes your rights, email us with the details and we will
-          review and act on it promptly.
-        </p>
-      </section>
-    </div>
-  </article>
-</Layout>
+<section><h2>Email contact</h2>
+<p>Contact the operator of {SITE.name} at <a href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a>. This is the site's editorial contact. We do not offer a live support desk, guarantee a response time, or handle game purchases, refunds or account recovery.</p>
+<p>Unofficial fan guide. Not affiliated with Lucasfilm, Disney, Fuse Games or Secret Mode. For a game account or storefront problem, use the support channel linked by the relevant developer, publisher or store. Do not send us a password, security code, payment detail or private account token.</p></section>
+<section><h2>Reporting an inaccurate guide</h2>
+<p>Include the page URL, the heading or sentence at issue, and what you think is wrong. Where relevant, include the platform, game version and date of your observation. A link to a published patch note or a short description of repeatable steps helps distinguish a changed mechanic from a one-off player report.</p>
+<p>A useful subject line is “Guide correction — [page title]”. If the issue involves a claimed fix, describe what happened before and after the suggested action. Please crop screenshots to the relevant game interface and remove names, messages or other private information. We do not need an entire save folder to consider a wording correction.</p></section>
+<section><h2>Rights and content-removal requests</h2>
+<p>Identify the affected page and the specific text or image, describe your relationship to the rights involved, and explain the requested action. A direct link to the original work or other relevant information can help us locate the issue. You do not need to send government identity documents in an initial request.</p>
+<p>We review the material and may ask for clarification before making a change. The site does not own the game's artwork or trademarks. If material needs to be removed or corrected, the request can concern that material without requiring deletion of every unrelated guide on the same subject.</p></section>
+<section><h2>Privacy and follow-up</h2>
+<p>Email includes your address and anything you choose to send. Use the subject “Privacy request” if you want to ask about a previous message or request its deletion. Include enough context to locate the correspondence without adding unnecessary personal information. The <a href="/privacy/">privacy policy</a> explains the limits of our control over mailbox and hosting-provider records.</p>
+<p>There is no on-site contact form, public comment system or file-upload service. Our <a href="/editorial/">editorial policy</a> explains how a correction can affect an article's wording and update date.</p></section>
+</SitePage>

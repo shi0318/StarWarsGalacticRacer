@@ -1,91 +1,17 @@
 ---
-// Tips 分类聚合页（CollectionPage）—— 方案 5.1
-// 卡片式列表：从 guides 集合中筛出 category === 'tips' 的文章
 import Layout from '../../layouts/Layout.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
-import StatusBadge from '../../components/StatusBadge.astro';
-import MediaFigure from '../../components/MediaFigure.astro';
-import { SITE_IMAGES } from '../../data/images';
+import GuideCard from '../../components/GuideCard.astro';
 import { getCollection } from 'astro:content';
-
-const title = 'Star Wars Galactic Racer Tips — Builds, Boosting & Credits';
-const description =
-  'Advanced Star Wars Galactic Racer tips: best builds, boost and drift technique, credits farming, and the fastest vehicles. Every claim carries a confirmation status.';
-
-const crumbs = [
-  { name: 'Home', url: '/' },
-  { name: 'Tips', url: '/tips/' },
-];
-
-const tips = (await getCollection('guides', ({ data }) => !data.draft && data.category === 'tips')).sort(
-  (a, b) => a.data.order - b.data.order,
-);
+const title = "Galactic Racer Focused Racing Guides";
+const description = "Choose a specific problem: contact, drafting, boost, a contract, recovery or an online group. These guides separate practical recommendations from dated comm";
+const crumbs = [{name:'Home',url:'/'},{name:"Tips",url:'/tips/'}];
+const guides = (await getCollection('guides', ({data}) => !data.draft && ["tips"].includes(data.category))).sort((a,b) => a.data.order-b.data.order || a.id.localeCompare(b.id));
 ---
-
 <Layout title={title} description={description} schemaType="collection" breadcrumb={crumbs}>
-  <Breadcrumb items={crumbs} />
-
-  <div class="mt-6 mb-8">
-    <MediaFigure
-      src={SITE_IMAGES.tipsArt.src}
-      alt={SITE_IMAGES.tipsArt.alt}
-      width={SITE_IMAGES.tipsArt.width}
-      height={SITE_IMAGES.tipsArt.height}
-      credit={SITE_IMAGES.tipsArt.credit}
-    />
-  </div>
-
-  <header class="max-w-3xl">
-    <h1 class="text-3xl font-bold tracking-tight text-void-100 md:text-4xl">
-      Star Wars Galactic Racer Tips
-    </h1>
-    <p class="mt-3 text-lg text-void-400">
-      Build order, the tour systems trophies name, and the class that actually finishes a race.
-    </p>
-  </header>
-
-  <section class="mt-8">
-    <h2 class="text-lg font-semibold text-void-100">Start with the buy questions</h2>
-    <ul class="mt-3 grid gap-3 sm:grid-cols-2">
-      <li><a class="text-plasma hover:underline" href="/achievements/">Achievements and trophies</a></li>
-      <li><a class="text-plasma hover:underline" href="/how-long-to-beat/">How long a tour takes</a></li>
-      <li><a class="text-plasma hover:underline" href="/is-it-worth-it/">Is it worth buying?</a></li>
-      <li><a class="text-plasma hover:underline" href="/platforms/">Platforms, Switch 2, Game Pass</a></li>
-      <li><a class="text-plasma hover:underline" href="/tips/no-private-lobbies/">No private lobbies</a></li>
-      <li><a class="text-plasma hover:underline" href="/tips/takedown-camera/">Takedown camera hits the wall</a></li>
-      <li><a class="text-plasma hover:underline" href="/hdr-black-screens/">HDR, black screens, corrupted saves</a></li>
-      <li><a class="text-plasma hover:underline" href="/rubberbanding-ai/">Rubberbanding AI</a></li>
-      <li><a class="text-plasma hover:underline" href="/tips/race-stutters/">Tiny stutters mid-race</a></li>
-      <li><a class="text-plasma hover:underline" href="/tips/shunt-takedown/">Shunts and takedowns</a></li>
-      <li><a class="text-plasma hover:underline" href="/tips/dlss-45-settings/">DLSS 4.5 PC settings</a></li>
-    </ul>
-  </section>
-
-  {
-    tips.length === 0 ? (
-      <p class="mt-8 text-void-400">Tips are being written. Check back soon.</p>
-    ) : (
-      <ul class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {tips.map((g) => (
-          <li>
-            <a
-              href={`/${g.id}/`}
-              class="group flex h-full flex-col rounded-xl border border-void-800 bg-void-900/40 p-5 transition-colors hover:border-plasma/40 hover:bg-void-900"
-            >
-              <div class="mb-2 flex items-start justify-between gap-2">
-                <h2 class="text-base font-semibold leading-snug text-void-100 group-hover:text-plasma">
-                  {g.data.heading ?? g.data.title}
-                </h2>
-                <StatusBadge status={g.data.status} size="sm" />
-              </div>
-              <p class="line-clamp-3 flex-1 text-sm leading-relaxed text-void-400">
-                {g.data.description}
-              </p>
-              <span class="mt-4 text-sm font-medium text-plasma/90">Read tip →</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    )
-  }
+ <Breadcrumb items={crumbs} />
+ <h1 class="mt-5 text-4xl font-bold">Focused Racing Guides</h1>
+ <p class="mt-4 max-w-3xl text-lg text-void-300">Choose a specific problem: contact, drafting, boost, a contract, recovery or an online group. These guides separate practical recommendations from dated community observations.</p>
+ <ul class="mt-7 grid gap-5 md:grid-cols-2">{guides.map(g => <GuideCard href={`/${g.id}/`} title={g.data.heading ?? g.data.title} description={g.data.description} cover={g.data.cover ?? '/images/guide/night-stadium.webp'} label="Guide" verified={g.data.updatedAt} status={g.data.status} />)}</ul>
+ <p class="mt-8 text-void-300">For campaign, control and technical guides, use the <a href="/guide/" class="text-plasma underline">complete guide directory</a>. Start with <a href="/game-modes/" class="text-plasma underline">mode selection</a> if you are unsure which activity fits your goal.</p>
 </Layout>

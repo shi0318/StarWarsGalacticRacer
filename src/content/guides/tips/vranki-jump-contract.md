@@ -1,62 +1,70 @@
 ---
-title: "Vranki's Jump Contract in Galactic Racer"
-heading: "Fly the jump before you sign Vranki's contract"
-description: "Vranki the Hutt's example contract is dazzling jumps for the crowd. Sign it only if the pod can leave the draft and land the jump."
+title: "Galactic Racer Vranki Jump Contracts: Prepare the Approach and Landing"
+heading: "Galactic Racer Vranki Jump Contracts: Prepare the Approach and Landing"
+description: "Prepare for Vranki\u2019s crowd-jump contract example with a clear approach, enough landing room and objective checks, without invented scoring or failure."
 category: tips
 status: official
 preRelease: false
-order: 6
+order: 5
 cover: "/images/guide/cliff-drop.webp"
-updatedAt: "2026-10-23"
+updatedAt: "2026-11-17"
 sources: []
 ---
 
-![A drop on a Galactic Racer circuit](/images/guide/cliff-drop.webp)
+For Vranki's crowd-jump contract example, prepare the approach and the landing before adding speed or another objective. The official Rivals and Backers explanation uses dazzling jumps as Vranki's example, but it does not publish a universal score, distance target or rule for every landing. Read the exact contract offered by your campaign, practice the relevant action, and check the result the game gives you.
 
-**Vranki the Hutt** is the Backer the October 20, 2026 note uses as the jump example. Once you qualify for the Galactic League, a Backer supplies the **League Token**, and the token is not free. The example contract is dazzling jumps that delight the crowd. If you cannot leave the draft, see the jump, and land it, do not sign that contract because the name is famous.
+![A steep drop along a Galactic Racer route](/images/guide/cliff-drop.webp)
 
-**Sidon Ithano** and **Q-33N** are the other two names in the same sentence. They are alternatives, not lesser Hutt. Read their contracts in the menu. This page is only Vranki's shape, because that is the shape the note actually described.
+## Read the offer before choosing the maneuver
 
-STAR WARS: Galactic Racer has been out since **October 6, 2026**, at **$59.99** on Steam with no discount as of October 20. Reviews were Very Positive, **7,372** of **8,494**. A crowd-jump contract is a second-run system. It is a bad first lap.
+Vranki is one of the Backer choices named alongside Sidon Ithano and Q-33N. Backers supply the League Token needed for a Tour and expect contracts in return. The general choice is covered in the [Backer guide](/tips/league-token-and-backers/). This page focuses on executing the jump-shaped task rather than ranking the Backers.
 
-## What the contract is asking
+Start with the contract's actual words. Note the action, any count or restriction shown, and the feedback the interface uses to record progress. Do not assume a jump that looks spectacular satisfies an objective merely because it resembles the promotional example.
 
-A jump for the crowd is a line change. You are not being asked to win the draft. You are being asked to be seen leaving the ground. That means:
+If the offer differs from the example discussed here, follow the offer. Avoid turning a general introduction to Vranki into a claim that every contract from that character is identical. The task in your campaign is the one you need to prepare for.
 
-- You need air you can see. Crait's salt flat blinds you if you stay in the wake. A blind jump is a crash, and a crash is a failed contract.
-- You need to leave the draft before the jump marker, not at the braking marker if the jump comes first. [When to leave the draft](/tips/when-to-leave-the-draft/) is the exit rule. A contract marker is an earlier exit.
-- You need a pod that survives the landing on that planet. [Match the pod to the hazard](/tips/match-the-pod-to-the-hazard/) before you sign. Vranki does not change the pod's class ability.
+## Find the approach before committing to speed
 
-The note does not print a point value for the jump. Do not invent one. Fly the jump, finish the race, and see whether the Backer stayed happy. Happiness, in the post's words, is what keeps the resources coming. A spectacular crash that the crowd might have liked in a film is still a crash in this contract until the game says otherwise. The post says "dazzling jumps," not "any incident."
+Use a relevant practice event when available. Identify where the approach begins, what line takes you toward the jump, and where the vehicle needs to be after landing. The screenshot above illustrates terrain; it is not a measured diagram of the contract's required jump.
 
-## When to sign it
+Choose a visible reference before the approach. Make sure another vehicle will not hide the only cue you are using. If traffic obscures it, leave room or choose a clearer approach rather than copying the vehicle ahead. That racer may take a line unsuitable for your craft or objective.
 
-Sign Vranki after you have landed the jump on the track the tour is about to use. A qualifying lap that never left the ground is not evidence you can delight a crowd. Run one practice lap with no token at stake. If the landing sticks, the contract is honest. If it does not, pick Sidon Ithano or Q-33N and read what they actually want.
+Drive the section at a manageable pace first. The aim is to understand the sequence, not to prove maximum speed on the first pass. If the landing leads immediately into another turn, include that turn in the practice. A jump is not isolated from the rest of the route.
 
-Do not sign it to impress a rival. [The rivalry](/tips/choose-your-rival/) can put a League Token on the line. A jump contract already spends your attention. Doing both on the first tour race is how the token leaves and the Backer goes cold in the same event. Keep the Backer. Watch the rival. Escalate later.
+## Keep the craft familiar
 
-Do not sign it because the pod looks fast in a straight line. A straight-line pod that cannot take the drop in the screenshot above is the wrong machine for this contract. Change the pod, or change the Backer. Do not change the contract text by wishing.
+A new vehicle class and a new jump are two learning tasks. Keep one familiar while working on the other. The official class descriptions give landspeeders, bikes and skim speeders different handling identities, while pods race separately because of their greater speed and size.
 
-## How to fly it once it is signed
+Use the [class comparison](/vehicles/landspeeders/) if you are choosing among speeders and the [podracer guide](/vehicles/podracers/) if the event uses a pod. Do not assume a maneuver learned in one class transfers with the same approach and clearance to another.
 
-1. Qualify first. The Backer menu is after that gate. [How to qualify](/tips/how-to-qualify/) is the lap that gets you there.
-2. Enter the tour race knowing where the jump is. If you do not know, you signed too early.
-3. Leave the draft before the jump. Take it in clean air.
-4. Land, then look for the next wake. The contract is the jump, not a permanent exile from the draft.
-5. Finish the race. A jump and a DNF is not a happy Backer until the game tells you it counts. Assume it does not.
+Inspect the equipped craft before practicing, especially after an update. The October 22 quality-of-life note warned that campaign customization could reset. A changed setup can explain an unfamiliar response without requiring a theory about a hidden jump penalty or a changed contract.
 
-If a rival is camping the landing, that is a style, not a reason to skip the jump you signed. Set the shunt up on the straight after you have landed, not in the air. An aerial punt is a crash with extra steps.
+## Separate takeoff, clearance and recovery
 
-## The rest of the economy
+Review three parts of the attempt. First, did you arrive on the intended approach? Second, did the craft clear the relevant terrain without unwanted contact? Third, did you recover onto a usable line for the next section? Identify the first failure before changing the next attempt.
 
-The League Token is the entry. The contract is the upkeep. Resources follow a Backer you keep happy. None of that is a credit number on the Steam page. The Steam page does say the game is **$59.99**, needs an SSD, **50 GB**, **12 GB** of RAM at minimum, and an RTX 2060-class GPU. A jump that hitches on a machine under that line will fail the contract for a reason Vranki cannot fix.
+If the entry is wrong, work on the earlier reference and approach. If clearance is the problem, compare the actual path and craft rather than blindly adding more speed. If the landing is clean but the next turn is lost, change the recovery plan. These are practice diagnoses, not fixed physics formulas.
 
-**49** achievements are on the listing. The rarest in the October 20 global sample were at **0.1%**. A crowd jump is not those achievements. It is a line. Fly it clean, keep the token, and let the next contract be a choice instead of a repair.
+Avoid stacking several corrections during an uncertain landing. Let the craft's response become readable before adding another aggressive action when the situation permits. The goal is a repeatable recovery, not an accidental finish whose successful input you cannot identify.
 
-Sidon and Q-33N remain on the menu if the drop in front of you is not a jump you can land. The note's point is that the choice changes the run. Make the choice you can drive.
+## Add boost only after the route is understandable
 
-A rivalry does not make the jump optional. If Kestar or another pilot escalates while you are under Vranki's contract, the contract is still the thing that keeps the Backer happy and the resources flowing. The token on the rivalry line is a second stake. You can decline it. The October 20 note calls the rivalry an option you start, not a tax on every contract. Decline it until the jump lands clean on a track you can name. Then consider the pilot.
+Use the controls and warnings shown by your current craft. Pick the release point as deliberately as the commitment point. A longer boost can make the approach feel powerful while leaving too little room to prepare for what follows.
 
-The same note says Bill Lane and Nathaniel Daw walked through how to maximize the system. Maximize, in the text they published, means complete the contract and know the rival's style. It does not mean chain every named pilot into one tour. Vranki's jump is one contract shape. Sidon's contract is another, and you should read it in the menu rather than assume it is also a jump. Q-33N is the third name, not a droid stat block the post forgot to print. Three signatures, three different evenings. Pick the evening your pod can finish.
+The [boost practice guide](/tips/ramjet-heat/) covers that decision. It does not supply a universal safe duration, because equipment and event circumstances matter. Do not adopt an exact heat threshold from a video unless its configuration and evidence match the test you are trying to repeat.
 
-Very Positive at **7,372** of **8,494** two weeks after the **October 6** launch means the racing already works for most owners. The Backer layer is the part that makes run two differ from run one. Treat it that way. Qualify, sign a jump only if the landing exists, keep the token for the tour, and let a Hutt's crowd wait until the pod can actually leave the ground. A failed dazzling jump is just a crash with a famous witness. The witness does not put the token back.
+If a practice attempt succeeds only when traffic happens to leave the landing clear, treat it as conditional success. Plan what you will do when the same space is occupied. An objective does not remove the need to read other racers.
+
+## Do not let a rivalry take over the attempt
+
+The campaign can combine contract decisions with rivalry stakes. That does not mean both should govern the same maneuver. A rival moving into the approach is a reason to reassess the opening, not proof that the contract demands an aerial attack.
+
+Keep attention on the action the contract requests. When considering a separate rivalry, read the stake and use the [rivalry guide](/tips/choose-your-rival/) to prepare. A familiar opponent's name does not guarantee that the next contact will be predictable.
+
+If the route becomes unsafe, prioritize understanding the resulting event state. This guide does not invent a rule that every crash invalidates the contract or that every jump before a DNF counts. Those conclusions must come from the objective feedback and result.
+
+## Check the result before repeating the whole sequence
+
+After the attempt, inspect the contract progress and the event result. If the action did not count, compare the contract wording with what happened. Preserve a screenshot or short note of both before changing vehicles, choosing another event or concluding that the condition is broken.
+
+When the result is clear, decide the next useful step. Repeat the approach if it remains inconsistent, adjust recovery if the landing leads to another error, or return to the Tour when the action is deliberate and the contract condition is understood. A practice routine is complete when it prepares you for the task actually offered, rather than a cinematic version of what a Hutt might enjoy watching.

@@ -1,5 +1,5 @@
 ---
-// 确认状态徽章 —— 本站与竞品的核心差异：每条信息可信度一眼可见（方案 4.2）
+// Legacy frontmatter categories are not evidence of official approval or testing.
 import { STATUS_META, type ConfidenceStatus } from '../data/sources';
 
 interface Props {
@@ -14,9 +14,7 @@ const pad = size === 'sm' ? 'px-1.5 py-0.5 text-[11px]' : 'px-2 py-0.5 text-xs';
 ---
 
 <span
-  class={`inline-flex items-center gap-1 rounded border font-medium whitespace-nowrap ${pad} ${meta.classes}`}
-  title={meta.description}
+  class={`inline-flex items-center rounded border border-void-700 text-void-400 font-medium whitespace-nowrap ${pad}`}
 >
-  <span aria-hidden="true">{meta.icon}</span>
   <span>{meta.label}</span>
 </span>
