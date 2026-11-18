@@ -72,6 +72,9 @@ test('trust pages provide current substantive policies without pretending ads or
   const privacy = await readPage('privacy/');
   assert.match(privacy, /does not load Google Analytics/);
   assert.match(privacy, /does not currently serve advertising/);
+  assert.match(privacy, /Cloudflare Web Analytics/);
+  assert.match(privacy, /https:\/\/developers\.cloudflare\.com\/web-analytics\//);
+  assert.doesNotMatch(privacy, /or another third-party audience-measurement tag/);
   assert.doesNotMatch(privacy, /record anonymised data|may display ads served/);
   const editorial = await readPage('editorial/');
   assert.match(editorial, /not a hands-on test/);
