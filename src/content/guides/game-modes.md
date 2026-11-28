@@ -31,7 +31,7 @@ The [first Tour guide](/tips/galactic-racer-first-tour-plan/) handles those prep
 
 ## Arcade: isolate the driving problem
 
-The official mode description includes time trials and precision-driving challenges. Their practical value is the ability to focus on an event's driving requirement without treating every attempt as the next chapter of a campaign. Read the actual target and permitted vehicle before starting. An event that rewards precision can demand a different approach from one that rewards your best elapsed time.
+The official mode description includes time trials and precision-driving challenges. Their practical value is the ability to focus on an event's driving requirement without treating every attempt as the next chapter of a campaign. Read the actual target and permitted vehicle before starting. An event that rewards precision can demand a different approach from one that rewards your best elapsed time. If you want to frame a vehicle or landmark instead of chasing the result, start with the [Photo Mode guide](/tips/photo-mode-guide/).
 
 Use the first attempt to locate the failure. Was the missed target caused by a wall, an unsuitable line, a late release of boost or a misunderstanding of the objective? Keep the same vehicle and event for the next attempt. Change only the thing you are trying to learn, otherwise a better result does not tell you which change helped.
 
